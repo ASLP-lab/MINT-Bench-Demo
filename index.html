@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MINT-Bench Demo Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <p class="brand-kicker">MINT-BENCH</p>
+        <p class="brand-sub">Instruction-Following TTS Benchmark Demo</p>
+      </div>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#examples">Examples</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <span class="badge">ACM MM 2026 Submission</span>
+        <h1>MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following TTS</h1>
+        <p class="lead">
+          A static demo page for showcasing benchmark design, multilingual audio examples,
+          leaderboard results, and project resources for instruction-following text-to-speech.
+        </p>
+        <div class="button-row">
+          <a class="btn primary" href="#">Paper</a>
+          <a class="btn" href="#">Code</a>
+          <a class="btn" href="#">Dataset</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Taxonomy-driven</span>
+          <span class="tag">10 Languages</span>
+          <span class="tag">Hierarchical Evaluation</span>
+          <span class="tag">Timbre + Style + Extra-vocal</span>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="card-inner">
+          <h2>At a glance</h2>
+          <p class="muted">Core components of the benchmark and demo page.</p>
+          <div class="glance-list">
+            <div class="mini-panel">
+              <strong>Taxonomy</strong>
+              Difficulty level, control domain, control specification, and fine-grained control pattern.
+            </div>
+            <div class="mini-panel">
+              <strong>Multilingual Coverage</strong>
+              Chinese, English, German, Spanish, French, Italian, Japanese, Korean, Portuguese, and Russian.
+            </div>
+            <div class="mini-panel">
+              <strong>Hierarchical Evaluation</strong>
+              Content consistency, instruction following, perceptual quality, and optional timbre diversity.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="overview">
+      <div class="container">
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-label">Languages</div>
+            <div class="stat-value">10</div>
+            <div class="stat-sub">Large splits for Chinese and English</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Atomic attributes</div>
+            <div class="stat-value">10</div>
+            <div class="stat-sub">Grouped into timbre and style</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Evaluation stages</div>
+            <div class="stat-value">3</div>
+            <div class="stat-sub">Content, instruction, quality</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Best open model</div>
+            <div class="stat-value stat-value-small">Qwen3TTS</div>
+            <div class="stat-sub">Competitive across multiple languages</div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-inner">
+              <h2 class="section-title">Overview</h2>
+              <p class="muted">
+                MINT-Bench evaluates instruction-following TTS with a hierarchical multi-axis taxonomy,
+                a scalable data construction pipeline, and a hybrid evaluation protocol.
+              </p>
+              <div class="grid-3">
+                <div class="outline-box">
+                  <strong>1. Taxonomy</strong>
+                  <p class="muted">Easy / Hard / Special, with timbre, style, composition, and extra-vocal control.</p>
+                </div>
+                <div class="outline-box">
+                  <strong>2. Data Pipeline</strong>
+                  <p class="muted">Node specification, structured label planning, and instruction-text realization.</p>
+                </div>
+                <div class="outline-box">
+                  <strong>3. Evaluation</strong>
+                  <p class="muted">Progressive assessment of content consistency, instruction following, and perceptual quality.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h2 class="section-title">Core inventory</h2>
+              <p class="muted">Atomic acoustic attributes underlying the benchmark.</p>
+              <div class="grid-2-small">
+                <div class="mini-panel">
+                  <strong>Timbre</strong>
+                  Age · Gender · Pitch · Texture
+                </div>
+                <div class="mini-panel">
+                  <strong>Style</strong>
+                  Speed · Volume · Emotion · Accent · Personality · Tone
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leaderboard">
+      <div class="container">
+        <div class="card">
+          <div class="card-inner">
+            <h2 class="section-title">Leaderboard</h2>
+            <p class="muted">Top models adapted from the current paper tables. Replace or expand as needed.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Overall</th>
+                    <th>Timbre</th>
+                    <th>Style</th>
+                    <th>Chinese</th>
+                    <th>English</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Gemini 2.5-Flash</strong></td><td>Commercial</td><td>3.75</td><td>3.58</td><td>3.95</td><td>2.95</td><td>3.66</td></tr>
+                  <tr><td><strong>Gemini 2.5-Pro</strong></td><td>Commercial</td><td>3.63</td><td>3.53</td><td>3.82</td><td>2.93</td><td>3.45</td></tr>
+                  <tr><td><strong>Qwen3TTS-12Hz-1.7B-VD</strong></td><td>Open-source</td><td>3.19</td><td>3.36</td><td>3.35</td><td>3.12</td><td>2.94</td></tr>
+                  <tr><td><strong>ElevenLabs-ttv-v3</strong></td><td>Commercial</td><td>3.06</td><td>3.25</td><td>3.03</td><td>2.72</td><td>3.15</td></tr>
+                  <tr><td><strong>MiniMax-Speech-2.7</strong></td><td>Commercial</td><td>2.70</td><td>2.99</td><td>2.91</td><td>2.62</td><td>2.62</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="container examples-layout">
+        <aside class="card">
+          <div class="card-inner">
+            <h2 class="section-title">Example browser</h2>
+            <p class="muted">Search and filter multilingual benchmark cases.</p>
+            <input id="searchInput" class="search-input" type="text" placeholder="Search language, split, subtype..." />
+            <div class="filter-group" id="languageFilters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="Chinese">Chinese</button>
+              <button class="filter-btn" data-filter="English">English</button>
+              <button class="filter-btn" data-filter="Japanese">Japanese</button>
+            </div>
+            <div class="filter-group" id="splitFilters">
+              <button class="filter-btn active" data-split="all">All splits</button>
+              <button class="filter-btn" data-split="Easy">Easy</button>
+              <button class="filter-btn" data-split="Hard">Hard</button>
+              <button class="filter-btn" data-split="Special">Special</button>
+            </div>
+            <div class="mini-panel top-gap">
+              <strong>Tip</strong>
+              Replace the sample cards with your own multilingual benchmark outputs and hosted audio files.
+            </div>
+          </div>
+        </aside>
+
+        <div class="sample-list" id="sampleList">
+          <article class="sample-box sample-item" data-language="Chinese" data-split="Easy" data-search="Chinese Easy Timbre Atomic Age Speak as if you are a young child 我可以喝一杯果汁吗">
+            <div class="sample-head">
+              <h3 class="sample-title">Chinese · Easy</h3>
+              <span class="pill">Timbre</span>
+              <span class="pill">Atomic / Age</span>
+            </div>
+            <div class="prompt-box">
+              <strong>Instruction</strong>
+              <p>Speak as if you are a young child.</p>
+              <strong class="prompt-subtitle">Synthesis text</strong>
+              <p>我可以喝一杯果汁吗？</p>
+            </div>
+            <div class="audio-grid">
+              <div class="audio-card">
+                <h4>Gemini 2.5-Flash</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <h4>Qwen3TTS-12Hz-1.7B-VD</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" />
+                </audio>
+              </div>
+            </div>
+          </article>
+
+          <article class="sample-box sample-item" data-language="English" data-split="Hard" data-search="English Hard Composition Dynamic Begin speaking slowly quietly and thoughtfully At first I thought it was just a simple mistake">
+            <div class="sample-head">
+              <h3 class="sample-title">English · Hard</h3>
+              <span class="pill">Composition</span>
+              <span class="pill">Dynamic</span>
+            </div>
+            <div class="prompt-box">
+              <strong>Instruction</strong>
+              <p>Begin speaking slowly, quietly, and thoughtfully. Then build into a fast, loud, and angry delivery.</p>
+              <strong class="prompt-subtitle">Synthesis text</strong>
+              <p>At first, I thought it was just a simple mistake. But then I saw the pattern, and I realized this was deliberate.</p>
+            </div>
+            <div class="audio-grid">
+              <div class="audio-card">
+                <h4>Gemini 2.5-Pro</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <h4>Qwen3TTS-12Hz-1.7B-VD</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" />
+                </audio>
+              </div>
+            </div>
+          </article>
+
+          <article class="sample-box sample-item" data-language="Japanese" data-split="Special" data-search="Japanese Special Extra vocal Implicit Nonverbal cough historical context document">
+            <div class="sample-head">
+              <h3 class="sample-title">Japanese · Special</h3>
+              <span class="pill">Extra-vocal</span>
+              <span class="pill">Implicit Nonverbal</span>
+            </div>
+            <div class="prompt-box">
+              <strong>Instruction</strong>
+              <p>As you explain this, interrupt yourself with a couple of small coughs.</p>
+              <strong class="prompt-subtitle">Synthesis text</strong>
+              <p>この文書を理解するには、当時の歴史的背景を考慮することが重要です。</p>
+            </div>
+            <div class="audio-grid">
+              <div class="audio-card">
+                <h4>Gemini 2.5-Flash</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <h4>MiniMax-Speech-2.7</h4>
+                <div class="muted">Replace with your real audio URL.</div>
+                <audio controls>
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" />
+                </audio>
+              </div>
+            </div>
+          </article>
+
+          <div id="emptyState" class="card empty-state hidden">
+            <div class="card-inner">No samples match the current filters.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container faq-grid">
+        <div class="card">
+          <div class="card-inner">
+            <h2 class="section-title">What to replace before release</h2>
+            <p class="muted">This scaffold is designed to be fast to customize.</p>
+            <details open>
+              <summary>Links and metadata</summary>
+              <p class="muted">Replace the Paper / Code / Dataset buttons, update the title if needed, and add the final venue or arXiv link.</p>
+            </details>
+            <details>
+              <summary>Audio samples</summary>
+              <p class="muted">Swap the placeholder MP3 URLs for your own hosted files. You can group by language, difficulty, or control type.</p>
+            </details>
+            <details>
+              <summary>Leaderboard</summary>
+              <p class="muted">Expand the table with your full results, or add per-language tabs and downloadable CSV / JSON summaries.</p>
+            </details>
+          </div>
+        </div>
+
+        <div id="citation" class="card">
+          <div class="card-inner">
+            <h2 class="section-title">Citation</h2>
+            <p class="muted">If you use MINT-Bench in your research, please cite the paper.</p>
+            <div class="bib-box">
+              <pre>@inproceedings{mintbench2026,
+  title={MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following Text-to-Speech},
+  author={Anonymous Authors},
+  booktitle={Proceedings of the ACM International Conference on Multimedia},
+  year={2026}
+}</pre>
+            </div>
+            <div class="button-row">
+              <a class="btn" href="#">Copy BibTeX</a>
+              <a class="btn" href="#">Open paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 MINT-Bench. Built as a customizable research demo page.</div>
+      <div class="nav footer-nav">
+        <a href="#overview">Overview</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#examples">Examples</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
