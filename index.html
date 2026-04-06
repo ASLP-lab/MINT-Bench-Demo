@@ -1,353 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MINT-Bench Demo Page</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT-Bench | Multilingual Instruction-Following TTS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div>
-        <p class="brand-kicker">MINT-BENCH</p>
-        <p class="brand-sub">Instruction-Following TTS Benchmark Demo</p>
-      </div>
-      <nav class="nav">
-        <a href="#overview">Overview</a>
-        <a href="#leaderboard">Leaderboard</a>
-        <a href="#examples">Examples</a>
-        <a href="#citation">Citation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="container hero">
-      <div>
-        <span class="badge">ACM MM 2026 Submission</span>
-        <h1>MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following TTS</h1>
-        <p class="lead">
-          A static demo page for showcasing benchmark design, multilingual audio examples,
-          leaderboard results, and project resources for instruction-following text-to-speech.
-        </p>
-        <div class="button-row">
-          <a class="btn primary" href="#">Paper</a>
-          <a class="btn" href="#">Code</a>
-          <a class="btn" href="#">Dataset</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="./assets/figs/logo.png" alt="MINT-Bench Logo" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#leaderboard">Leaderboard</a>
+                <a href="#demos">Demos</a>
+            </div>
         </div>
-        <div class="tag-row">
-          <span class="tag">Taxonomy-driven</span>
-          <span class="tag">10 Languages</span>
-          <span class="tag">Hierarchical Evaluation</span>
-          <span class="tag">Timbre + Style + Extra-vocal</span>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-logo-wrapper">
+                <img src="./assets/figs/logo.png" alt="MINT-Bench Logo" class="hero-logo-img">
+            </div>
+            <h1>MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following Text-to-Speech</h1>
+            <p class="subtitle">A hierarchical multi-axis taxonomy, a scalable multi-stage data construction pipeline, and a hierarchical hybrid evaluation protocol for controllable and expressive speech generation.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">📄 Paper</a>
+                <a href="#" class="btn btn-secondary">💻 Code</a>
+                <a href="#" class="btn btn-secondary">🗄️ Dataset</a>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <aside class="card">
-        <div class="card-inner">
-          <h2>At a glance</h2>
-          <p class="muted">Core components of the benchmark and demo page.</p>
-          <div class="glance-list">
-            <div class="mini-panel">
-              <strong>Taxonomy</strong>
-              Difficulty level, control domain, control specification, and fine-grained control pattern.
-            </div>
-            <div class="mini-panel">
-              <strong>Multilingual Coverage</strong>
-              Chinese, English, German, Spanish, French, Italian, Japanese, Korean, Portuguese, and Russian.
-            </div>
-            <div class="mini-panel">
-              <strong>Hierarchical Evaluation</strong>
-              Content consistency, instruction following, perceptual quality, and optional timbre diversity.
-            </div>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section id="overview">
-      <div class="container">
-        <div class="stats">
-          <div class="stat-card">
-            <div class="stat-label">Languages</div>
-            <div class="stat-value">10</div>
-            <div class="stat-sub">Large splits for Chinese and English</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Atomic attributes</div>
-            <div class="stat-value">10</div>
-            <div class="stat-sub">Grouped into timbre and style</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Evaluation stages</div>
-            <div class="stat-value">3</div>
-            <div class="stat-sub">Content, instruction, quality</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Best open model</div>
-            <div class="stat-value stat-value-small">Qwen3TTS</div>
-            <div class="stat-sub">Competitive across multiple languages</div>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <div class="card">
-            <div class="card-inner">
-              <h2 class="section-title">Overview</h2>
-              <p class="muted">
-                MINT-Bench evaluates instruction-following TTS with a hierarchical multi-axis taxonomy,
-                a scalable data construction pipeline, and a hybrid evaluation protocol.
-              </p>
-              <div class="grid-3">
-                <div class="outline-box">
-                  <strong>1. Taxonomy</strong>
-                  <p class="muted">Easy / Hard / Special, with timbre, style, composition, and extra-vocal control.</p>
-                </div>
-                <div class="outline-box">
-                  <strong>2. Data Pipeline</strong>
-                  <p class="muted">Node specification, structured label planning, and instruction-text realization.</p>
-                </div>
-                <div class="outline-box">
-                  <strong>3. Evaluation</strong>
-                  <p class="muted">Progressive assessment of content consistency, instruction following, and perceptual quality.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <h2 class="section-title">Core inventory</h2>
-              <p class="muted">Atomic acoustic attributes underlying the benchmark.</p>
-              <div class="grid-2-small">
-                <div class="mini-panel">
-                  <strong>Timbre</strong>
-                  Age · Gender · Pitch · Texture
-                </div>
-                <div class="mini-panel">
-                  <strong>Style</strong>
-                  Speed · Volume · Emotion · Accent · Personality · Tone
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="leaderboard">
-      <div class="container">
-        <div class="card">
-          <div class="card-inner">
-            <h2 class="section-title">Leaderboard</h2>
-            <p class="muted">Top models adapted from the current paper tables. Replace or expand as needed.</p>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Model</th>
-                    <th>Type</th>
-                    <th>Overall</th>
-                    <th>Timbre</th>
-                    <th>Style</th>
-                    <th>Chinese</th>
-                    <th>English</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td><strong>Gemini 2.5-Flash</strong></td><td>Commercial</td><td>3.75</td><td>3.58</td><td>3.95</td><td>2.95</td><td>3.66</td></tr>
-                  <tr><td><strong>Gemini 2.5-Pro</strong></td><td>Commercial</td><td>3.63</td><td>3.53</td><td>3.82</td><td>2.93</td><td>3.45</td></tr>
-                  <tr><td><strong>Qwen3TTS-12Hz-1.7B-VD</strong></td><td>Open-source</td><td>3.19</td><td>3.36</td><td>3.35</td><td>3.12</td><td>2.94</td></tr>
-                  <tr><td><strong>ElevenLabs-ttv-v3</strong></td><td>Commercial</td><td>3.06</td><td>3.25</td><td>3.03</td><td>2.72</td><td>3.15</td></tr>
-                  <tr><td><strong>MiniMax-Speech-2.7</strong></td><td>Commercial</td><td>2.70</td><td>2.99</td><td>2.91</td><td>2.62</td><td>2.62</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples">
-      <div class="container examples-layout">
-        <aside class="card">
-          <div class="card-inner">
-            <h2 class="section-title">Example browser</h2>
-            <p class="muted">Search and filter multilingual benchmark cases.</p>
-            <input id="searchInput" class="search-input" type="text" placeholder="Search language, split, subtype..." />
-            <div class="filter-group" id="languageFilters">
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="Chinese">Chinese</button>
-              <button class="filter-btn" data-filter="English">English</button>
-              <button class="filter-btn" data-filter="Japanese">Japanese</button>
-            </div>
-            <div class="filter-group" id="splitFilters">
-              <button class="filter-btn active" data-split="all">All splits</button>
-              <button class="filter-btn" data-split="Easy">Easy</button>
-              <button class="filter-btn" data-split="Hard">Hard</button>
-              <button class="filter-btn" data-split="Special">Special</button>
-            </div>
-            <div class="mini-panel top-gap">
-              <strong>Tip</strong>
-              Replace the sample cards with your own multilingual benchmark outputs and hosted audio files.
-            </div>
-          </div>
+    <div class="page-wrapper">
+        
+        <aside class="toc-sidebar">
+            <div class="toc-title">On this page</div>
+            <ul class="toc-list">
+                <li><a href="#overview" class="toc-link active">Overview</a></li>
+                <li>
+                    <a href="#leaderboard" class="toc-link">Leaderboard</a>
+                    <ul class="toc-sublist">
+                        <li><a href="#overall-leaderboard" class="toc-link toc-sublink">Overall</a></li>
+                        <li><a href="#detailed-leaderboard" class="toc-link toc-sublink">Detailed</a></li>
+                    </ul>
+                </li>
+                <li><a href="#demos" class="toc-link">Demos</a></li>
+            </ul>
         </aside>
 
-        <div class="sample-list" id="sampleList">
-          <article class="sample-box sample-item" data-language="Chinese" data-split="Easy" data-search="Chinese Easy Timbre Atomic Age Speak as if you are a young child 我可以喝一杯果汁吗">
-            <div class="sample-head">
-              <h3 class="sample-title">Chinese · Easy</h3>
-              <span class="pill">Timbre</span>
-              <span class="pill">Atomic / Age</span>
-            </div>
-            <div class="prompt-box">
-              <strong>Instruction</strong>
-              <p>Speak as if you are a young child.</p>
-              <strong class="prompt-subtitle">Synthesis text</strong>
-              <p>我可以喝一杯果汁吗？</p>
-            </div>
-            <div class="audio-grid">
-              <div class="audio-card">
-                <h4>Gemini 2.5-Flash</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
-                </audio>
-              </div>
-              <div class="audio-card">
-                <h4>Qwen3TTS-12Hz-1.7B-VD</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" />
-                </audio>
-              </div>
-            </div>
-          </article>
+        <main class="main-content">
+            
+            <section id="overview" class="section">
+                <div class="container">
+                    <h2 class="section-title">Overview</h2>
+                    
+                    <div class="card">
+                        <h3>Abstract</h3>
+                        <p>Instruction-following text-to-speech (TTS) has emerged as an important capability for controllable and expressive speech generation, yet its evaluation remains underdeveloped due to limited benchmark coverage, weak diagnostic granularity, and insufficient multilingual support. We present <strong>MINT-Bench</strong>, a comprehensive multilingual benchmark for instruction-following TTS. MINT-Bench is built upon a hierarchical multi-axis taxonomy, a scalable multi-stage data construction pipeline, and a hierarchical hybrid evaluation protocol that jointly assesses content consistency, instruction following, and perceptual quality. Experiments across ten languages show that current systems remain far from solved: frontier commercial systems lead overall, while leading open-source models become highly competitive and can even outperform commercial counterparts in localized settings such as Chinese. The benchmark further reveals that harder compositional and paralinguistic controls remain major bottlenecks for current systems. We release MINT-Bench together with the data construction and evaluation toolkit to support future research on controllable, multilingual, and diagnostically grounded TTS evaluation.</p>
+                    </div>
+                    
+                    <div class="card mt-4">
+                        <h3>MINT-Bench Framework</h3>
+                        
+                        <div class="image-wrapper">
+                            <img src="assets/figs/overview.png" alt="MINT-Bench Overview">
+                        </div>
+                        
+                        <p class="image-caption">
+                            <strong>Figure 1: Overview of MINT-Bench.</strong> Rather than treating instruction-following TTS evaluation as a flat collection of prompts, MINT-Bench formulates it as a structured benchmark construction and evaluation problem. The framework consists of three tightly coupled components: a <em>Hierarchical Multi-axis Taxonomy</em> that organizes benchmark coverage, a controlled <em>Three-stage Data Construction Pipeline</em> that instantiates valid benchmark cases into natural-language items, and a <em>Hierarchical Hybrid Evaluation Protocol</em> that assesses synthesized speech from multiple complementary perspectives.
+                        </p>
+                    </div>
 
-          <article class="sample-box sample-item" data-language="English" data-split="Hard" data-search="English Hard Composition Dynamic Begin speaking slowly quietly and thoughtfully At first I thought it was just a simple mistake">
-            <div class="sample-head">
-              <h3 class="sample-title">English · Hard</h3>
-              <span class="pill">Composition</span>
-              <span class="pill">Dynamic</span>
-            </div>
-            <div class="prompt-box">
-              <strong>Instruction</strong>
-              <p>Begin speaking slowly, quietly, and thoughtfully. Then build into a fast, loud, and angry delivery.</p>
-              <strong class="prompt-subtitle">Synthesis text</strong>
-              <p>At first, I thought it was just a simple mistake. But then I saw the pattern, and I realized this was deliberate.</p>
-            </div>
-            <div class="audio-grid">
-              <div class="audio-card">
-                <h4>Gemini 2.5-Pro</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" />
-                </audio>
-              </div>
-              <div class="audio-card">
-                <h4>Qwen3TTS-12Hz-1.7B-VD</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" />
-                </audio>
-              </div>
-            </div>
-          </article>
+                    <div class="card mt-4">
+                        <h3>Hierarchical Hybrid Evaluation Protocol</h3>
+                        
+                        <div class="image-wrapper">
+                            <img src="assets/figs/evaluation.png" alt="Evaluation Pipeline">
+                        </div>
+                        
+                        <p class="image-caption">
+                            <strong>Figure 2: Hierarchical hybrid evaluation protocol of MINT-Bench.</strong> The pipeline progressively evaluates content consistency, instruction following, perceptual quality, and timbre diversity.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-          <article class="sample-box sample-item" data-language="Japanese" data-split="Special" data-search="Japanese Special Extra vocal Implicit Nonverbal cough historical context document">
-            <div class="sample-head">
-              <h3 class="sample-title">Japanese · Special</h3>
-              <span class="pill">Extra-vocal</span>
-              <span class="pill">Implicit Nonverbal</span>
-            </div>
-            <div class="prompt-box">
-              <strong>Instruction</strong>
-              <p>As you explain this, interrupt yourself with a couple of small coughs.</p>
-              <strong class="prompt-subtitle">Synthesis text</strong>
-              <p>この文書を理解するには、当時の歴史的背景を考慮することが重要です。</p>
-            </div>
-            <div class="audio-grid">
-              <div class="audio-card">
-                <h4>Gemini 2.5-Flash</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" />
-                </audio>
-              </div>
-              <div class="audio-card">
-                <h4>MiniMax-Speech-2.7</h4>
-                <div class="muted">Replace with your real audio URL.</div>
-                <audio controls>
-                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" />
-                </audio>
-              </div>
-            </div>
-          </article>
+            <section id="leaderboard" class="section">
+                <div class="container-wide">
+                    <h2 class="section-title">Leaderboard</h2>
+                    
+                    <h3 id="overall-leaderboard" class="section-title">Overall Leaderboard</h3>
+                    <div class="card">
+                        <div class="lang-tabs" id="overall-lang-tabs">
+                            <button class="lang-tab active" data-lang="en">English</button>
+                            <button class="lang-tab" data-lang="zh">Chinese</button>
+                            <button class="lang-tab" data-lang="ja">Japanese</button>
+                            <button class="lang-tab" data-lang="ko">Korean</button>
+                            <button class="lang-tab" data-lang="fr">French</button>
+                            <button class="lang-tab" data-lang="de">German</button>
+                            <button class="lang-tab" data-lang="es">Spanish</button>
+                            <button class="lang-tab" data-lang="pt">Portuguese</button>
+                            <button class="lang-tab" data-lang="it">Italian</button>
+                            <button class="lang-tab" data-lang="ru">Russian</button>
+                        </div>
 
-          <div id="emptyState" class="card empty-state hidden">
-            <div class="card-inner">No samples match the current filters.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+                        <div class="table-legend">
+                            <strong>Note:</strong> The main score in <strong>bold</strong> is the penalized score (Instuction Following / Perceptual Quality) factoring in content consistency. 
+                            The smaller text below shows the <code>raw</code> score (unpenalized), Word Error Rate (<code>WER</code>), and the content consistency pass rate (<code>Pass</code>).
+                        </div>
 
-    <section>
-      <div class="container faq-grid">
-        <div class="card">
-          <div class="card-inner">
-            <h2 class="section-title">What to replace before release</h2>
-            <p class="muted">This scaffold is designed to be fast to customize.</p>
-            <details open>
-              <summary>Links and metadata</summary>
-              <p class="muted">Replace the Paper / Code / Dataset buttons, update the title if needed, and add the final venue or arXiv link.</p>
-            </details>
-            <details>
-              <summary>Audio samples</summary>
-              <p class="muted">Swap the placeholder MP3 URLs for your own hosted files. You can group by language, difficulty, or control type.</p>
-            </details>
-            <details>
-              <summary>Leaderboard</summary>
-              <p class="muted">Expand the table with your full results, or add per-language tabs and downloadable CSV / JSON summaries.</p>
-            </details>
-          </div>
-        </div>
+                        <div class="table-responsive">
+                            <table class="leaderboard-table active-table" id="table-en">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="3" class="sticky-col">Model</th>
+                                        <th rowspan="3">Overall avg</th>
+                                        <th rowspan="3">Timbre avg</th>
+                                        <th rowspan="3">Style avg</th>
+                                        <th colspan="3" class="th-easy">Easy</th>
+                                        <th colspan="6" class="th-hard">Hard</th>
+                                        <th colspan="4" class="th-special">Special</th>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2" class="th-easy-sub">Tag</th>
+                                        <th rowspan="2" class="th-easy-sub">Direct</th>
+                                        <th rowspan="2" class="th-easy-sub">Simple-comp</th>
+                                        <th colspan="4" class="th-hard-sub">complex comp</th>
+                                        <th colspan="2" class="th-hard-sub">Persona</th>
+                                        <th colspan="2" class="th-special-sub">Abnormal</th>
+                                        <th colspan="2" class="th-special-sub">Nonverbal</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-hard-sub">multi-comp</th>
+                                        <th class="th-hard-sub">dynamic</th>
+                                        <th class="th-hard-sub">layered</th>
+                                        <th class="th-hard-sub">conflict</th>
+                                        <th class="th-hard-sub">scenario</th>
+                                        <th class="th-hard-sub">character</th>
+                                        <th class="th-special-sub">disfluency</th>
+                                        <th class="th-special-sub">dysphonia</th>
+                                        <th class="th-special-sub">implicit</th>
+                                        <th class="th-special-sub">explicit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">geminiflash</td>
+                                        <td><div class="score-main">2.44 / 3.66</div><div class="score-sub">raw 2.68 / 4.02<br>WER 1.4% | Pass 91.0%</div></td>
+                                        <td><div class="score-main">2.33 / 3.37</div><div class="score-sub">raw 2.62 / 3.78<br>WER 1.7% | Pass 89.1%</div></td>
+                                        <td><div class="score-main">2.59 / 3.96</div><div class="score-sub">raw 2.84 / 4.34<br>WER 1.2% | Pass 91.3%</div></td>
+                                        <td><div class="score-main">2.50 / 3.74</div><div class="score-sub">raw 2.73 / 4.08<br>WER 1.3% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">2.53 / 3.81</div><div class="score-sub">raw 2.79 / 4.21<br>WER 1.5% | Pass 90.5%</div></td>
+                                        <td><div class="score-main">2.65 / 4.07</div><div class="score-sub">raw 2.89 / 4.44<br>WER 0.8% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">2.50 / 3.64</div><div class="score-sub">raw 2.76 / 4.03<br>WER 1.6% | Pass 90.3%</div></td>
+                                        <td><div class="score-main">2.24 / 3.54</div><div class="score-sub">raw 2.78 / 4.39<br>WER 2.1% | Pass 80.6%</div></td>
+                                        <td><div class="score-main">2.46 / 3.94</div><div class="score-sub">raw 2.81 / 4.50<br>WER 1.2% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">2.31 / 3.25</div><div class="score-sub">raw 2.47 / 3.47<br>WER 0.8% | Pass 93.8%</div></td>
+                                        <td><div class="score-main">2.28 / 3.38</div><div class="score-sub">raw 2.63 / 3.90<br>WER 1.1% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">2.17 / 3.22</div><div class="score-sub">raw 2.50 / 3.70<br>WER 1.5% | Pass 86.9%</div></td>
+                                        <td><div class="score-main">1.95 / 2.55</div><div class="score-sub">raw 1.95 / 2.55<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.62 / 4.08</div><div class="score-sub">raw 2.62 / 4.08<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.56 / 3.94</div><div class="score-sub">raw 2.56 / 3.94<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.31 / 3.56</div><div class="score-sub">raw 2.31 / 3.56<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+                                    
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">geminipro</td>
+                                        <td><div class="score-main">2.39 / 3.45</div><div class="score-sub">raw 2.65 / 3.83<br>WER 1.4% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">2.34 / 3.17</div><div class="score-sub">raw 2.61 / 3.54<br>WER 1.5% | Pass 89.5%</div></td>
+                                        <td><div class="score-main">2.53 / 3.73</div><div class="score-sub">raw 2.81 / 4.15<br>WER 1.3% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">2.47 / 3.49</div><div class="score-sub">raw 2.72 / 3.85<br>WER 1.5% | Pass 90.7%</div></td>
+                                        <td><div class="score-main">2.51 / 3.64</div><div class="score-sub">raw 2.80 / 4.06<br>WER 1.6% | Pass 89.6%</div></td>
+                                        <td><div class="score-main">2.52 / 3.60</div><div class="score-sub">raw 2.83 / 4.06<br>WER 1.2% | Pass 88.9%</div></td>
+                                        <td><div class="score-main">2.44 / 3.32</div><div class="score-sub">raw 2.62 / 3.57<br>WER 1.2% | Pass 93.1%</div></td>
+                                        <td><div class="score-main">2.35 / 3.80</div><div class="score-sub">raw 2.92 / 4.72<br>WER 1.4% | Pass 80.6%</div></td>
+                                        <td><div class="score-main">2.23 / 3.38</div><div class="score-sub">raw 2.75 / 4.16<br>WER 1.6% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">2.40 / 3.57</div><div class="score-sub">raw 2.56 / 3.81<br>WER 0.8% | Pass 93.8%</div></td>
+                                        <td><div class="score-main">2.22 / 3.26</div><div class="score-sub">raw 2.57 / 3.77<br>WER 1.1% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">2.05 / 2.91</div><div class="score-sub">raw 2.40 / 3.42<br>WER 1.3% | Pass 85.1%</div></td>
+                                        <td><div class="score-main">1.90 / 2.40</div><div class="score-sub">raw 1.80 / 2.40<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.71 / 4.21</div><div class="score-sub">raw 2.71 / 4.21<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.31 / 3.50</div><div class="score-sub">raw 2.31 / 3.50<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.35 / 3.58</div><div class="score-sub">raw 2.35 / 3.58<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
 
-        <div id="citation" class="card">
-          <div class="card-inner">
-            <h2 class="section-title">Citation</h2>
-            <p class="muted">If you use MINT-Bench in your research, please cite the paper.</p>
-            <div class="bib-box">
-              <pre>@inproceedings{mintbench2026,
-  title={MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following Text-to-Speech},
-  author={Anonymous Authors},
-  booktitle={Proceedings of the ACM International Conference on Multimedia},
-  year={2026}
-}</pre>
-            </div>
-            <div class="button-row">
-              <a class="btn" href="#">Copy BibTeX</a>
-              <a class="btn" href="#">Open paper</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">elevenlabs</td>
+                                        <td><div class="score-main">2.23 / 3.12</div><div class="score-sub">raw 2.50 / 3.50<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.44 / 3.27</div><div class="score-sub">raw 2.74 / 3.67<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.25 / 3.13</div><div class="score-sub">raw 2.53 / 3.51<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.35 / 3.22</div><div class="score-sub">raw 2.64 / 3.61<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.25 / 3.06</div><div class="score-sub">raw 2.52 / 3.43<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.55 / 3.65</div><div class="score-sub">raw 2.86 / 4.09<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.30 / 3.00</div><div class="score-sub">raw 2.58 / 3.36<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">1.91 / 2.50</div><div class="score-sub">raw 2.14 / 2.81<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.26 / 3.21</div><div class="score-sub">raw 2.53 / 3.59<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.29 / 3.30</div><div class="score-sub">raw 2.57 / 3.70<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.50 / 3.95</div><div class="score-sub">raw 2.80 / 4.43<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.42 / 3.66</div><div class="score-sub">raw 2.72 / 4.11<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">0.89 / 0.89</div><div class="score-sub">raw 1.00 / 1.00<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">1.56 / 2.08</div><div class="score-sub">raw 1.75 / 2.33<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">1.27 / 1.61</div><div class="score-sub">raw 1.42 / 1.81<br>WER 1.4% | Pass 89.2%</div></td>
+                                        <td><div class="score-main">2.29 / 3.40</div><div class="score-sub">raw 2.56 / 3.81<br>WER 1.4% | Pass 89.2%</div></td>
+                                    </tr>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 MINT-Bench. Built as a customizable research demo page.</div>
-      <div class="nav footer-nav">
-        <a href="#overview">Overview</a>
-        <a href="#leaderboard">Leaderboard</a>
-        <a href="#examples">Examples</a>
-        <a href="#citation">Citation</a>
-      </div>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">qwen3tts</td>
+                                        <td><div class="score-main">2.12 / 2.94</div><div class="score-sub">raw 2.33 / 3.24<br>WER 1.5% | Pass 90.9%</div></td>
+                                        <td><div class="score-main">2.28 / 3.16</div><div class="score-sub">raw 2.55 / 3.53<br>WER 1.3% | Pass 89.4%</div></td>
+                                        <td><div class="score-main">2.16 / 3.03</div><div class="score-sub">raw 2.39 / 3.34<br>WER 1.3% | Pass 90.7%</div></td>
+                                        <td><div class="score-main">2.20 / 3.14</div><div class="score-sub">raw 2.46 / 3.51<br>WER 1.7% | Pass 89.4%</div></td>
+                                        <td><div class="score-main">2.13 / 2.96</div><div class="score-sub">raw 2.39 / 3.33<br>WER 2.2% | Pass 89.1%</div></td>
+                                        <td><div class="score-main">2.44 / 3.44</div><div class="score-sub">raw 2.67 / 3.75<br>WER 0.9% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">2.35 / 3.27</div><div class="score-sub">raw 2.53 / 3.51<br>WER 1.0% | Pass 93.1%</div></td>
+                                        <td><div class="score-main">1.57 / 1.99</div><div class="score-sub">raw 1.89 / 2.39<br>WER 0.9% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">2.11 / 2.90</div><div class="score-sub">raw 2.41 / 3.31<br>WER 1.0% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">2.15 / 2.79</div><div class="score-sub">raw 2.22 / 2.88<br>WER 0.4% | Pass 96.9%</div></td>
+                                        <td><div class="score-main">2.06 / 2.97</div><div class="score-sub">raw 2.47 / 3.57<br>WER 1.3% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">2.12 / 2.96</div><div class="score-sub">raw 2.38 / 3.31<br>WER 1.3% | Pass 89.3%</div></td>
+                                        <td><div class="score-main">1.20 / 1.20</div><div class="score-sub">raw 1.20 / 1.20<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.21 / 3.29</div><div class="score-sub">raw 2.21 / 3.29<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.81 / 2.44</div><div class="score-sub">raw 1.81 / 2.44<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.59 / 2.03</div><div class="score-sub">raw 1.59 / 2.03<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">minimax</td>
+                                        <td><div class="score-main">1.95 / 2.62</div><div class="score-sub">raw 2.15 / 2.89<br>WER 1.4% | Pass 90.5%</div></td>
+                                        <td><div class="score-main">2.12 / 2.82</div><div class="score-sub">raw 2.39 / 3.19<br>WER 1.5% | Pass 88.6%</div></td>
+                                        <td><div class="score-main">2.04 / 2.77</div><div class="score-sub">raw 2.26 / 3.08<br>WER 1.4% | Pass 90.2%</div></td>
+                                        <td><div class="score-main">2.07 / 2.85</div><div class="score-sub">raw 2.30 / 3.16<br>WER 1.7% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">1.99 / 2.65</div><div class="score-sub">raw 2.22 / 2.96<br>WER 1.6% | Pass 89.5%</div></td>
+                                        <td><div class="score-main">2.35 / 3.20</div><div class="score-sub">raw 2.68 / 3.65<br>WER 1.3% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">2.27 / 3.02</div><div class="score-sub">raw 2.44 / 3.25<br>WER 1.1% | Pass 93.0%</div></td>
+                                        <td><div class="score-main">1.53 / 1.99</div><div class="score-sub">raw 1.83 / 2.39<br>WER 0.8% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.57 / 2.02</div><div class="score-sub">raw 2.09 / 2.69<br>WER 2.9% | Pass 75.0%</div></td>
+                                        <td><div class="score-main">2.07 / 2.83</div><div class="score-sub">raw 2.07 / 2.83<br>WER 0.1% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.06 / 3.00</div><div class="score-sub">raw 2.47 / 3.60<br>WER 1.4% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">2.09 / 2.93</div><div class="score-sub">raw 2.32 / 3.25<br>WER 1.2% | Pass 90.2%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.08 / 1.17</div><div class="score-sub">raw 1.08 / 1.17<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.26 / 1.48</div><div class="score-sub">raw 1.26 / 1.48<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+                                    
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">moss1b7</td>
+                                        <td><div class="score-main">1.90 / 2.53</div><div class="score-sub">raw 2.20 / 2.93<br>WER 2.8% | Pass 86.4%</div></td>
+                                        <td><div class="score-main">2.01 / 2.61</div><div class="score-sub">raw 2.38 / 3.08<br>WER 2.8% | Pass 84.6%</div></td>
+                                        <td><div class="score-main">1.99 / 2.72</div><div class="score-sub">raw 2.30 / 3.14<br>WER 2.7% | Pass 86.5%</div></td>
+                                        <td><div class="score-main">1.97 / 2.52</div><div class="score-sub">raw 2.25 / 2.89<br>WER 2.2% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.90 / 2.57</div><div class="score-sub">raw 2.27 / 3.06<br>WER 3.5% | Pass 83.8%</div></td>
+                                        <td><div class="score-main">2.29 / 3.09</div><div class="score-sub">raw 2.54 / 3.42<br>WER 0.9% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">2.01 / 2.78</div><div class="score-sub">raw 2.34 / 3.24<br>WER 4.5% | Pass 85.7%</div></td>
+                                        <td><div class="score-main">1.71 / 2.35</div><div class="score-sub">raw 2.36 / 3.25<br>WER 4.0% | Pass 72.2%</div></td>
+                                        <td><div class="score-main">1.90 / 2.64</div><div class="score-sub">raw 2.34 / 3.25<br>WER 2.4% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">2.11 / 2.84</div><div class="score-sub">raw 2.25 / 3.03<br>WER 0.9% | Pass 93.8%</div></td>
+                                        <td><div class="score-main">1.76 / 2.17</div><div class="score-sub">raw 2.03 / 2.50<br>WER 1.0% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">1.74 / 2.28</div><div class="score-sub">raw 2.20 / 2.90<br>WER 3.6% | Pass 78.7%</div></td>
+                                        <td><div class="score-main">1.30 / 1.50</div><div class="score-sub">raw 1.30 / 1.50<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.04 / 2.92</div><div class="score-sub">raw 2.04 / 2.92<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.97 / 2.77</div><div class="score-sub">raw 1.97 / 2.77<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.16 / 1.28</div><div class="score-sub">raw 1.16 / 1.28<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">hume</td>
+                                        <td><div class="score-main">1.86 / 2.51</div><div class="score-sub">raw 2.07 / 2.79<br>WER 1.6% | Pass 89.9%</div></td>
+                                        <td><div class="score-main">2.08 / 2.86</div><div class="score-sub">raw 2.39 / 3.30<br>WER 1.8% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">1.95 / 2.69</div><div class="score-sub">raw 2.16 / 2.98<br>WER 1.4% | Pass 89.5%</div></td>
+                                        <td><div class="score-main">2.10 / 3.00</div><div class="score-sub">raw 2.38 / 3.41<br>WER 2.0% | Pass 88.1%</div></td>
+                                        <td><div class="score-main">2.08 / 2.98</div><div class="score-sub">raw 2.27 / 3.26<br>WER 1.3% | Pass 91.4%</div></td>
+                                        <td><div class="score-main">2.22 / 3.11</div><div class="score-sub">raw 2.57 / 3.60<br>WER 1.3% | Pass 86.6%</div></td>
+                                        <td><div class="score-main">2.00 / 2.71</div><div class="score-sub">raw 2.17 / 2.94<br>WER 1.2% | Pass 92.2%</div></td>
+                                        <td><div class="score-main">1.65 / 1.99</div><div class="score-sub">raw 1.92 / 2.31<br>WER 1.9% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">1.52 / 1.62</div><div class="score-sub">raw 1.81 / 1.94<br>WER 1.9% | Pass 83.9%</div></td>
+                                        <td><div class="score-main">1.44 / 1.68</div><div class="score-sub">raw 1.60 / 1.87<br>WER 1.2% | Pass 90.0%</div></td>
+                                        <td><div class="score-main">1.97 / 2.56</div><div class="score-sub">raw 2.37 / 3.07<br>WER 1.3% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.74 / 2.28</div><div class="score-sub">raw 2.03 / 2.66<br>WER 1.8% | Pass 85.7%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.03 / 1.03</div><div class="score-sub">raw 1.03 / 1.03<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mimo</td>
+                                        <td><div class="score-main">1.75 / 2.22</div><div class="score-sub">raw 2.13 / 2.70<br>WER 3.5% | Pass 82.2%</div></td>
+                                        <td><div class="score-main">1.80 / 2.17</div><div class="score-sub">raw 2.29 / 2.76<br>WER 4.1% | Pass 78.6%</div></td>
+                                        <td><div class="score-main">1.83 / 2.37</div><div class="score-sub">raw 2.24 / 2.91<br>WER 3.1% | Pass 81.5%</div></td>
+                                        <td><div class="score-main">1.87 / 2.42</div><div class="score-sub">raw 2.24 / 2.89<br>WER 3.2% | Pass 83.8%</div></td>
+                                        <td><div class="score-main">1.79 / 2.28</div><div class="score-sub">raw 2.22 / 2.83<br>WER 4.5% | Pass 80.3%</div></td>
+                                        <td><div class="score-main">2.03 / 2.49</div><div class="score-sub">raw 2.47 / 3.04<br>WER 2.0% | Pass 81.9%</div></td>
+                                        <td><div class="score-main">1.95 / 2.49</div><div class="score-sub">raw 2.31 / 2.94<br>WER 3.3% | Pass 84.5%</div></td>
+                                        <td><div class="score-main">1.44 / 1.81</div><div class="score-sub">raw 2.00 / 2.50<br>WER 3.1% | Pass 72.2%</div></td>
+                                        <td><div class="score-main">1.25 / 1.46</div><div class="score-sub">raw 2.00 / 2.34<br>WER 5.0% | Pass 62.5%</div></td>
+                                        <td><div class="score-main">1.71 / 2.25</div><div class="score-sub">raw 2.28 / 3.00<br>WER 2.9% | Pass 75.0%</div></td>
+                                        <td><div class="score-main">1.89 / 2.53</div><div class="score-sub">raw 2.27 / 3.03<br>WER 2.1% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.63 / 2.13</div><div class="score-sub">raw 2.16 / 2.82<br>WER 3.3% | Pass 75.4%</div></td>
+                                        <td><div class="score-main">1.05 / 1.05</div><div class="score-sub">raw 1.05 / 1.05<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.96 / 2.54</div><div class="score-sub">raw 1.96 / 2.54<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.47 / 1.91</div><div class="score-sub">raw 1.47 / 1.91<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.03 / 1.03</div><div class="score-sub">raw 1.03 / 1.03<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">gpt4omini</td>
+                                        <td><div class="score-main">1.69 / 2.15</div><div class="score-sub">raw 1.89 / 2.40<br>WER 1.7% | Pass 89.4%</div></td>
+                                        <td><div class="score-main">1.70 / 2.09</div><div class="score-sub">raw 1.91 / 2.35<br>WER 1.9% | Pass 88.6%</div></td>
+                                        <td><div class="score-main">1.78 / 2.30</div><div class="score-sub">raw 1.98 / 2.56<br>WER 1.4% | Pass 90.0%</div></td>
+                                        <td><div class="score-main">1.63 / 2.07</div><div class="score-sub">raw 1.81 / 2.31<br>WER 1.6% | Pass 90.0%</div></td>
+                                        <td><div class="score-main">1.83 / 2.42</div><div class="score-sub">raw 2.03 / 2.68<br>WER 2.0% | Pass 90.2%</div></td>
+                                        <td><div class="score-main">1.74 / 2.16</div><div class="score-sub">raw 1.96 / 2.43<br>WER 1.4% | Pass 88.9%</div></td>
+                                        <td><div class="score-main">1.81 / 2.22</div><div class="score-sub">raw 1.97 / 2.42<br>WER 1.4% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">1.72 / 2.24</div><div class="score-sub">raw 2.14 / 2.78<br>WER 1.3% | Pass 80.6%</div></td>
+                                        <td><div class="score-main">1.74 / 2.19</div><div class="score-sub">raw 2.06 / 2.59<br>WER 1.4% | Pass 84.4%</div></td>
+                                        <td><div class="score-main">1.87 / 2.40</div><div class="score-sub">raw 2.00 / 2.57<br>WER 0.9% | Pass 93.3%</div></td>
+                                        <td><div class="score-main">1.61 / 1.89</div><div class="score-sub">raw 2.10 / 2.47<br>WER 1.5% | Pass 76.7%</div></td>
+                                        <td><div class="score-main">1.47 / 1.79</div><div class="score-sub">raw 1.78 / 2.16<br>WER 2.2% | Pass 82.8%</div></td>
+                                        <td><div class="score-main">1.30 / 1.30</div><div class="score-sub">raw 1.30 / 1.30<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.88 / 2.71</div><div class="score-sub">raw 1.88 / 2.71<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.62 / 2.19</div><div class="score-sub">raw 1.62 / 2.19<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.59 / 2.03</div><div class="score-sub">raw 1.59 / 2.03<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mingmoe</td>
+                                        <td><div class="score-main">1.51 / 1.79</div><div class="score-sub">raw 1.70 / 2.01<br>WER 1.8% | Pass 89.1%</div></td>
+                                        <td><div class="score-main">1.68 / 1.94</div><div class="score-sub">raw 1.91 / 2.20<br>WER 1.8% | Pass 88.2%</div></td>
+                                        <td><div class="score-main">1.58 / 1.89</div><div class="score-sub">raw 1.75 / 2.10<br>WER 1.5% | Pass 90.0%</div></td>
+                                        <td><div class="score-main">1.70 / 2.17</div><div class="score-sub">raw 1.93 / 2.47<br>WER 2.1% | Pass 87.8%</div></td>
+                                        <td><div class="score-main">1.61 / 1.87</div><div class="score-sub">raw 1.79 / 2.08<br>WER 2.0% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">1.99 / 2.43</div><div class="score-sub">raw 2.17 / 2.65<br>WER 0.8% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">1.41 / 1.52</div><div class="score-sub">raw 1.52 / 1.63<br>WER 1.0% | Pass 93.0%</div></td>
+                                        <td><div class="score-main">1.60 / 2.06</div><div class="score-sub">raw 1.92 / 2.47<br>WER 1.4% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.27 / 1.32</div><div class="score-sub">raw 1.56 / 1.62<br>WER 2.0% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">1.20 / 1.20</div><div class="score-sub">raw 1.38 / 1.38<br>WER 1.6% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.56 / 1.99</div><div class="score-sub">raw 1.80 / 2.30<br>WER 1.0% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">1.31 / 1.55</div><div class="score-sub">raw 1.62 / 1.91<br>WER 2.0% | Pass 81.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.03 / 1.03</div><div class="score-sub">raw 1.03 / 1.03<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.12 / 1.25</div><div class="score-sub">raw 1.12 / 1.25<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mingdense</td>
+                                        <td><div class="score-main">1.41 / 1.70</div><div class="score-sub">raw 1.63 / 1.96<br>WER 2.4% | Pass 86.4%</div></td>
+                                        <td><div class="score-main">1.55 / 1.91</div><div class="score-sub">raw 1.80 / 2.21<br>WER 2.5% | Pass 86.2%</div></td>
+                                        <td><div class="score-main">1.46 / 1.75</div><div class="score-sub">raw 1.68 / 2.02<br>WER 2.2% | Pass 86.7%</div></td>
+                                        <td><div class="score-main">1.62 / 2.10</div><div class="score-sub">raw 1.85 / 2.39<br>WER 2.3% | Pass 87.8%</div></td>
+                                        <td><div class="score-main">1.46 / 1.88</div><div class="score-sub">raw 1.76 / 2.26<br>WER 3.5% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.69 / 2.08</div><div class="score-sub">raw 1.93 / 2.38<br>WER 1.4% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.41 / 1.48</div><div class="score-sub">raw 1.54 / 1.61<br>WER 1.3% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">1.33 / 1.55</div><div class="score-sub">raw 1.62 / 1.88<br>WER 2.1% | Pass 82.4%</div></td>
+                                        <td><div class="score-main">1.08 / 1.12</div><div class="score-sub">raw 1.50 / 1.56<br>WER 2.9% | Pass 71.9%</div></td>
+                                        <td><div class="score-main">1.23 / 1.29</div><div class="score-sub">raw 1.41 / 1.47<br>WER 2.2% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.20 / 1.33</div><div class="score-sub">raw 1.57 / 1.73<br>WER 1.4% | Pass 76.7%</div></td>
+                                        <td><div class="score-main">1.27 / 1.54</div><div class="score-sub">raw 1.58 / 1.91<br>WER 2.4% | Pass 80.7%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.04 / 1.04</div><div class="score-sub">raw 1.04 / 1.04<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.06 / 1.13</div><div class="score-sub">raw 1.06 / 1.13<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">parlerttslarge</td>
+                                        <td><div class="score-main">1.38 / 1.52</div><div class="score-sub">raw 1.72 / 1.90<br>WER 4.4% | Pass 80.2%</div></td>
+                                        <td><div class="score-main">1.61 / 1.71</div><div class="score-sub">raw 2.02 / 2.14<br>WER 3.8% | Pass 79.7%</div></td>
+                                        <td><div class="score-main">1.49 / 1.68</div><div class="score-sub">raw 1.84 / 2.08<br>WER 4.0% | Pass 81.0%</div></td>
+                                        <td><div class="score-main">1.45 / 1.61</div><div class="score-sub">raw 1.82 / 2.03<br>WER 4.5% | Pass 79.3%</div></td>
+                                        <td><div class="score-main">1.65 / 1.85</div><div class="score-sub">raw 1.92 / 2.15<br>WER 2.5% | Pass 85.9%</div></td>
+                                        <td><div class="score-main">1.74 / 1.88</div><div class="score-sub">raw 2.12 / 2.29<br>WER 2.6% | Pass 81.9%</div></td>
+                                        <td><div class="score-main">1.64 / 1.76</div><div class="score-sub">raw 1.90 / 2.04<br>WER 2.7% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">0.85 / 0.88</div><div class="score-sub">raw 1.61 / 1.67<br>WER 6.9% | Pass 52.8%</div></td>
+                                        <td><div class="score-main">1.35 / 1.55</div><div class="score-sub">raw 1.97 / 2.25<br>WER 6.4% | Pass 68.8%</div></td>
+                                        <td><div class="score-main">1.15 / 1.39</div><div class="score-sub">raw 1.75 / 2.12<br>WER 10.5% | Pass 65.6%</div></td>
+                                        <td><div class="score-main">0.93 / 1.03</div><div class="score-sub">raw 1.27 / 1.40<br>WER 4.4% | Pass 73.3%</div></td>
+                                        <td><div class="score-main">0.94 / 1.01</div><div class="score-sub">raw 1.39 / 1.51<br>WER 5.6% | Pass 67.2%</div></td>
+                                        <td><div class="score-main">1.15 / 1.15</div><div class="score-sub">raw 1.15 / 1.15<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.92 / 2.29</div><div class="score-sub">raw 1.92 / 2.29<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.06 / 1.12</div><div class="score-sub">raw 1.06 / 1.12<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">parlerttsmini</td>
+                                        <td><div class="score-main">1.04 / 1.13</div><div class="score-sub">raw 1.55 / 1.69<br>WER 17.5% | Pass 67.1%</div></td>
+                                        <td><div class="score-main">1.11 / 1.17</div><div class="score-sub">raw 1.65 / 1.73<br>WER 9.7% | Pass 67.7%</div></td>
+                                        <td><div class="score-main">1.13 / 1.25</div><div class="score-sub">raw 1.68 / 1.87<br>WER 16.4% | Pass 67.2%</div></td>
+                                        <td><div class="score-main">1.18 / 1.29</div><div class="score-sub">raw 1.71 / 1.87<br>WER 12.7% | Pass 69.1%</div></td>
+                                        <td><div class="score-main">1.28 / 1.39</div><div class="score-sub">raw 1.73 / 1.88<br>WER 18.3% | Pass 74.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.04</div><div class="score-sub">raw 1.67 / 1.74<br>WER 13.2% | Pass 59.7%</div></td>
+                                        <td><div class="score-main">1.23 / 1.40</div><div class="score-sub">raw 1.64 / 1.86<br>WER 8.8% | Pass 75.0%</div></td>
+                                        <td><div class="score-main">0.75 / 0.82</div><div class="score-sub">raw 1.42 / 1.56<br>WER 15.5% | Pass 52.8%</div></td>
+                                        <td><div class="score-main">0.90 / 1.01</div><div class="score-sub">raw 1.69 / 1.91<br>WER 14.6% | Pass 53.1%</div></td>
+                                        <td><div class="score-main">0.73 / 0.80</div><div class="score-sub">raw 1.47 / 1.59<br>WER 12.9% | Pass 50.0%</div></td>
+                                        <td><div class="score-main">0.45 / 0.48</div><div class="score-sub">raw 1.13 / 1.20<br>WER 19.0% | Pass 40.0%</div></td>
+                                        <td><div class="score-main">0.51 / 0.54</div><div class="score-sub">raw 1.19 / 1.26<br>WER 30.5% | Pass 42.6%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.33 / 3.04</div><div class="score-sub">raw 2.33 / 3.04<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.12 / 1.25</div><div class="score-sub">raw 1.12 / 1.25<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="leaderboard-table hidden-table" id="table-zh">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="3" class="sticky-col">Model</th>
+                                        <th rowspan="3">Overall avg</th>
+                                        <th rowspan="3">Timbre avg</th>
+                                        <th rowspan="3">Style avg</th>
+                                        <th colspan="3" class="th-easy">Easy</th>
+                                        <th colspan="6" class="th-hard">Hard</th>
+                                        <th colspan="4" class="th-special">Special</th>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2" class="th-easy-sub">Tag</th>
+                                        <th rowspan="2" class="th-easy-sub">Direct</th>
+                                        <th rowspan="2" class="th-easy-sub">Simple-comp</th>
+                                        <th colspan="4" class="th-hard-sub">complex comp</th>
+                                        <th colspan="2" class="th-hard-sub">Persona</th>
+                                        <th colspan="2" class="th-special-sub">Abnormal</th>
+                                        <th colspan="2" class="th-special-sub">Nonverbal</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-hard-sub">multi-comp</th>
+                                        <th class="th-hard-sub">dynamic</th>
+                                        <th class="th-hard-sub">layered</th>
+                                        <th class="th-hard-sub">conflict</th>
+                                        <th class="th-hard-sub">scenario</th>
+                                        <th class="th-hard-sub">character</th>
+                                        <th class="th-special-sub">disfluency</th>
+                                        <th class="th-special-sub">dysphonia</th>
+                                        <th class="th-special-sub">implicit</th>
+                                        <th class="th-special-sub">explicit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">qwen3tts</td>
+                                        <td><div class="score-main">2.16 / 3.12</div><div class="score-sub">raw 2.43 / 3.51<br>WER 1.1% | Pass 88.7%</div></td>
+                                        <td><div class="score-main">2.29 / 3.30</div><div class="score-sub">raw 2.63 / 3.78<br>WER 0.8% | Pass 87.2%</div></td>
+                                        <td><div class="score-main">2.23 / 3.27</div><div class="score-sub">raw 2.51 / 3.67<br>WER 1.1% | Pass 89.0%</div></td>
+                                        <td><div class="score-main">2.27 / 3.35</div><div class="score-sub">raw 2.59 / 3.82<br>WER 1.1% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">2.33 / 3.38</div><div class="score-sub">raw 2.50 / 3.62<br>WER 0.5% | Pass 93.2%</div></td>
+                                        <td><div class="score-main">2.69 / 4.05</div><div class="score-sub">raw 2.85 / 4.29<br>WER 0.4% | Pass 94.4%</div></td>
+                                        <td><div class="score-main">2.25 / 3.26</div><div class="score-sub">raw 2.65 / 3.85<br>WER 2.6% | Pass 84.7%</div></td>
+                                        <td><div class="score-main">1.64 / 2.06</div><div class="score-sub">raw 1.97 / 2.47<br>WER 1.0% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.98 / 2.69</div><div class="score-sub">raw 2.19 / 2.97<br>WER 0.6% | Pass 90.6%</div></td>
+                                        <td><div class="score-main">1.85 / 2.67</div><div class="score-sub">raw 2.47 / 3.56<br>WER 1.6% | Pass 75.0%</div></td>
+                                        <td><div class="score-main">1.89 / 2.63</div><div class="score-sub">raw 2.47 / 3.43<br>WER 1.2% | Pass 76.7%</div></td>
+                                        <td><div class="score-main">1.89 / 2.66</div><div class="score-sub">raw 2.35 / 3.31<br>WER 1.6% | Pass 80.3%</div></td>
+                                        <td><div class="score-main">1.20 / 1.40</div><div class="score-sub">raw 1.20 / 1.40<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.67 / 4.25</div><div class="score-sub">raw 2.67 / 4.25<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.03 / 2.97</div><div class="score-sub">raw 2.03 / 2.97<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.69 / 2.34</div><div class="score-sub">raw 1.69 / 2.34<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">geminiflash</td>
+                                        <td><div class="score-main">2.09 / 2.95</div><div class="score-sub">raw 2.48 / 3.51<br>WER 1.6% | Pass 84.3%</div></td>
+                                        <td><div class="score-main">2.09 / 2.79</div><div class="score-sub">raw 2.47 / 3.30<br>WER 1.5% | Pass 84.4%</div></td>
+                                        <td><div class="score-main">2.11 / 3.04</div><div class="score-sub">raw 2.58 / 3.71<br>WER 1.7% | Pass 81.9%</div></td>
+                                        <td><div class="score-main">2.02 / 2.85</div><div class="score-sub">raw 2.55 / 3.60<br>WER 2.0% | Pass 79.3%</div></td>
+                                        <td><div class="score-main">2.21 / 3.19</div><div class="score-sub">raw 2.56 / 3.68<br>WER 1.3% | Pass 86.5%</div></td>
+                                        <td><div class="score-main">2.44 / 3.52</div><div class="score-sub">raw 2.75 / 3.96<br>WER 0.9% | Pass 88.9%</div></td>
+                                        <td><div class="score-main">2.25 / 3.05</div><div class="score-sub">raw 2.61 / 3.54<br>WER 1.5% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">2.01 / 2.86</div><div class="score-sub">raw 2.50 / 3.56<br>WER 1.5% | Pass 80.6%</div></td>
+                                        <td><div class="score-main">1.73 / 2.22</div><div class="score-sub">raw 2.22 / 2.84<br>WER 2.2% | Pass 78.1%</div></td>
+                                        <td><div class="score-main">1.48 / 1.98</div><div class="score-sub">raw 2.16 / 2.88<br>WER 2.5% | Pass 68.8%</div></td>
+                                        <td><div class="score-main">1.89 / 2.56</div><div class="score-sub">raw 2.47 / 3.33<br>WER 1.5% | Pass 76.7%</div></td>
+                                        <td><div class="score-main">1.88 / 2.63</div><div class="score-sub">raw 2.36 / 3.31<br>WER 1.6% | Pass 79.3%</div></td>
+                                        <td><div class="score-main">1.55 / 1.75</div><div class="score-sub">raw 1.55 / 1.75<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.58 / 4.12</div><div class="score-sub">raw 2.58 / 4.12<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.41 / 3.66</div><div class="score-sub">raw 2.41 / 3.66<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.28 / 3.41</div><div class="score-sub">raw 2.28 / 3.41<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">geminipro</td>
+                                        <td><div class="score-main">2.13 / 2.93</div><div class="score-sub">raw 2.50 / 3.43<br>WER 1.8% | Pass 85.3%</div></td>
+                                        <td><div class="score-main">2.20 / 2.85</div><div class="score-sub">raw 2.55 / 3.30<br>WER 1.5% | Pass 86.4%</div></td>
+                                        <td><div class="score-main">2.22 / 3.11</div><div class="score-sub">raw 2.61 / 3.65<br>WER 1.7% | Pass 85.2%</div></td>
+                                        <td><div class="score-main">2.12 / 2.91</div><div class="score-sub">raw 2.55 / 3.51<br>WER 1.8% | Pass 82.9%</div></td>
+                                        <td><div class="score-main">2.29 / 3.09</div><div class="score-sub">raw 2.60 / 3.51<br>WER 1.1% | Pass 88.1%</div></td>
+                                        <td><div class="score-main">2.44 / 3.43</div><div class="score-sub">raw 2.79 / 3.92<br>WER 1.1% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">2.20 / 2.93</div><div class="score-sub">raw 2.47 / 3.29<br>WER 1.0% | Pass 88.9%</div></td>
+                                        <td><div class="score-main">2.01 / 2.82</div><div class="score-sub">raw 2.50 / 3.50<br>WER 2.6% | Pass 80.6%</div></td>
+                                        <td><div class="score-main">1.85 / 2.46</div><div class="score-sub">raw 2.47 / 3.28<br>WER 1.6% | Pass 75.0%</div></td>
+                                        <td><div class="score-main">2.11 / 2.84</div><div class="score-sub">raw 2.59 / 3.50<br>WER 1.8% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">1.44 / 2.12</div><div class="score-sub">raw 2.53 / 3.73<br>WER 6.1% | Pass 56.7%</div></td>
+                                        <td><div class="score-main">1.78 / 2.31</div><div class="score-sub">raw 2.21 / 2.88<br>WER 1.4% | Pass 80.2%</div></td>
+                                        <td><div class="score-main">1.70 / 2.15</div><div class="score-sub">raw 1.70 / 2.15<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.71 / 4.21</div><div class="score-sub">raw 2.71 / 4.21<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.41 / 3.53</div><div class="score-sub">raw 2.41 / 3.53<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.31 / 3.62</div><div class="score-sub">raw 2.31 / 3.62<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mingmoe</td>
+                                        <td><div class="score-main">1.95 / 2.68</div><div class="score-sub">raw 2.09 / 2.89<br>WER 0.7% | Pass 93.0%</div></td>
+                                        <td><div class="score-main">2.10 / 2.85</div><div class="score-sub">raw 2.27 / 3.08<br>WER 0.4% | Pass 92.4%</div></td>
+                                        <td><div class="score-main">2.06 / 2.92</div><div class="score-sub">raw 2.21 / 3.12<br>WER 0.6% | Pass 93.4%</div></td>
+                                        <td><div class="score-main">2.12 / 2.99</div><div class="score-sub">raw 2.29 / 3.22<br>WER 0.8% | Pass 92.7%</div></td>
+                                        <td><div class="score-main">2.02 / 2.84</div><div class="score-sub">raw 2.09 / 2.95<br>WER 0.3% | Pass 96.4%</div></td>
+                                        <td><div class="score-main">2.44 / 3.66</div><div class="score-sub">raw 2.58 / 3.88<br>WER 0.3% | Pass 94.4%</div></td>
+                                        <td><div class="score-main">2.16 / 2.91</div><div class="score-sub">raw 2.32 / 3.12<br>WER 0.4% | Pass 93.1%</div></td>
+                                        <td><div class="score-main">1.91 / 2.44</div><div class="score-sub">raw 2.08 / 2.67<br>WER 0.5% | Pass 91.7%</div></td>
+                                        <td><div class="score-main">1.82 / 2.40</div><div class="score-sub">raw 2.16 / 2.84<br>WER 0.7% | Pass 84.4%</div></td>
+                                        <td><div class="score-main">1.64 / 2.13</div><div class="score-sub">raw 1.88 / 2.44<br>WER 0.8% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.72 / 2.44</div><div class="score-sub">raw 2.07 / 2.93<br>WER 0.9% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.80 / 2.42</div><div class="score-sub">raw 2.05 / 2.76<br>WER 1.1% | Pass 87.7%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.67 / 2.33</div><div class="score-sub">raw 1.67 / 2.33<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.66 / 2.22</div><div class="score-sub">raw 1.66 / 2.22<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.06 / 1.12</div><div class="score-sub">raw 1.06 / 1.12<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">moss1b7</td>
+                                        <td><div class="score-main">1.93 / 2.63</div><div class="score-sub">raw 2.27 / 3.09<br>WER 3.1% | Pass 85.2%</div></td>
+                                        <td><div class="score-main">1.98 / 2.60</div><div class="score-sub">raw 2.41 / 3.16<br>WER 3.2% | Pass 82.4%</div></td>
+                                        <td><div class="score-main">2.00 / 2.79</div><div class="score-sub">raw 2.36 / 3.30<br>WER 3.7% | Pass 84.7%</div></td>
+                                        <td><div class="score-main">2.00 / 2.70</div><div class="score-sub">raw 2.38 / 3.20<br>WER 3.4% | Pass 84.3%</div></td>
+                                        <td><div class="score-main">1.92 / 2.66</div><div class="score-sub">raw 2.24 / 3.09<br>WER 2.1% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">2.14 / 2.90</div><div class="score-sub">raw 2.47 / 3.34<br>WER 1.9% | Pass 86.8%</div></td>
+                                        <td><div class="score-main">2.27 / 3.15</div><div class="score-sub">raw 2.52 / 3.49<br>WER 3.9% | Pass 90.1%</div></td>
+                                        <td><div class="score-main">1.46 / 2.01</div><div class="score-sub">raw 2.23 / 3.06<br>WER 11.8% | Pass 65.7%</div></td>
+                                        <td><div class="score-main">1.90 / 2.56</div><div class="score-sub">raw 2.34 / 3.16<br>WER 1.4% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">1.96 / 2.77</div><div class="score-sub">raw 2.41 / 3.41<br>WER 1.4% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">1.59 / 2.10</div><div class="score-sub">raw 2.17 / 2.87<br>WER 3.4% | Pass 73.3%</div></td>
+                                        <td><div class="score-main">1.77 / 2.41</div><div class="score-sub">raw 2.19 / 2.98<br>WER 2.7% | Pass 80.8%</div></td>
+                                        <td><div class="score-main">1.30 / 1.50</div><div class="score-sub">raw 1.30 / 1.50<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.33 / 3.67</div><div class="score-sub">raw 2.33 / 3.67<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.97 / 2.70</div><div class="score-sub">raw 1.97 / 2.70<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.81 / 2.34</div><div class="score-sub">raw 1.81 / 2.34<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">minimax</td>
+                                        <td><div class="score-main">1.95 / 2.62</div><div class="score-sub">raw 2.10 / 2.83<br>WER 0.7% | Pass 92.8%</div></td>
+                                        <td><div class="score-main">2.17 / 2.88</div><div class="score-sub">raw 2.35 / 3.12<br>WER 0.6% | Pass 92.1%</div></td>
+                                        <td><div class="score-main">2.07 / 2.86</div><div class="score-sub">raw 2.19 / 3.03<br>WER 0.5% | Pass 94.3%</div></td>
+                                        <td><div class="score-main">2.08 / 2.84</div><div class="score-sub">raw 2.23 / 3.04<br>WER 0.8% | Pass 93.2%</div></td>
+                                        <td><div class="score-main">2.05 / 2.86</div><div class="score-sub">raw 2.18 / 3.04<br>WER 0.5% | Pass 94.2%</div></td>
+                                        <td><div class="score-main">2.49 / 3.47</div><div class="score-sub">raw 2.56 / 3.56<br>WER 0.1% | Pass 97.4%</div></td>
+                                        <td><div class="score-main">2.18 / 2.99</div><div class="score-sub">raw 2.35 / 3.21<br>WER 0.5% | Pass 93.1%</div></td>
+                                        <td><div class="score-main">1.76 / 2.20</div><div class="score-sub">raw 1.86 / 2.33<br>WER 0.6% | Pass 94.4%</div></td>
+                                        <td><div class="score-main">1.95 / 2.52</div><div class="score-sub">raw 2.16 / 2.78<br>WER 0.7% | Pass 90.6%</div></td>
+                                        <td><div class="score-main">1.80 / 2.38</div><div class="score-sub">raw 2.06 / 2.72<br>WER 0.9% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.91 / 2.80</div><div class="score-sub">raw 2.52 / 3.69<br>WER 1.2% | Pass 75.9%</div></td>
+                                        <td><div class="score-main">1.73 / 2.25</div><div class="score-sub">raw 2.02 / 2.62<br>WER 1.1% | Pass 85.7%</div></td>
+                                        <td><div class="score-main">1.05 / 1.05</div><div class="score-sub">raw 1.05 / 1.05<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.75 / 2.50</div><div class="score-sub">raw 1.75 / 2.50<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.25 / 1.44</div><div class="score-sub">raw 1.25 / 1.44<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.06 / 1.12</div><div class="score-sub">raw 1.06 / 1.12<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">elevenlabs</td>
+                                        <td><div class="score-main">1.98 / 2.61</div><div class="score-sub">raw 2.29 / 3.02<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.18 / 2.71</div><div class="score-sub">raw 2.52 / 3.14<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.94 / 2.56</div><div class="score-sub">raw 2.25 / 2.96<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.08 / 2.65</div><div class="score-sub">raw 2.41 / 3.07<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.94 / 2.39</div><div class="score-sub">raw 2.25 / 2.77<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.22 / 2.90</div><div class="score-sub">raw 2.57 / 3.37<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.16 / 2.96</div><div class="score-sub">raw 2.50 / 3.42<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.42 / 1.67</div><div class="score-sub">raw 1.65 / 1.94<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.95 / 2.56</div><div class="score-sub">raw 2.26 / 2.97<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.86 / 2.49</div><div class="score-sub">raw 2.16 / 2.88<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.90 / 2.56</div><div class="score-sub">raw 2.20 / 2.97<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.15 / 3.06</div><div class="score-sub">raw 2.49 / 3.55<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.01 / 1.10</div><div class="score-sub">raw 1.17 / 1.28<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.10 / 3.33</div><div class="score-sub">raw 2.43 / 3.86<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">1.19 / 1.49</div><div class="score-sub">raw 1.38 / 1.72<br>WER 1.7% | Pass 86.3%</div></td>
+                                        <td><div class="score-main">2.14 / 3.26</div><div class="score-sub">raw 2.48 / 3.77<br>WER 1.7% | Pass 86.3%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mingdense</td>
+                                        <td><div class="score-main">1.87 / 2.56</div><div class="score-sub">raw 2.02 / 2.77<br>WER 0.6% | Pass 92.5%</div></td>
+                                        <td><div class="score-main">2.04 / 2.81</div><div class="score-sub">raw 2.23 / 3.07<br>WER 0.5% | Pass 91.4%</div></td>
+                                        <td><div class="score-main">2.01 / 2.79</div><div class="score-sub">raw 2.14 / 2.97<br>WER 0.5% | Pass 93.9%</div></td>
+                                        <td><div class="score-main">1.95 / 2.80</div><div class="score-sub">raw 2.19 / 3.15<br>WER 0.9% | Pass 89.0%</div></td>
+                                        <td><div class="score-main">1.96 / 2.76</div><div class="score-sub">raw 2.03 / 2.86<br>WER 0.2% | Pass 96.8%</div></td>
+                                        <td><div class="score-main">2.39 / 3.45</div><div class="score-sub">raw 2.50 / 3.60<br>WER 0.3% | Pass 95.7%</div></td>
+                                        <td><div class="score-main">2.24 / 2.98</div><div class="score-sub">raw 2.34 / 3.11<br>WER 0.3% | Pass 95.8%</div></td>
+                                        <td><div class="score-main">1.68 / 2.07</div><div class="score-sub">raw 1.78 / 2.19<br>WER 0.5% | Pass 94.4%</div></td>
+                                        <td><div class="score-main">1.72 / 2.08</div><div class="score-sub">raw 1.97 / 2.38<br>WER 0.5% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.65 / 2.14</div><div class="score-sub">raw 1.97 / 2.55<br>WER 1.1% | Pass 83.9%</div></td>
+                                        <td><div class="score-main">1.56 / 2.16</div><div class="score-sub">raw 1.97 / 2.72<br>WER 1.2% | Pass 79.3%</div></td>
+                                        <td><div class="score-main">1.82 / 2.47</div><div class="score-sub">raw 2.07 / 2.81<br>WER 1.1% | Pass 87.7%</div></td>
+                                        <td><div class="score-main">1.00 / 1.00</div><div class="score-sub">raw 1.00 / 1.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.55 / 2.00</div><div class="score-sub">raw 1.55 / 2.00<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.35 / 1.68</div><div class="score-sub">raw 1.35 / 1.68<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.07 / 1.13</div><div class="score-sub">raw 1.07 / 1.13<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">mimo</td>
+                                        <td><div class="score-main">1.75 / 2.22</div><div class="score-sub">raw 2.12 / 2.69<br>WER 1.9% | Pass 82.6%</div></td>
+                                        <td><div class="score-main">1.78 / 2.17</div><div class="score-sub">raw 2.31 / 2.82<br>WER 2.4% | Pass 76.8%</div></td>
+                                        <td><div class="score-main">1.83 / 2.35</div><div class="score-sub">raw 2.20 / 2.83<br>WER 1.8% | Pass 83.1%</div></td>
+                                        <td><div class="score-main">1.86 / 2.37</div><div class="score-sub">raw 2.35 / 2.99<br>WER 2.1% | Pass 79.3%</div></td>
+                                        <td><div class="score-main">1.78 / 2.25</div><div class="score-sub">raw 2.20 / 2.78<br>WER 2.2% | Pass 80.8%</div></td>
+                                        <td><div class="score-main">2.14 / 2.80</div><div class="score-sub">raw 2.44 / 3.19<br>WER 1.6% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.74 / 2.15</div><div class="score-sub">raw 2.24 / 2.76<br>WER 1.5% | Pass 77.8%</div></td>
+                                        <td><div class="score-main">1.62 / 1.97</div><div class="score-sub">raw 1.94 / 2.36<br>WER 1.0% | Pass 83.3%</div></td>
+                                        <td><div class="score-main">1.33 / 1.46</div><div class="score-sub">raw 1.58 / 1.74<br>WER 1.0% | Pass 83.9%</div></td>
+                                        <td><div class="score-main">1.68 / 2.11</div><div class="score-sub">raw 2.06 / 2.59<br>WER 4.3% | Pass 81.2%</div></td>
+                                        <td><div class="score-main">1.76 / 2.43</div><div class="score-sub">raw 2.20 / 3.03<br>WER 1.1% | Pass 80.0%</div></td>
+                                        <td><div class="score-main">1.51 / 1.90</div><div class="score-sub">raw 2.00 / 2.52<br>WER 1.8% | Pass 75.4%</div></td>
+                                        <td><div class="score-main">1.40 / 1.65</div><div class="score-sub">raw 1.40 / 1.65<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.33 / 3.21</div><div class="score-sub">raw 2.33 / 3.21<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.72 / 2.34</div><div class="score-sub">raw 1.72 / 2.34<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.22 / 1.41</div><div class="score-sub">raw 1.22 / 1.41<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">voicesculptor</td>
+                                        <td><div class="score-main">1.59 / 2.01</div><div class="score-sub">raw 1.96 / 2.47<br>WER 9.2% | Pass 81.1%</div></td>
+                                        <td><div class="score-main">1.55 / 1.84</div><div class="score-sub">raw 2.02 / 2.40<br>WER 11.3% | Pass 76.8%</div></td>
+                                        <td><div class="score-main">1.62 / 2.09</div><div class="score-sub">raw 2.01 / 2.59<br>WER 9.4% | Pass 80.7%</div></td>
+                                        <td><div class="score-main">1.63 / 2.13</div><div class="score-sub">raw 2.05 / 2.67<br>WER 4.0% | Pass 79.7%</div></td>
+                                        <td><div class="score-main">1.41 / 1.80</div><div class="score-sub">raw 2.03 / 2.59<br>WER 21.4% | Pass 69.4%</div></td>
+                                        <td><div class="score-main">1.87 / 2.33</div><div class="score-sub">raw 2.17 / 2.71<br>WER 8.0% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">1.69 / 2.08</div><div class="score-sub">raw 1.93 / 2.38<br>WER 5.3% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.60 / 1.82</div><div class="score-sub">raw 1.86 / 2.11<br>WER 2.0% | Pass 86.1%</div></td>
+                                        <td><div class="score-main">1.78 / 2.02</div><div class="score-sub">raw 2.03 / 2.31<br>WER 3.6% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.25 / 1.54</div><div class="score-sub">raw 1.91 / 2.34<br>WER 20.8% | Pass 65.6%</div></td>
+                                        <td><div class="score-main">1.42 / 1.78</div><div class="score-sub">raw 1.93 / 2.43<br>WER 1.5% | Pass 73.3%</div></td>
+                                        <td><div class="score-main">1.59 / 2.00</div><div class="score-sub">raw 1.95 / 2.47<br>WER 4.0% | Pass 81.1%</div></td>
+                                        <td><div class="score-main">1.25 / 1.35</div><div class="score-sub">raw 1.25 / 1.35<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">2.46 / 3.46</div><div class="score-sub">raw 2.46 / 3.46<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.75 / 2.38</div><div class="score-sub">raw 1.75 / 2.38<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.09 / 1.16</div><div class="score-sub">raw 1.09 / 1.16<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+        
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">gpt4omini</td>
+                                        <td><div class="score-main">1.56 / 1.82</div><div class="score-sub">raw 1.75 / 2.04<br>WER 1.1% | Pass 89.5%</div></td>
+                                        <td><div class="score-main">1.58 / 1.72</div><div class="score-sub">raw 1.81 / 1.97<br>WER 1.2% | Pass 87.3%</div></td>
+                                        <td><div class="score-main">1.63 / 1.92</div><div class="score-sub">raw 1.82 / 2.15<br>WER 0.9% | Pass 89.5%</div></td>
+                                        <td><div class="score-main">1.53 / 1.75</div><div class="score-sub">raw 1.74 / 1.99<br>WER 1.3% | Pass 87.9%</div></td>
+                                        <td><div class="score-main">1.76 / 2.01</div><div class="score-sub">raw 1.88 / 2.14<br>WER 0.4% | Pass 93.7%</div></td>
+                                        <td><div class="score-main">1.77 / 2.06</div><div class="score-sub">raw 2.00 / 2.32<br>WER 0.6% | Pass 90.3%</div></td>
+                                        <td><div class="score-main">1.59 / 1.86</div><div class="score-sub">raw 1.76 / 2.06<br>WER 0.7% | Pass 88.9%</div></td>
+                                        <td><div class="score-main">1.78 / 2.25</div><div class="score-sub">raw 2.00 / 2.53<br>WER 0.7% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.20 / 1.23</div><div class="score-sub">raw 1.38 / 1.41<br>WER 0.7% | Pass 87.5%</div></td>
+                                        <td><div class="score-main">1.39 / 1.68</div><div class="score-sub">raw 1.94 / 2.34<br>WER 1.9% | Pass 71.9%</div></td>
+                                        <td><div class="score-main">1.20 / 1.31</div><div class="score-sub">raw 1.50 / 1.63<br>WER 1.3% | Pass 80.0%</div></td>
+                                        <td><div class="score-main">1.33 / 1.54</div><div class="score-sub">raw 1.59 / 1.84<br>WER 1.5% | Pass 83.6%</div></td>
+                                        <td><div class="score-main">1.11 / 1.11</div><div class="score-sub">raw 1.11 / 1.11<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.96 / 2.71</div><div class="score-sub">raw 1.96 / 2.71<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.62 / 2.06</div><div class="score-sub">raw 1.62 / 2.06<br>WER nan% | Pass 100.0%</div></td>
+                                        <td><div class="score-main">1.47 / 1.91</div><div class="score-sub">raw 1.47 / 1.91<br>WER nan% | Pass 100.0%</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="leaderboard-table hidden-table" id="table-ja">
+                                <tbody>
+                                    <tr><td class="text-center text-muted" style="padding: 3rem;"><em>(Japanese leaderboard data will be populated here)</em></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+
+                    <h3 id="detailed-leaderboard" class="section-title" style="margin-top: 4rem;">Detailed Leaderboard</h3>
+                    <div class="card">
+                        <div class="lang-tabs" id="detailed-lang-tabs">
+                            <button class="lang-tab active" data-lang="en">English</button>
+                            <button class="lang-tab" data-lang="zh">Chinese</button>
+                            <button class="lang-tab" data-lang="ja">Japanese</button>
+                            <button class="lang-tab" data-lang="ko">Korean</button>
+                            <button class="lang-tab" data-lang="fr">French</button>
+                            <button class="lang-tab" data-lang="de">German</button>
+                            <button class="lang-tab" data-lang="es">Spanish</button>
+                            <button class="lang-tab" data-lang="pt">Portuguese</button>
+                            <button class="lang-tab" data-lang="it">Italian</button>
+                            <button class="lang-tab" data-lang="ru">Russian</button>
+                        </div>
+
+                        <div class="table-legend">
+                            <strong>Interactive Taxonomy:</strong> Click on the rows with a [▼] to expand or collapse sub-categories. The color scale maps from Red (lower scores) to Green (higher scores).
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="leaderboard-table" id="detailed-heatmap-table">
+                                <thead>
+                                    <tr id="heatmap-header-row">
+                                        <th class="sticky-col taxonomy-col" style="text-align: left; padding-left: 1rem; width: 350px;">Taxonomy Node</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="heatmap-body">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="demos" class="section">
+                <div class="container-wide">
+                    <h2 class="section-title">Audio Demos</h2>
+                    
+                    <div class="card demo-container">
+                        <div class="lang-tabs" id="demo-lang-tabs">
+                            <button class="lang-tab active" data-lang="en">English</button>
+                            <button class="lang-tab" data-lang="zh">Chinese</button>
+                        </div>
+
+                        <div id="taxonomy-tabs-container">
+                            </div>
+
+                        <div class="demo-nav-bar" style="margin-top: 1rem;">
+                            <button class="btn btn-secondary" id="btn-prev-sample">⬅ Prev Sample</button>
+                            <span id="sample-counter" class="font-weight-bold">Sample 0 / 0</span>
+                            <button class="btn btn-secondary" id="btn-next-sample">Next Sample ➡</button>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="shared-input-box">
+                            <div class="shared-header">
+                                <span class="badge" id="lbl-plan-id">PLAN__...</span>
+                                <span class="badge badge-outline" id="lbl-taxonomy">taxonomy/...</span>
+                            </div>
+                            <div class="shared-content">
+                                <p><strong>Instruction:</strong> <span id="lbl-instruction" class="text-primary"></span></p>
+                                <p><strong>Text:</strong> <span id="lbl-text"></span></p>
+                                <p><strong>Target Values:</strong> <code id="lbl-targets"></code></p>
+                            </div>
+                        </div>
+
+                        <div class="model-grid" id="model-cards-container">
+                            </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>© 2026 MINT-Bench. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
