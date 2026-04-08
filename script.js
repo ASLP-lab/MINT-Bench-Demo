@@ -98,6 +98,29 @@ document.addEventListener("DOMContentLoaded", () => {
         "moss1b7", "voicesculptor", "parlerttslarge", "parlerttsmini"
     ];
 
+    // 【新增】模型名称映射字典
+    const MODEL_NAME_MAP = {
+        "geminiflash": "Gemini 2.5-Flash",
+        "geminipro": "Gemini 2.5-Pro",
+        "elevenlabs": "ElevenLabs-ttv-v3",
+        "qwen3tts": "Qwen3TTS-12Hz-1.7B-VD",
+        "minimax": "MiniMax-Speech-2.7",
+        "moss1b7": "MOSS-VoiceGenerator",
+        "hume": "Hume-Octave1",
+        "mimo": "MiMo-Audio-7B-Instruct",
+        "gpt4omini": "GPT-4o-Mini-TTS",
+        "mingmoe": "Ming-omni-tts-16.8B-A3B",
+        "mingdense": "Ming-omni-tts-0.5B",
+        "parlerttslarge": "Parler-TTS Large",
+        "parlerttsmini": "Parler-TTS Mini",
+        "voicesculptor": "VoiceSculptor"
+    };
+
+    // 【新增】获取美化后的模型名
+    function getDisplayModelName(rawName) {
+        return MODEL_NAME_MAP[rawName] || rawName;
+    }
+
     // 格式化标签显示 (例如 "complex_comp" -> "Complex Comp")
     function formatLabel(str) {
         return str.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -363,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 构建单个卡片 HTML
             const cardHtml = `
                 <div class="model-card">
-                    <h4>${model}</h4>
+                    <h4>${getDisplayModelName(model)}</h4>
                     <div class="card-metrics">
                         <div class="metric-item">
                             <span class="metric-label">Final Score</span>
@@ -458,7 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 theadRow.innerHTML = `<th class="sticky-col taxonomy-col" style="text-align: left; padding-left: 1rem; width: 350px;">Taxonomy Node</th>`;
                 detailedModels.forEach(model => {
-                    theadRow.insertAdjacentHTML('beforeend', `<th>${model}</th>`);
+                    theadRow.insertAdjacentHTML('beforeend', `<th>${getDisplayModelName(model)}</th>`);
                 });
 
                 let paths = Object.keys(data).sort();
