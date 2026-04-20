@@ -1,0 +1,201 @@
+{
+    "mimo": {
+      "text": "The primary colors in additive color models are red, green, and blue.",
+      "instruction": "Speak this with a woman's voice.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand10.mp3"
+      ]
+    },
+    "moss1b7": {
+      "text": "He said he would call me back, but so far I haven't heard anything.",
+      "instruction": "Age: adult, Volume: quiet",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_en/PLAN__en__easy_composite_simple_comp_static__0053__cand10.mp3"
+      ]
+    },
+    "qwen3tts": {
+      "text": "It's just not what I was hoping for, I guess.",
+      "instruction": "The speaker is a woman, and she sounds disappointed.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_en/PLAN__en__easy_composite_simple_comp_static__0054__cand10.mp3"
+      ]
+    },
+    "minimax": {
+      "text": "I believe you're the one who left the light on in the kitchen.",
+      "instruction": "Speak this in a teasing manner, using a bright and energetic adult male voice.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_en/PLAN__en__hard_composite_complex_comp_static__0017__cand10.mp3"
+      ]
+    },
+    "gpt4omini": {
+      "text": "Please have your tickets ready for inspection.",
+      "instruction": "Age: adult",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand09.mp3"
+      ]
+    },
+    "mingmoe": {
+      "text": "Please be aware that the front entrance is temporarily closed.",
+      "instruction": "Gender: Female",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_en/PLAN__en__easy_timbre_tag_atomic_gender__0006__cand10.mp3"
+      ]
+    },
+    "geminipro": {
+      "text": "The primary colors in additive color models are red, green, and blue.",
+      "instruction": "Speak this with a woman's voice.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_en/PLAN__en__easy_timbre_direct_atomic_gender__0004__cand10.mp3"
+      ]
+    },
+    "parlerttslarge": {
+      "text": "The international summit concluded today with a joint statement on climate action and economic cooperation.",
+      "instruction": "Pitch: very_low, Accent: american_accent",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttslarge_en/PLAN__en__easy_composite_simple_comp_static__0011__cand10.mp3"
+      ]
+    },
+    "geminiflash": {
+      "text": "Please have your tickets ready for inspection.",
+      "instruction": "Age: adult",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_en/PLAN__en__easy_timbre_tag_atomic_age__0007__cand10.mp3"
+      ]
+    },
+    "elevenlabs": {
+      "text": "Would you mind opening the window?",
+      "instruction": "Use an extremely high pitch for this line.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_en/PLAN__en__easy_timbre_direct_atomic_pitch__0001__cand10.mp3"
+      ]
+    },
+    "hume": {
+      "text": "We should probably check the weather forecast before we head out.",
+      "instruction": "Pitch: low",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/hume_en/PLAN__en__easy_timbre_tag_atomic_pitch__0011__cand10.mp3"
+      ]
+    },
+    "mingdense": {
+      "text": "The plumber is scheduled to arrive at ten in the morning.",
+      "instruction": "Use a standard adult voice for this recording.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand10.mp3"
+      ]
+    },
+    "parlerttsmini": {
+      "text": "The plumber is scheduled to arrive at ten in the morning.",
+      "instruction": "Use a standard adult voice for this recording.",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/parlerttsmini_en/PLAN__en__easy_timbre_direct_atomic_age__0005__cand10.mp3"
+      ]
+    }
+  }

@@ -700,4 +700,163 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initDualRadarCharts()
 
+    
+    // ==========================================
+    // Timbre Diversity 音频演示功能
+    // ==========================================
+    let tdsDataEN = {};
+    let tdsDataZH = {};
+
+    function getTDSAudioPath(path) {
+        if (/^(https?:)?\/\//.test(path) || path.startsWith('/')) return path;
+        return `./${path.replace(/^\.\//, '')}`;
+    }
+
+    function getSortedTDSModelKeys() {
+        const allModelKeys = new Set([...Object.keys(tdsDataEN), ...Object.keys(tdsDataZH)]);
+        return Array.from(allModelKeys).sort((a, b) => {
+            const idxA = preferredModelOrder.indexOf(a);
+            const idxB = preferredModelOrder.indexOf(b);
+            const valA = idxA === -1 ? 999 : idxA;
+            const valB = idxB === -1 ? 999 : idxB;
+            if (valA !== valB) return valA - valB;
+            return a.localeCompare(b);
+        });
+    }
+
+    function fillTDSModelSelector(modelKeys) {
+        const selectEl = document.getElementById('tds-model-select');
+        if (!selectEl) return;
+
+        selectEl.innerHTML = '';
+        modelKeys.forEach(key => {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = getDisplayModelName(key);
+            selectEl.appendChild(option);
+        });
+    }
+
+    async function loadTDSData() {
+        const selectEl = document.getElementById('tds-model-select');
+        const loadingIndicator = document.getElementById('tds-loading-indicator');
+        if (!selectEl || !loadingIndicator) return;
+
+        try {
+            loadingIndicator.style.display = 'inline';
+
+            const [respEN, respZH] = await Promise.all([
+                fetch('./assets/demos/timbre_diversity/metadata/tds_en.json'),
+                fetch('./assets/demos/timbre_diversity/metadata/tds_zh.json')
+            ]);
+
+            if (!respEN.ok) {
+                throw new Error(`EN fetch failed with status ${respEN.status}`);
+            }
+            if (!respZH.ok) {
+                throw new Error(`ZH fetch failed with status ${respZH.status}`);
+            }
+
+            [tdsDataEN, tdsDataZH] = await Promise.all([respEN.json(), respZH.json()]);
+
+            const sortedKeys = getSortedTDSModelKeys();
+            if (sortedKeys.length === 0) {
+                throw new Error('No TDS models found in metadata');
+            }
+
+            fillTDSModelSelector(sortedKeys);
+            selectEl.value = sortedKeys[0];
+            renderTDSAudio(sortedKeys[0]);
+        } catch (err) {
+            console.error('Failed to load TDS metadata:', err);
+            selectEl.innerHTML = '<option value="">Failed to load data</option>';
+            document.getElementById('tds-en-meta').innerHTML = '<p style="color: #94a3b8; margin: 0;">Failed to load English TDS metadata.</p>';
+            document.getElementById('tds-zh-meta').innerHTML = '<p style="color: #94a3b8; margin: 0;">Failed to load Chinese TDS metadata.</p>';
+            document.getElementById('tds-en-samples').innerHTML = '<p style="color: #94a3b8;">Failed to load English TDS samples.</p>';
+            document.getElementById('tds-zh-samples').innerHTML = '<p style="color: #94a3b8;">Failed to load Chinese TDS samples.</p>';
+        } finally {
+            loadingIndicator.style.display = 'none';
+        }
+    }
+
+    function renderTDSMeta(containerId, sampleData, emptyMessage) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        if (!sampleData) {
+            container.innerHTML = `<p style="color: #94a3b8; margin: 0;">${emptyMessage}</p>`;
+            return;
+        }
+
+        container.innerHTML = `
+            <p style="margin: 0 0 0.5rem 0;"><strong>Instruction:</strong> ${sampleData.instruction || 'N/A'}</p>
+            <p style="margin: 0;"><strong>Text:</strong> ${sampleData.text || 'N/A'}</p>
+        `;
+    }
+
+    function renderTDSAudio(modelKey) {
+        const enContainer = document.getElementById('tds-en-samples');
+        const zhContainer = document.getElementById('tds-zh-samples');
+        if (!enContainer || !zhContainer) return;
+
+        const displayName = getDisplayModelName(modelKey);
+
+        const enSampleData = tdsDataEN?.[modelKey] || null;
+        const enPaths = enSampleData?.wav_paths || [];
+        renderTDSMeta('tds-en-meta', enSampleData, 'No English TDS metadata available.');
+        if (enPaths.length > 0) {
+            enContainer.innerHTML = '';
+            enPaths.forEach((path, idx) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'tds-audio-item';
+                itemDiv.innerHTML = `
+                    <span style="min-width: 40px; color: #64748b;">#${idx+1}</span>
+                    <audio controls preload="none">
+                        <source src="${getTDSAudioPath(path)}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                `;
+                enContainer.appendChild(itemDiv);
+            });
+        } else {
+            enContainer.innerHTML = `<p style="color: #94a3b8;">No English TDS samples available for ${displayName}.</p>`;
+        }
+
+        const zhSampleData = tdsDataZH?.[modelKey] || null;
+        const zhPaths = zhSampleData?.wav_paths || [];
+        renderTDSMeta('tds-zh-meta', zhSampleData, 'No Chinese TDS metadata available.');
+        if (zhPaths.length > 0) {
+            zhContainer.innerHTML = '';
+            zhPaths.forEach((path, idx) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'tds-audio-item';
+                itemDiv.innerHTML = `
+                    <span style="min-width: 40px; color: #64748b;">#${idx+1}</span>
+                    <audio controls preload="none">
+                        <source src="${getTDSAudioPath(path)}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                `;
+                zhContainer.appendChild(itemDiv);
+            });
+        } else {
+            zhContainer.innerHTML = `<p style="color: #94a3b8;">No Chinese TDS samples available for ${displayName}.</p>`;
+        }
+    }
+
+    function initTDSAudioSelector() {
+        const selectEl = document.getElementById('tds-model-select');
+        if (!selectEl) return;
+
+        selectEl.addEventListener('change', (e) => {
+            const modelKey = e.target.value;
+            if (modelKey) {
+                renderTDSAudio(modelKey);
+            }
+        });
+    }
+
+    initTDSAudioSelector();
+    loadTDSData();
+
 });

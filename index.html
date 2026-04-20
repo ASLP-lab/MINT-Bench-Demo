@@ -38,7 +38,7 @@
                         </div>
                         <div class="summary-col">
                             <ul style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; padding-left: 1.2rem; margin: 0;">
-                                <li style="margin-bottom: 0.5rem;"><strong>Evaluation:</strong> A hybrid protocol assessing consistency, instruction following, and perceptual quality.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Evaluation:</strong> A hybrid protocol assessing consistency, instruction following, perceptual quality and timbre diversity.</li>
                                 <li style="margin-bottom: 0.5rem;"><strong>Scope:</strong> Extensive coverage across 10 languages and ~12k curated evaluation cases.</li>
                                 <li><strong>Insight:</strong> Open-source models show remarkable competitiveness in localized settings (e.g., Chinese), rivaling frontier commercial systems.</li>
                             </ul>
@@ -91,7 +91,13 @@
                         <li><a href="#detailed-leaderboard" class="toc-link toc-sublink">Detailed</a></li>
                     </ul>
                 </li>
-                <li><a href="#demos" class="toc-link">Demos</a></li>
+                <li>
+                    <a href="#demos" class="toc-link">Demos</a>
+                    <ul class="toc-sublist">
+                        <li><a href="#instruction-following-demos" class="toc-link toc-sublink">Instruction Following</a></li>
+                        <li><a href="#timbre-diversity" class="toc-link toc-sublink">Timbre Diversity</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
 
@@ -2667,8 +2673,10 @@
 
             <section id="demos" class="section">
                 <div class="container-wide">
-                    <h2 class="section-title">Audio Demos</h2>
+                    <h2 class="section-title">Demos</h2>
                     
+                    <!-- Instruction Following 子板块 -->
+                    <h3 id="instruction-following-demos" class="subsection-title" style="margin-top: 2rem;">Instruction Following</h3>
                     <div class="card demo-container">
                         
                         <div class="table-legend" style="margin-bottom: 1.5rem; text-align: left;">
@@ -2678,7 +2686,7 @@
                                 <li><strong>ElevenLabs</strong> imposes a minimum text length requirement for synthesis. To satisfy this, the input text was repeated, meaning you will hear repeated speech in most ElevenLabs samples.</li>
                             </ul>
                         </div>
-
+            
                         <div class="lang-tabs" id="demo-lang-tabs">
                             <button class="lang-tab active" data-lang="en">English</button>
                             <button class="lang-tab" data-lang="zh">Chinese</button>
@@ -2691,18 +2699,19 @@
                             <button class="lang-tab" data-lang="it">Italian</button>
                             <button class="lang-tab" data-lang="ru">Russian</button>
                         </div>
-
+            
                         <div id="taxonomy-tabs-container">
-                            </div>
-
+                            <!-- 动态渲染分类树按钮 -->
+                        </div>
+            
                         <div class="demo-nav-bar" style="margin-top: 1rem;">
                             <button class="btn btn-secondary" id="btn-prev-sample">⬅ Prev Sample</button>
                             <span id="sample-counter" class="font-weight-bold">Sample 0 / 0</span>
                             <button class="btn btn-secondary" id="btn-next-sample">Next Sample ➡</button>
                         </div>
-
+            
                         <hr class="divider">
-
+            
                         <div class="shared-input-box">
                             <div class="shared-header">
                                 <span class="badge" id="lbl-plan-id">PLAN__...</span>
@@ -2714,9 +2723,121 @@
                                 <p><strong>Target Values:</strong> <code id="lbl-targets"></code></p>
                             </div>
                         </div>
-
+            
                         <div class="model-grid" id="model-cards-container">
+                            <!-- 动态渲染模型卡片 -->
+                        </div>
+                    </div>
+            
+                    <!-- Timbre Diversity 子板块 -->
+                    <!-- 第二部分：Timbre Diversity -->
+                    <h3 id="timbre-diversity" class="section-title" style="margin-top: 3rem;">Timbre Diversity</h3>
+
+                    <div class="card" style="padding: 2rem;">
+                        <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                            <strong>Timbre Diversity Score (TDS)</strong> measures the ability to generate multiple diverse voices for the same instruction. Higher scores indicate greater voice variety. 
+                            For each model, we fix one text and one instruction, generate 10 candidate samples, and keep the samples that pass instruction-following evaluation for TDS computation. 
+                            Below, we randomly select one Chinese case and one English case per model for demonstration.
+                        <div class="table-responsive" style="max-height: 400px; overflow-x: auto;">
+                            <table class="leaderboard-table" id="tds-table" style="min-width: 1800px;">
+                                <thead>
+                                    <tr>
+                                        <th class="sticky-col" style="min-width: 100px;">Language</th>
+                                        <th>Gemini 2.5-Flash</th>
+                                        <th>Gemini 2.5-Pro</th>
+                                        <th>ElevenLabs-ttv-v3</th>
+                                        <th>MiniMax-Speech-2.7</th>
+                                        <th>Hume-Octave1</th>
+                                        <th>GPT-4o-Mini-TTS</th>
+                                        <th>Qwen3TTS-12Hz-1.7B-VD</th>
+                                        <th>MOSS-VoiceGenerator</th>
+                                        <th>MiMo-Audio-7B-Instruct</th>
+                                        <th>Ming-omni-tts-16.8B-A3B</th>
+                                        <th>Ming-omni-tts-0.5B</th>
+                                        <th>Parler-TTS Large</th>
+                                        <th>Parler-TTS Mini</th>
+                                        <th>VoiceSculptor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">English (EN)</td>
+                                        <td>0.46</td>
+                                        <td>0.57</td>
+                                        <td>0.31</td>
+                                        <td>0.44</td>
+                                        <td>0.37</td>
+                                        <td>0.37</td>
+                                        <td>0.37</td>
+                                        <td>0.47</td>
+                                        <td>0.52</td>
+                                        <td>0.32</td>
+                                        <td>0.35</td>
+                                        <td>0.42</td>
+                                        <td>0.33</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="model-row">
+                                        <td class="sticky-col font-weight-bold">Chinese (ZH)</td>
+                                        <td>0.32</td>
+                                        <td>0.39</td>
+                                        <td>0.18</td>
+                                        <td>0.38</td>
+                                        <td>-</td>
+                                        <td>0.25</td>
+                                        <td>0.28</td>
+                                        <td>0.35</td>
+                                        <td>0.37</td>
+                                        <td>0.22</td>
+                                        <td>0.23</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>0.32</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 在 <div class="table-responsive"> ... </div> 之后添加 -->
+                        <div style="margin-top: 2.5rem;">
+                            <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">🔊 Listen to Timbre Diversity Samples</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                                Select a model to hear multiple diverse voice renditions of the same instruction in English and Chinese.
+                            </p>
+
+                            <!-- 模型选择器 -->
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                                <label for="tds-model-select" style="font-weight: 700;">Choose a model:</label>
+                                <select id="tds-model-select" style="padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); background: white; font-size: 1rem; min-width: 250px;">
+                                    <option value="">Loading TDS models...</option>
+                                </select>
+                                <span id="tds-loading-indicator" style="color: #94a3b8; display: none;">Loading...</span>
                             </div>
+
+                            <!-- 左右音频列 -->
+                            <div id="tds-audio-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <!-- 英文列 -->
+                                <div>
+                                    <h4 style="margin-bottom: 1rem; color: #2563eb;">English (EN) Samples</h4>
+                                    <div id="tds-en-meta" style="margin-bottom: 1rem; padding: 1rem; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                                        <p style="color: #94a3b8; margin: 0;">Select a model to load samples.</p>
+                                    </div>
+                                    <div id="tds-en-samples" class="tds-sample-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                        <p style="color: #94a3b8;">Select a model to load samples.</p>
+                                    </div>
+                                </div>
+                                <!-- 中文列 -->
+                                <div>
+                                    <h4 style="margin-bottom: 1rem; color: #e11d48;">Chinese (ZH) Samples</h4>
+                                    <div id="tds-zh-meta" style="margin-bottom: 1rem; padding: 1rem; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                                        <p style="color: #94a3b8; margin: 0;">Select a model to load samples.</p>
+                                    </div>
+                                    <div id="tds-zh-samples" class="tds-sample-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                        <p style="color: #94a3b8;">Select a model to load samples.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2747,7 +2868,7 @@
         </div>
     </footer>
 
-    <script src="chart.js"></script>
-    <script src="script.js"></script>
+    <script src="chart.js?v=20260420a"></script>
+    <script src="script.js?v=20260420a"></script>
 </body>
 </html>

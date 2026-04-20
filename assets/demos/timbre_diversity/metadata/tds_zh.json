@@ -1,0 +1,161 @@
+{
+    "qwen3tts": {
+      "text": "时间过得真快啊，仿佛昨天还是个孩子，今天就已经满头白发了。",
+      "instruction": "年龄：老年，性别：男性，情感：沉思",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/qwen3tts_zh/PLAN__zh__hard_composite_complex_comp_static__0001__cand10.mp3"
+      ]
+    },
+    "minimax": {
+      "text": "有时候，停下来思考是很有必要的。",
+      "instruction": "我需要一个男声来念这段话。",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/minimax_zh/PLAN__zh__easy_timbre_direct_atomic_gender__0007__cand10.mp3"
+      ]
+    },
+    "voicesculptor": {
+      "text": "请注意，办公室的饮水机今天需要进行维护，请大家暂时使用茶水间的备用饮用水。",
+      "instruction": "用正常的音高和不带感情的语气，读出以下通知。",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/voicesculptor_zh/PLAN__zh__easy_composite_simple_comp_static__0060__cand10.mp3"
+      ]
+    },
+    "gpt4omini": {
+      "text": "我宣布，本次项目启动会现在正式开始，请各位保持安静。",
+      "instruction": "个性：自信, 音高：低, 语速：正常, 音量：大",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/gpt4omini_zh/PLAN__zh__hard_composite_complex_comp_static__0018__cand10.mp3"
+      ]
+    },
+    "mingmoe": {
+      "text": "你赶紧把东西收拾好，五分钟后楼下集合，听见没有？",
+      "instruction": "用标准普通话，语气很急，像是在催别人一样。",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingmoe_zh/PLAN__zh__hard_composite_complex_comp_static__0027__cand10.mp3"
+      ]
+    },
+    "geminipro": {
+      "text": "这个城市有两个主要的机场。",
+      "instruction": "性别：男性",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminipro_zh/PLAN__zh__easy_timbre_tag_atomic_gender__0001__cand10.mp3"
+      ]
+    },
+    "mimo": {
+      "text": "我跟你讲哦，这个超好吃的，你要不要也来一个？",
+      "instruction": "用一个台湾小女孩开心快乐的语气说话。",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mimo_zh/PLAN__zh__hard_composite_complex_comp_static__0010__cand10.mp3"
+      ]
+    },
+    "moss1b7": {
+      "text": "那家新开的饭馆味道挺地道的，我昨天晚上刚去过。",
+      "instruction": "性别：男性, 口音：北京话",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/moss1b7_zh/PLAN__zh__easy_composite_simple_comp_static__0055__cand10.mp3"
+      ]
+    },
+    "mingdense": {
+      "text": "读一本好书总能让人获得新的见解和启发。",
+      "instruction": "年龄：成年",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand07.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/mingdense_zh/PLAN__zh__easy_timbre_tag_atomic_age__0007__cand10.mp3"
+      ]
+    },
+    "geminiflash": {
+      "text": "麻烦你把这个文件复印一份。",
+      "instruction": "音高：低",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand06.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand09.mp3",
+        "assets/demos/timbre_diversity/mp3s/geminiflash_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0010__cand10.mp3"
+      ]
+    },
+    "elevenlabs": {
+      "text": "前方路段因施工临时封闭，请过往车辆注意绕行。",
+      "instruction": "音高：高",
+      "wav_paths": [
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand01.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand02.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand03.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand04.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand05.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand08.mp3",
+        "assets/demos/timbre_diversity/mp3s/elevenlabs_zh/PLAN__zh__easy_timbre_tag_atomic_pitch__0006__cand10.mp3"
+      ]
+    }
+  }

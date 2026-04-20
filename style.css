@@ -833,3 +833,25 @@ footer {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* TDS 表格中缺省值的样式 */
+#tds-table th {
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+
+/* TDS 音频样本列表中的单个音频卡片 */
+.tds-audio-item {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tds-audio-item audio {
+    width: 100%;
+    height: 36px;
+}
