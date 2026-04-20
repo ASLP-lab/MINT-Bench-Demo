@@ -26,11 +26,54 @@
                 <img src="./assets/figs/logo.png" alt="MINT-Bench Logo" class="hero-logo-img">
             </div>
             <h1>MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following Text-to-Speech</h1>
-            <p class="subtitle">A hierarchical multi-axis taxonomy, a scalable multi-stage data construction pipeline, and a hierarchical hybrid evaluation protocol for controllable and expressive speech generation.</p>
+            
+            <div class="hero-summary-radar-box" style="margin: 2.5rem auto; background: #ffffff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 2.5rem; text-align: left; max-width: 1100px; border: 1px solid var(--border-color);">
+
+                <div class="summary-section" style="margin-bottom: 2.5rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+                        <div class="summary-col">
+                            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-color); margin: 0;">
+                                <strong>MINT-Bench</strong> is a comprehensive multilingual benchmark designed to address the evaluation gap in instruction-following TTS. It introduces a <strong>hierarchical multi-axis taxonomy</strong> comprising 15 categories and a <strong>scalable data construction pipeline</strong> that transforms instruction constraints into natural-language prompts.
+                            </p>
+                        </div>
+                        <div class="summary-col">
+                            <ul style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; padding-left: 1.2rem; margin: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong>Evaluation:</strong> A hybrid protocol assessing consistency, instruction following, and perceptual quality.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Scope:</strong> Extensive coverage across 10 languages and ~12k curated evaluation cases.</li>
+                                <li><strong>Insight:</strong> Open-source models show remarkable competitiveness in localized settings (e.g., Chinese), rivaling frontier commercial systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="radar-section">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-color); font-size: 1.2rem;">Multilingual Capability Landscape</h3>
+                    <div class="radar-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                        <div class="chart-container">
+                            <h4 style="text-align: center; color: #e11d48; margin-bottom: 1rem; font-size: 1.05rem;">Chinese (ZH)</h4>
+                            <div style="height: 430px; position: relative;">
+                                <canvas id="chineseRadarChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <h4 style="text-align: center; color: #2563eb; margin-bottom: 1rem; font-size: 1.05rem;">English (EN)</h4>
+                            <div style="height: 430px; position: relative;">
+                                <canvas id="englishRadarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0;">
+                        * Visualizing all evaluated models. Showing <strong>Top 3</strong> by default, click the legend below to toggle others.<br>
+                        <strong>(Comm)</strong>: Commercial Systems | <strong>(OS)</strong>: Open-Source Models. Dashed lines indicate OS models.
+                    </p>
+                </div>
+            
+            </div>
+            
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary">📄 Paper</a>
-                <a href="#" class="btn btn-secondary">💻 Code</a>
-                <a href="#" class="btn btn-secondary">🗄️ Dataset</a>
+                <a href="#" class="btn btn-secondary" style="background-color: #f1f5f9; color: #94a3b8; border-color: #e2e8f0; cursor: not-allowed; text-decoration: none;" onclick="event.preventDefault();">💻 Code (Coming Soon)</a>
+                <a href="#" class="btn btn-secondary" style="background-color: #f1f5f9; color: #94a3b8; border-color: #e2e8f0; cursor: not-allowed; text-decoration: none;" onclick="event.preventDefault();">🤗 Dataset (Coming Soon)</a>
             </div>
         </div>
     </header>
@@ -2704,6 +2747,7 @@
         </div>
     </footer>
 
+    <script src="chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

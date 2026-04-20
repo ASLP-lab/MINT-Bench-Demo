@@ -820,3 +820,16 @@ footer {
     /* 加这一行，让透明度变化有一个 0.2 秒的丝滑过渡 */
     transition: opacity 0.2s ease; 
 }
+
+@media (max-width: 992px) {
+    /* Summary 文字左右分栏变上下 */
+    .summary-section > div {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* 雷达图左右分栏变上下 */
+    .radar-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
