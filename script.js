@@ -907,8 +907,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initDualRadarCharts();
 
-    initDualRadarCharts()
-
     
     // ==========================================
     // Timbre Diversity 音频演示功能
