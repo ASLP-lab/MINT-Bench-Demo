@@ -93,12 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentDisplayModels = [];  // 当前语种实际包含的模型
     // 这里设定你期望的模型排序优先级，未在列表内的模型会自动按字母排在最后
     const preferredModelOrder = [
-        "geminiflash", "geminipro", "elevenlabs", "gpt4omini", 
-        "qwen3tts", "minimax", "mimo", "mingmoe", "mingdense", 
+        "geminiflash", "geminipro", "elevenlabs", "mimopro", "stepaudio25",
+        "bluebell", "bluebreeze", "gpt4omini", "minimax", "hume",
+        "qwen3tts", "voxcpm2", "omnivoice", "mimo", "mingmoe", "mingdense",
         "moss1b7", "voicesculptor", "parlerttslarge", "parlerttsmini"
     ];
-
-    // 【新增】模型名称映射字典
+    
     const MODEL_NAME_MAP = {
         "geminiflash": "Gemini 2.5-Flash",
         "geminipro": "Gemini 2.5-Pro",
@@ -113,7 +113,15 @@ document.addEventListener("DOMContentLoaded", () => {
         "mingdense": "Ming-omni-tts-0.5B",
         "parlerttslarge": "Parler-TTS Large",
         "parlerttsmini": "Parler-TTS Mini",
-        "voicesculptor": "VoiceSculptor"
+        "voicesculptor": "VoiceSculptor",
+    
+        // 新增 / 修正模型
+        "mimopro": "MiMo 2.5 Pro TTS Voice Design",
+        "stepaudio25": "StepAudio-2.5-TTS",
+        "omnivoice": "OmniVoice-VoiceDesign",
+        "voxcpm2": "VoxCPM2-VoiceDesign",
+        "bluebell": "Bluebell-VoiceDesign",
+        "bluebreeze": "Bluebell-VoiceDesign"
     };
 
     // 【新增】获取美化后的模型名
@@ -608,8 +616,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     function initDualRadarCharts() {
         const labels = [
-            'Overall avg', 'Timbre avg', 'Style avg', 'Tag', 'Direct', 
-            'Simple-comp', 'Multi-comp', 'Dynamic', 'Layered', 'Conflict', 
+            'Overall avg', 'Timbre avg', 'Style avg', 'Tag', 'Direct',
+            'Simple-comp', 'Multi-comp', 'Dynamic', 'Layered', 'Conflict',
             'Scenario', 'Character', 'Disfluency', 'Dysphonia', 'Implicit', 'Explicit'
         ];
 
@@ -617,86 +625,287 @@ document.addEventListener("DOMContentLoaded", () => {
             responsive: true,
             maintainAspectRatio: false,
             layout: { padding: 20 },
+            elements: {
+                line: { tension: 0.12 },
+                point: { hoverRadius: 5 }
+            },
             scales: {
                 r: {
-                    min: 0.5, max: 3.0, stepSize: 0.5,
-                    angleLines: { color: 'rgba(0,0,0,0.05)' },
-                    grid: { color: 'rgba(0,0,0,0.05)' },
-                    pointLabels: { font: { size: 9, weight: '600', family: 'system-ui' }, color: '#475569' },
-                    ticks: { backdropColor: 'transparent', font: { size: 8 }, color: '#cbd5e1' }
+                    min: 0.5,
+                    max: 3.0,
+                    angleLines: { color: 'rgba(0,0,0,0.06)' },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                    pointLabels: {
+                        font: { size: 9, weight: '600', family: 'system-ui' },
+                        color: '#475569'
+                    },
+                    ticks: {
+                        stepSize: 0.5,
+                        backdropColor: 'transparent',
+                        font: { size: 8 },
+                        color: '#cbd5e1'
+                    }
                 }
             },
             plugins: {
-                legend: { 
-                    position: 'bottom', 
-                    labels: { boxWidth: 10, padding: 8, font: { size: 9, family: 'system-ui' }, usePointStyle: true } 
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        padding: 8,
+                        font: { size: 9, family: 'system-ui' },
+                        usePointStyle: true
+                    }
                 },
-                tooltip: { backgroundColor: 'rgba(15, 23, 42, 0.9)', padding: 8, cornerRadius: 6 }
+                tooltip: {
+                    backgroundColor: 'rgba(15, 23, 42, 0.92)',
+                    padding: 10,
+                    cornerRadius: 8,
+                    callbacks: {
+                        label: (context) => `${context.dataset.label}: ${context.formattedValue}`
+                    }
+                }
             }
         };
 
-        // 调色盘
-        const colors = {
-            flash: '#2563eb', pro: '#60a5fa', eleven: '#ec4899', qwen: '#10b981', 
-            minimax: '#f59e0b', moss: '#8b5cf6', ming16: '#14b8a6', ming05: '#4ade80', 
-            mimo: '#eab308', hume: '#6366f1', gpt4o: '#a855f7', parlerL: '#94a3b8', 
-            parlerM: '#cbd5e1', voiceS: '#f43f5e'
+        // 模型类型规则：
+        // OS 使用虚线；Commercial 使用实线。
+        // 你特别指定：
+        // voxcpm2 / omnivoice = 开源模型
+        // stepaudio25 / bluebell / mimopro = 商业模型
+        function getModelFamily(modelName) {
+            const name = modelName.toLowerCase().replace(/[\s_]/g, '');
+
+            if (
+                name.includes('voxcpm2') ||
+                name.includes('voxcpm') ||
+                name.includes('omnivoice')
+            ) {
+                return 'OS';
+            }
+
+            if (
+                name.includes('stepaudio25') ||
+                name.includes('stepaudio-2.5') ||
+                name.includes('stepaudio') ||
+                name.includes('bluebell') ||
+                name.includes('bluebreeze') ||
+                name.includes('mimo2.5pro') ||
+                name.includes('mimopro')
+            ) {
+                return 'Comm';
+            }
+
+            // 其他已有开源模型
+            if (
+                name.includes('qwen') ||
+                name.includes('moss') ||
+                name.includes('ming') ||
+                name.includes('mimo-audio') ||
+                name.includes('mimoaudio') ||
+                name.includes('voicesculptor') ||
+                name.includes('parlertts')
+            ) {
+                return 'OS';
+            }
+
+            // 默认按商业模型处理
+            return 'Comm';
+        }
+
+        function getRadarDisplayName(modelName) {
+            const nameMap = {
+                'Gemini 2.5-Flash': 'Gemini Flash',
+                'Gemini 2.5-Pro': 'Gemini Pro',
+                'ElevenLabs-ttv-v3': 'ElevenLabs-v3',
+                'MiniMax-Speech-2.7': 'MiniMax-2.7',
+                'Qwen3TTS-12Hz-1.7B-VD': 'Qwen3TTS-1.7B',
+                'MOSS-VoiceGenerator': 'MOSS-Voice',
+                'Ming-omni-tts-16.8B-A3B': 'Ming-Omni-16.8B',
+                'Ming-omni-tts-0.5B': 'Ming-Omni-0.5B',
+                'MiMo-Audio-7B-Instruct': 'MiMo-Audio',
+                'MiMo 2.5 Pro TTS Voice Design': 'MiMo 2.5 Pro',
+                'StepAudio-2.5-TTS': 'StepAudio-2.5',
+                'Bluebell-VoiceDesign': 'Bluebell',
+                'VoxCPM2-VoiceDesign': 'VoxCPM2',
+                'OmniVoice-VoiceDesign': 'OmniVoice',
+                'GPT-4o-Mini-TTS': 'GPT-4o-Mini',
+                'Hume-Octave1': 'Hume-Octave1',
+                'Parler-TTS Large': 'Parler Large',
+                'Parler-TTS Mini': 'Parler Mini'
+            };
+
+            return nameMap[modelName] || modelName;
+        }
+
+        const modelColorMap = {
+            'geminiflash': '#2563eb',
+            'geminipro': '#60a5fa',
+            'elevenlabs': '#ec4899',
+            'mimopro': '#ef4444',
+            'stepaudio': '#f97316',
+            'bluebell': '#0ea5e9',
+            'qwen': '#10b981',
+            'voxcpm': '#22c55e',
+            'omnivoice': '#84cc16',
+            'minimax': '#f59e0b',
+            'moss': '#8b5cf6',
+            'ming16': '#14b8a6',
+            'ming05': '#4ade80',
+            'mimoaudio': '#eab308',
+            'hume': '#6366f1',
+            'gpt4o': '#a855f7',
+            'parlerlarge': '#94a3b8',
+            'parlermini': '#cbd5e1',
+            'voicesculptor': '#f43f5e'
         };
 
-        // --- 1. 中文雷达图 (ZH 11个模型) ---
-        // Top 3 (Qwen3, Gemini Pro, Gemini Flash) 默认显示
-        const ctxZh = document.getElementById('chineseRadarChart');
-        if (ctxZh) {
-            new Chart(ctxZh, {
+        const fallbackPalette = [
+            '#2563eb', '#ec4899', '#10b981', '#f59e0b',
+            '#8b5cf6', '#14b8a6', '#eab308', '#6366f1',
+            '#a855f7', '#f43f5e', '#0ea5e9', '#22c55e'
+        ];
+
+        function normalizeModelKey(modelName) {
+            const name = modelName.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            if (name.includes('gemini25flash')) return 'geminiflash';
+            if (name.includes('gemini25pro')) return 'geminipro';
+            if (name.includes('elevenlabs')) return 'elevenlabs';
+            if (name.includes('mimo25pro')) return 'mimopro';
+            if (name.includes('stepaudio')) return 'stepaudio';
+            if (name.includes('bluebell') || name.includes('bluebreeze')) return 'bluebell';
+            if (name.includes('qwen')) return 'qwen';
+            if (name.includes('voxcpm')) return 'voxcpm';
+            if (name.includes('omnivoice')) return 'omnivoice';
+            if (name.includes('minimax')) return 'minimax';
+            if (name.includes('moss')) return 'moss';
+            if (name.includes('168b')) return 'ming16';
+            if (name.includes('05b') || name.includes('0.5b')) return 'ming05';
+            if (name.includes('mimoaudio')) return 'mimoaudio';
+            if (name.includes('hume')) return 'hume';
+            if (name.includes('gpt4omini')) return 'gpt4o';
+            if (name.includes('parlerttslarge')) return 'parlerlarge';
+            if (name.includes('parlerttsmini')) return 'parlermini';
+            if (name.includes('voicesculptor')) return 'voicesculptor';
+
+            return name;
+        }
+
+        function getRadarColor(modelName, index) {
+            const key = normalizeModelKey(modelName);
+            return modelColorMap[key] || fallbackPalette[index % fallbackPalette.length];
+        }
+
+        function hexToRgba(hex, alpha) {
+            const cleanHex = hex.replace('#', '');
+            const value = parseInt(cleanHex, 16);
+
+            const r = (value >> 16) & 255;
+            const g = (value >> 8) & 255;
+            const b = value & 255;
+
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        function parseMainScore(cell) {
+            const mainScore = cell.querySelector('.score-main');
+            const scoreText = mainScore ? mainScore.textContent : cell.textContent;
+
+            // score-main 形如：2.44 / 3.66
+            // 雷达图只取第一个分数，即 instruction-following / 主分数
+            const firstScore = scoreText.split('/')[0].trim();
+            const value = parseFloat(firstScore);
+
+            return Number.isFinite(value) ? value : null;
+        }
+
+        // 直接从 Overall Leaderboard 表格抽取雷达图数据。
+        // 好处：leaderboard 新增模型后，雷达图自动同步，不需要再手写数组。
+        function extractRadarDatasetsFromTable(lang) {
+            const table = document.getElementById(`table-${lang}`);
+            if (!table) return [];
+
+            const rows = Array.from(table.querySelectorAll('tbody tr.model-row'));
+
+            return rows
+                .map((row) => {
+                    const modelCell = row.querySelector('td.sticky-col');
+                    if (!modelCell) return null;
+
+                    const modelName = modelCell.textContent.trim();
+
+                    // 去掉模型名列，读取后面 16 个指标列
+                    const scoreCells = Array.from(row.querySelectorAll('td')).slice(1, labels.length + 1);
+                    const scores = scoreCells.map(parseMainScore);
+
+                    if (scores.length !== labels.length || scores.some(score => score === null)) {
+                        return null;
+                    }
+
+                    return {
+                        modelName,
+                        displayName: getRadarDisplayName(modelName),
+                        family: getModelFamily(modelName),
+                        scores
+                    };
+                })
+                .filter(Boolean)
+                .sort((a, b) => b.scores[0] - a.scores[0]); // 按 Overall avg 从高到低排序
+        }
+
+        function buildRadarDatasets(lang) {
+            return extractRadarDatasetsFromTable(lang).map((model, index) => {
+                const color = getRadarColor(model.modelName, index);
+                const isOpenSource = model.family === 'OS';
+                const isTopThree = index < 3;
+
+                return {
+                    label: `${model.displayName} (${model.family})`,
+                    data: model.scores,
+                    borderColor: color,
+                    backgroundColor: hexToRgba(color, isTopThree ? 0.10 : 0.035),
+                    pointBackgroundColor: color,
+                    pointBorderColor: '#ffffff',
+                    pointRadius: isTopThree ? 2.5 : 1.8,
+                    pointHoverRadius: 5,
+                    borderWidth: isTopThree ? 2.5 : 1.5,
+
+                    // OS 模型虚线；商业模型实线
+                    borderDash: isOpenSource ? [4, 4] : [],
+
+                    // 默认只显示 Top 3，其余模型通过 legend 点击打开
+                    hidden: !isTopThree
+                };
+            });
+        }
+
+        function createRadarChart(canvasId, lang) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas || typeof Chart === 'undefined') return;
+
+            const datasets = buildRadarDatasets(lang);
+
+            if (!datasets.length) {
+                console.warn(`No radar data found for ${lang.toUpperCase()}.`);
+                return;
+            }
+
+            new Chart(canvas, {
                 type: 'radar',
                 data: {
-                    labels: labels,
-                    datasets: [
-                        { label: 'Qwen3TTS-1.7B (OS)', data: [2.16, 2.29, 2.23, 2.27, 2.33, 2.69, 2.25, 1.64, 1.98, 1.85, 1.89, 1.89, 1.20, 2.67, 2.03, 1.69], borderColor: colors.qwen, backgroundColor: 'rgba(16,185,129,0.1)', borderWidth: 2.5, borderDash: [4,4] },
-                        { label: 'Gemini 2.5-Pro (Comm)', data: [2.13, 2.20, 2.22, 2.12, 2.29, 2.44, 2.20, 2.01, 1.85, 2.11, 1.44, 1.78, 1.70, 2.71, 2.41, 2.31], borderColor: colors.pro, borderWidth: 2.5 },
-                        { label: 'Gemini 2.5-Flash (Comm)', data: [2.09, 2.09, 2.11, 2.02, 2.21, 2.44, 2.25, 2.01, 1.73, 1.48, 1.89, 1.88, 1.55, 2.58, 2.41, 2.28], borderColor: colors.flash, borderWidth: 2.5 },
-                        { label: 'ElevenLabs-v3 (Comm)', data: [1.98, 2.23, 1.96, 2.23, 2.05, 2.30, 2.11, 1.34, 1.89, 1.73, 1.87, 2.09, 0.87, 1.90, 1.14, 2.12], borderColor: colors.eleven, borderWidth: 1.5, hidden: true },
-                        { label: 'MiniMax-2.7 (Comm)', data: [1.95, 2.17, 2.07, 2.08, 2.05, 2.49, 2.18, 1.76, 1.95, 1.80, 1.91, 1.73, 1.05, 1.75, 1.25, 1.06], borderColor: colors.minimax, borderWidth: 1.5, hidden: true },
-                        { label: 'Ming-Omni-16.8B (OS)', data: [1.95, 2.10, 2.06, 2.12, 2.02, 2.44, 2.16, 1.91, 1.82, 1.64, 1.72, 1.80, 1.00, 1.67, 1.66, 1.06], borderColor: colors.ming16, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'MOSS-Voice (OS)', data: [1.93, 1.98, 2.00, 2.00, 1.92, 2.14, 2.27, 1.46, 1.90, 1.96, 1.59, 1.77, 1.30, 2.33, 1.97, 1.81], borderColor: colors.moss, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'Ming-Omni-0.5B (OS)', data: [1.87, 2.04, 2.01, 1.95, 1.96, 2.39, 2.24, 1.68, 1.72, 1.65, 1.56, 1.82, 1.00, 1.55, 1.35, 1.07], borderColor: colors.ming05, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'MiMo-Audio (OS)', data: [1.75, 1.78, 1.83, 1.86, 1.78, 2.14, 1.74, 1.62, 1.33, 1.68, 1.76, 1.51, 1.40, 2.33, 1.72, 1.22], borderColor: colors.mimo, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'VoiceSculptor (OS)', data: [1.59, 1.55, 1.62, 1.63, 1.41, 1.87, 1.69, 1.60, 1.78, 1.25, 1.42, 1.59, 1.25, 2.46, 1.75, 1.09], borderColor: colors.voiceS, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'GPT-4o-Mini-TTS (Comm)', data: [1.56, 1.58, 1.63, 1.53, 1.76, 1.77, 1.59, 1.78, 1.20, 1.39, 1.20, 1.33, 1.11, 1.96, 1.62, 1.47], borderColor: colors.gpt4o, borderWidth: 1.5, hidden: true }
-                    ]
+                    labels,
+                    datasets
                 },
                 options: commonOptions
             });
         }
 
-        // --- 2. 英文雷达图 (EN 13个模型) ---
-        // Top 3 (Gemini Flash, Gemini Pro, ElevenLabs) 默认显示
-        const ctxEn = document.getElementById('englishRadarChart');
-        if (ctxEn) {
-            new Chart(ctxEn, {
-                type: 'radar',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        { label: 'Gemini 2.5-Flash (Comm)', data: [2.44, 2.33, 2.59, 2.50, 2.53, 2.65, 2.50, 2.24, 2.46, 2.31, 2.28, 2.17, 1.95, 2.62, 2.56, 2.31], borderColor: colors.flash, backgroundColor: 'rgba(37,99,235,0.1)', borderWidth: 2.5 },
-                        { label: 'Gemini 2.5-Pro (Comm)', data: [2.39, 2.34, 2.53, 2.47, 2.51, 2.52, 2.44, 2.35, 2.23, 2.40, 2.22, 2.05, 1.90, 2.71, 2.31, 2.35], borderColor: colors.pro, borderWidth: 2.5 },
-                        { label: 'ElevenLabs-v3 (Comm)', data: [2.23, 2.53, 2.23, 2.49, 2.34, 2.62, 2.24, 1.81, 2.18, 2.12, 2.48, 2.42, 0.77, 1.43, 1.21, 2.21], borderColor: colors.eleven, borderWidth: 2.5 },
-                        { label: 'Qwen3TTS-1.7B (OS)', data: [2.12, 2.28, 2.16, 2.20, 2.13, 2.44, 2.35, 1.57, 2.11, 2.15, 2.06, 2.12, 1.20, 2.21, 1.81, 1.59], borderColor: colors.qwen, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'MiniMax-2.7 (Comm)', data: [1.95, 2.12, 2.04, 2.07, 1.99, 2.35, 2.27, 1.53, 1.57, 2.07, 2.06, 2.09, 1.00, 1.08, 1.26, 1.00], borderColor: colors.minimax, borderWidth: 1.5, hidden: true },
-                        { label: 'MOSS-Voice (OS)', data: [1.90, 2.01, 1.99, 1.97, 1.90, 2.29, 2.01, 1.71, 1.90, 2.11, 1.76, 1.74, 1.30, 2.04, 1.97, 1.16], borderColor: colors.moss, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'Hume-Octave1 (Comm)', data: [1.86, 2.08, 1.95, 2.10, 2.08, 2.22, 2.00, 1.65, 1.52, 1.44, 1.97, 1.74, 1.00, 1.00, 1.00, 1.03], borderColor: colors.hume, borderWidth: 1.5, hidden: true },
-                        { label: 'MiMo-Audio (OS)', data: [1.75, 1.80, 1.83, 1.87, 1.79, 2.03, 1.95, 1.44, 1.25, 1.71, 1.89, 1.63, 1.05, 1.96, 1.47, 1.03], borderColor: colors.mimo, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'GPT-4o-Mini-TTS (Comm)', data: [1.69, 1.70, 1.78, 1.63, 1.83, 1.74, 1.81, 1.72, 1.74, 1.87, 1.61, 1.47, 1.30, 1.88, 1.62, 1.59], borderColor: colors.gpt4o, borderWidth: 1.5, hidden: true },
-                        { label: 'Ming-Omni-16.8B (OS)', data: [1.51, 1.68, 1.58, 1.70, 1.61, 1.99, 1.41, 1.60, 1.27, 1.20, 1.56, 1.31, 1.00, 1.00, 1.03, 1.12], borderColor: colors.ming16, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'Ming-Omni-0.5B (OS)', data: [1.41, 1.55, 1.46, 1.62, 1.46, 1.69, 1.41, 1.33, 1.08, 1.23, 1.20, 1.27, 1.00, 1.04, 1.06, 1.00], borderColor: colors.ming05, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'Parler-TTS Large (OS)', data: [1.38, 1.61, 1.49, 1.45, 1.65, 1.74, 1.64, 0.85, 1.35, 1.15, 0.93, 0.94, 1.15, 1.92, 1.06, 1.00], borderColor: colors.parlerL, borderWidth: 1.5, borderDash: [4,4], hidden: true },
-                        { label: 'Parler-TTS Mini (OS)', data: [1.04, 1.11, 1.13, 1.18, 1.28, 1.00, 1.23, 0.75, 0.90, 0.73, 0.45, 0.51, 1.00, 2.33, 1.12, 1.00], borderColor: colors.parlerM, borderWidth: 1.5, borderDash: [4,4], hidden: true }
-                    ]
-                },
-                options: commonOptions
-            });
-        }
+        createRadarChart('chineseRadarChart', 'zh');
+        createRadarChart('englishRadarChart', 'en');
     }
+
+    initDualRadarCharts();
 
     initDualRadarCharts()
 
