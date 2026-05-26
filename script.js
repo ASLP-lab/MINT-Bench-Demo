@@ -94,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 这里设定你期望的模型排序优先级，未在列表内的模型会自动按字母排在最后
     const preferredModelOrder = [
         "geminiflash", "geminipro", "elevenlabs", "mimopro", "stepaudio25",
-        "bluebell", "bluebreeze", "gpt4omini", "minimax", "hume",
+        // "bluebell", "bluebreeze", 
+        "gpt4omini", "minimax", "hume",
         "qwen3tts", "voxcpm2", "omnivoice", "mimo", "mingmoe", "mingdense",
         "moss1b7", "voicesculptor", "parlerttslarge", "parlerttsmini"
     ];
@@ -120,9 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
         "stepaudio25": "StepAudio-2.5-TTS",
         "omnivoice": "OmniVoice-VoiceDesign",
         "voxcpm2": "VoxCPM2-VoiceDesign",
-        "bluebell": "Bluebell-VoiceDesign",
-        "bluebreeze": "Bluebell-VoiceDesign"
+        // "bluebell": "Bluebell-VoiceDesign",
+        // "bluebreeze": "Bluebell-VoiceDesign"
     };
+
+    // 【临时隐藏 BlueBell / BlueBreeze 相关结果】
+    function isBlueBellModel(modelName) {
+        const name = String(modelName).toLowerCase().replace(/[^a-z0-9]/g, '');
+        return name.includes('bluebell') || name.includes('bluebreeze');
+    }
 
     // 【新增】获取美化后的模型名
     function getDisplayModelName(rawName) {
@@ -248,7 +255,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 let uniqueModels = new Set();
                 for (const planId in data) {
                     if (data[planId].models) {
-                        Object.keys(data[planId].models).forEach(m => uniqueModels.add(m));
+                        // Object.keys(data[planId].models).forEach(m => uniqueModels.add(m));
+                        Object.keys(data[planId].models)
+                        .filter(m => !isBlueBellModel(m))
+                        .forEach(m => uniqueModels.add(m));
                     }
                 }
                 
@@ -362,6 +372,8 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = '';
         
         currentDisplayModels.forEach(model => {
+            if (isBlueBellModel(model)) return;
+
             const modelRes = planData.models[model];
             if (!modelRes) return; // 如果当前样本中没有该模型的结果，则跳过卡片生成
 
@@ -476,7 +488,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 let modelsSet = new Set();
                 for (let path in data) {
-                    Object.keys(data[path]).forEach(m => modelsSet.add(m));
+                    // Object.keys(data[path]).forEach(m => modelsSet.add(m));
+                    Object.keys(data[path])
+                    .filter(m => !isBlueBellModel(m))
+                    .forEach(m => modelsSet.add(m));
                 }
                 detailedModels = Array.from(modelsSet).sort((a, b) => {
                     let idxA = preferredModelOrder.indexOf(a);
@@ -834,6 +849,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (!modelCell) return null;
 
                     const modelName = modelCell.textContent.trim();
+                    if (isBlueBellModel(modelName)) return null;
 
                     // 去掉模型名列，读取后面 16 个指标列
                     const scoreCells = Array.from(row.querySelectorAll('td')).slice(1, labels.length + 1);
