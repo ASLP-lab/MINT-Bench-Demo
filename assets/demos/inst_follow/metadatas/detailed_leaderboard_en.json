@@ -17,7 +17,11 @@
     "voxcpm2": 2.93,
     "mimopro": 3.73,
     "parlerttslarge": 2.12,
-    "mimo": 2.89
+    "mimo": 2.89,
+    "fireredtts3": 2.9,
+    "ming_3_0_tts_tiny": 2.71,
+    "qwen_audio_tts_flash_text": 3.19,
+    "qwen_audio_tts_plus_text": 2.52
   },
   "easy/timbre": {
     "bluebreeze": 3.55,
@@ -37,7 +41,11 @@
     "voxcpm2": 2.67,
     "mimopro": 3.66,
     "parlerttslarge": 2.14,
-    "mimo": 2.68
+    "mimo": 2.68,
+    "fireredtts3": 3.07,
+    "ming_3_0_tts_tiny": 2.65,
+    "qwen_audio_tts_flash_text": 3.05,
+    "qwen_audio_tts_plus_text": 2.36
   },
   "easy/timbre/direct": {
     "bluebreeze": 3.46,
@@ -57,7 +65,11 @@
     "voxcpm2": 2.49,
     "mimopro": 3.7,
     "parlerttslarge": 2.22,
-    "mimo": 2.52
+    "mimo": 2.52,
+    "fireredtts3": 2.97,
+    "ming_3_0_tts_tiny": 2.77,
+    "qwen_audio_tts_flash_text": 3.1,
+    "qwen_audio_tts_plus_text": 2.43
   },
   "easy/timbre/direct/atomic": {
     "bluebreeze": 3.46,
@@ -77,7 +89,11 @@
     "voxcpm2": 2.49,
     "mimopro": 3.7,
     "parlerttslarge": 2.22,
-    "mimo": 2.52
+    "mimo": 2.52,
+    "fireredtts3": 2.97,
+    "ming_3_0_tts_tiny": 2.77,
+    "qwen_audio_tts_flash_text": 3.1,
+    "qwen_audio_tts_plus_text": 2.43
   },
   "easy/timbre/direct/atomic/gender": {
     "bluebreeze": 4.2,
@@ -97,7 +113,11 @@
     "voxcpm2": 4.2,
     "mimopro": 4.5,
     "parlerttslarge": 2.11,
-    "mimo": 2.8
+    "mimo": 2.8,
+    "fireredtts3": 3.9,
+    "ming_3_0_tts_tiny": 3.2,
+    "qwen_audio_tts_flash_text": 4.7,
+    "qwen_audio_tts_plus_text": 3.9
   },
   "easy/style": {
     "bluebreeze": 3.3,
@@ -117,7 +137,11 @@
     "voxcpm2": 2.86,
     "mimopro": 3.66,
     "parlerttslarge": 2.07,
-    "mimo": 2.95
+    "mimo": 2.95,
+    "fireredtts3": 2.73,
+    "ming_3_0_tts_tiny": 2.59,
+    "qwen_audio_tts_flash_text": 3.11,
+    "qwen_audio_tts_plus_text": 2.53
   },
   "easy/style/direct": {
     "bluebreeze": 3.3,
@@ -137,7 +161,11 @@
     "voxcpm2": 2.88,
     "mimopro": 3.55,
     "parlerttslarge": 2.12,
-    "mimo": 2.98
+    "mimo": 2.98,
+    "fireredtts3": 2.75,
+    "ming_3_0_tts_tiny": 2.83,
+    "qwen_audio_tts_flash_text": 3.57,
+    "qwen_audio_tts_plus_text": 2.72
   },
   "easy/style/direct/atomic": {
     "bluebreeze": 3.3,
@@ -157,7 +185,11 @@
     "voxcpm2": 2.88,
     "mimopro": 3.55,
     "parlerttslarge": 2.12,
-    "mimo": 2.98
+    "mimo": 2.98,
+    "fireredtts3": 2.75,
+    "ming_3_0_tts_tiny": 2.83,
+    "qwen_audio_tts_flash_text": 3.57,
+    "qwen_audio_tts_plus_text": 2.72
   },
   "easy/style/direct/atomic/tone": {
     "bluebreeze": 2.82,
@@ -177,7 +209,11 @@
     "voxcpm2": 2.32,
     "mimopro": 3.0,
     "parlerttslarge": 1.97,
-    "mimo": 3.35
+    "mimo": 3.35,
+    "fireredtts3": 2.82,
+    "ming_3_0_tts_tiny": 3.03,
+    "qwen_audio_tts_flash_text": 3.71,
+    "qwen_audio_tts_plus_text": 2.94
   },
   "easy/style/tag": {
     "bluebreeze": 3.3,
@@ -197,7 +233,11 @@
     "voxcpm2": 2.85,
     "mimopro": 3.77,
     "parlerttslarge": 2.02,
-    "mimo": 2.92
+    "mimo": 2.92,
+    "fireredtts3": 2.71,
+    "ming_3_0_tts_tiny": 2.36,
+    "qwen_audio_tts_flash_text": 2.65,
+    "qwen_audio_tts_plus_text": 2.35
   },
   "easy/style/tag/atomic": {
     "bluebreeze": 3.3,
@@ -217,7 +257,11 @@
     "voxcpm2": 2.85,
     "mimopro": 3.77,
     "parlerttslarge": 2.02,
-    "mimo": 2.92
+    "mimo": 2.92,
+    "fireredtts3": 2.71,
+    "ming_3_0_tts_tiny": 2.36,
+    "qwen_audio_tts_flash_text": 2.65,
+    "qwen_audio_tts_plus_text": 2.35
   },
   "easy/style/tag/atomic/speed": {
     "bluebreeze": 2.93,
@@ -237,7 +281,11 @@
     "voxcpm2": 2.93,
     "mimopro": 3.73,
     "parlerttslarge": 3.07,
-    "mimo": 3.23
+    "mimo": 3.23,
+    "fireredtts3": 3,
+    "ming_3_0_tts_tiny": 2.27,
+    "qwen_audio_tts_flash_text": 3.6,
+    "qwen_audio_tts_plus_text": 3.07
   },
   "easy/style/direct/atomic/emotion": {
     "bluebreeze": 3.29,
@@ -257,7 +305,11 @@
     "voxcpm2": 2.92,
     "mimopro": 3.83,
     "parlerttslarge": 2.71,
-    "mimo": 2.96
+    "mimo": 2.96,
+    "fireredtts3": 3.04,
+    "ming_3_0_tts_tiny": 2.71,
+    "qwen_audio_tts_flash_text": 4,
+    "qwen_audio_tts_plus_text": 3.12
   },
   "easy/style/direct/atomic/speed": {
     "bluebreeze": 3.2,
@@ -277,7 +329,11 @@
     "voxcpm2": 4.27,
     "mimopro": 4.07,
     "parlerttslarge": 2.8,
-    "mimo": 2.6
+    "mimo": 2.6,
+    "fireredtts3": 2.8,
+    "ming_3_0_tts_tiny": 2.87,
+    "qwen_audio_tts_flash_text": 4.47,
+    "qwen_audio_tts_plus_text": 2.93
   },
   "easy/composite": {
     "bluebreeze": 3.5,
@@ -297,7 +353,11 @@
     "voxcpm2": 3.58,
     "mimopro": 4.12,
     "parlerttslarge": 2.29,
-    "mimo": 3.04
+    "mimo": 3.04,
+    "fireredtts3": 3.24,
+    "ming_3_0_tts_tiny": 3.25,
+    "qwen_audio_tts_flash_text": 3.75,
+    "qwen_audio_tts_plus_text": 2.75
   },
   "easy/composite/simple_comp": {
     "bluebreeze": 3.5,
@@ -317,7 +377,11 @@
     "voxcpm2": 3.58,
     "mimopro": 4.12,
     "parlerttslarge": 2.29,
-    "mimo": 3.04
+    "mimo": 3.04,
+    "fireredtts3": 3.24,
+    "ming_3_0_tts_tiny": 3.25,
+    "qwen_audio_tts_flash_text": 3.75,
+    "qwen_audio_tts_plus_text": 2.75
   },
   "easy/composite/simple_comp/static": {
     "bluebreeze": 3.5,
@@ -337,7 +401,11 @@
     "voxcpm2": 3.58,
     "mimopro": 4.12,
     "parlerttslarge": 2.29,
-    "mimo": 3.04
+    "mimo": 3.04,
+    "fireredtts3": 3.24,
+    "ming_3_0_tts_tiny": 3.25,
+    "qwen_audio_tts_flash_text": 3.75,
+    "qwen_audio_tts_plus_text": 2.75
   },
   "easy/timbre/tag": {
     "bluebreeze": 3.64,
@@ -357,7 +425,11 @@
     "voxcpm2": 2.85,
     "mimopro": 3.62,
     "parlerttslarge": 2.07,
-    "mimo": 2.84
+    "mimo": 2.84,
+    "fireredtts3": 3.18,
+    "ming_3_0_tts_tiny": 2.52,
+    "qwen_audio_tts_flash_text": 3,
+    "qwen_audio_tts_plus_text": 2.3
   },
   "easy/timbre/tag/atomic": {
     "bluebreeze": 3.64,
@@ -377,7 +449,11 @@
     "voxcpm2": 2.85,
     "mimopro": 3.62,
     "parlerttslarge": 2.07,
-    "mimo": 2.84
+    "mimo": 2.84,
+    "fireredtts3": 3.18,
+    "ming_3_0_tts_tiny": 2.52,
+    "qwen_audio_tts_flash_text": 3,
+    "qwen_audio_tts_plus_text": 2.3
   },
   "easy/timbre/tag/atomic/texture": {
     "bluebreeze": 3.04,
@@ -397,7 +473,11 @@
     "voxcpm2": 2.25,
     "mimopro": 3.62,
     "parlerttslarge": 1.75,
-    "mimo": 2.5
+    "mimo": 2.5,
+    "fireredtts3": 2.5,
+    "ming_3_0_tts_tiny": 2.25,
+    "qwen_audio_tts_flash_text": 2.46,
+    "qwen_audio_tts_plus_text": 1.88
   },
   "hard": {
     "bluebreeze": 3.39,
@@ -417,7 +497,11 @@
     "voxcpm2": 2.44,
     "mimopro": 3.61,
     "parlerttslarge": 1.77,
-    "mimo": 2.8
+    "mimo": 2.8,
+    "fireredtts3": 2.37,
+    "ming_3_0_tts_tiny": 2.67,
+    "qwen_audio_tts_flash_text": 2.8,
+    "qwen_audio_tts_plus_text": 2.1
   },
   "hard/composite": {
     "bluebreeze": 3.39,
@@ -437,7 +521,11 @@
     "voxcpm2": 2.44,
     "mimopro": 3.61,
     "parlerttslarge": 1.77,
-    "mimo": 2.8
+    "mimo": 2.8,
+    "fireredtts3": 2.37,
+    "ming_3_0_tts_tiny": 2.67,
+    "qwen_audio_tts_flash_text": 2.8,
+    "qwen_audio_tts_plus_text": 2.1
   },
   "hard/composite/persona": {
     "bluebreeze": 3.32,
@@ -457,7 +545,11 @@
     "voxcpm2": 2.53,
     "mimopro": 3.85,
     "parlerttslarge": 1.49,
-    "mimo": 2.86
+    "mimo": 2.86,
+    "fireredtts3": 2.64,
+    "ming_3_0_tts_tiny": 2.64,
+    "qwen_audio_tts_flash_text": 2.78,
+    "qwen_audio_tts_plus_text": 1.95
   },
   "hard/composite/persona/non_ip_archetype": {
     "bluebreeze": 3.6,
@@ -477,7 +569,11 @@
     "voxcpm2": 1.87,
     "mimopro": 4.13,
     "parlerttslarge": 1.77,
-    "mimo": 2.87
+    "mimo": 2.87,
+    "fireredtts3": 1.97,
+    "ming_3_0_tts_tiny": 2.37,
+    "qwen_audio_tts_flash_text": 2.43,
+    "qwen_audio_tts_plus_text": 1.53
   },
   "hard/composite/persona/stylized_persona": {
     "bluebreeze": 3.2,
@@ -497,7 +593,11 @@
     "voxcpm2": 2.83,
     "mimopro": 4.1,
     "parlerttslarge": 1.77,
-    "mimo": 2.93
+    "mimo": 2.93,
+    "fireredtts3": 3.83,
+    "ming_3_0_tts_tiny": 2.83,
+    "qwen_audio_tts_flash_text": 2.63,
+    "qwen_audio_tts_plus_text": 1.93
   },
   "easy/style/tag/atomic/accent": {
     "bluebreeze": 4.04,
@@ -517,7 +617,11 @@
     "voxcpm2": 3.96,
     "mimopro": 4.0,
     "parlerttslarge": 1.58,
-    "mimo": 3.67
+    "mimo": 3.67,
+    "fireredtts3": 2.17,
+    "ming_3_0_tts_tiny": 2.62,
+    "qwen_audio_tts_flash_text": 2.96,
+    "qwen_audio_tts_plus_text": 1.62
   },
   "hard/composite/complex_comp": {
     "bluebreeze": 3.45,
@@ -537,7 +641,11 @@
     "voxcpm2": 2.37,
     "mimopro": 3.4,
     "parlerttslarge": 2.02,
-    "mimo": 2.75
+    "mimo": 2.75,
+    "fireredtts3": 2.13,
+    "ming_3_0_tts_tiny": 2.7,
+    "qwen_audio_tts_flash_text": 2.81,
+    "qwen_audio_tts_plus_text": 2.22
   },
   "hard/composite/complex_comp/conflict": {
     "bluebreeze": 3.19,
@@ -557,7 +665,11 @@
     "voxcpm2": 2.38,
     "mimopro": 3.22,
     "parlerttslarge": 2.12,
-    "mimo": 3.0
+    "mimo": 3.0,
+    "fireredtts3": 2.28,
+    "ming_3_0_tts_tiny": 2.53,
+    "qwen_audio_tts_flash_text": 2.72,
+    "qwen_audio_tts_plus_text": 1.91
   },
   "easy/style/direct/atomic/accent": {
     "bluebreeze": 3.92,
@@ -577,7 +689,11 @@
     "voxcpm2": 2.79,
     "mimopro": 3.08,
     "parlerttslarge": 1.92,
-    "mimo": 3.5
+    "mimo": 3.5,
+    "fireredtts3": 2.33,
+    "ming_3_0_tts_tiny": 2.17,
+    "qwen_audio_tts_flash_text": 2.83,
+    "qwen_audio_tts_plus_text": 2.12
   },
   "hard/composite/persona/ip_portrait": {
     "bluebreeze": 3.25,
@@ -597,7 +713,11 @@
     "voxcpm2": 2.41,
     "mimopro": 3.53,
     "parlerttslarge": 1.41,
-    "mimo": 2.72
+    "mimo": 2.72,
+    "fireredtts3": 2.66,
+    "ming_3_0_tts_tiny": 2.28,
+    "qwen_audio_tts_flash_text": 2.5,
+    "qwen_audio_tts_plus_text": 1.5
   },
   "special": {
     "bluebreeze": 2.75,
@@ -617,7 +737,11 @@
     "voxcpm2": 1.21,
     "mimopro": 2.4,
     "parlerttslarge": 1.35,
-    "mimo": 1.63
+    "mimo": 1.63,
+    "fireredtts3": 1.21,
+    "ming_3_0_tts_tiny": 1.75,
+    "qwen_audio_tts_flash_text": 2.27,
+    "qwen_audio_tts_plus_text": 2
   },
   "special/extra_vocal": {
     "bluebreeze": 2.75,
@@ -637,7 +761,11 @@
     "voxcpm2": 1.21,
     "mimopro": 2.4,
     "parlerttslarge": 1.35,
-    "mimo": 1.63
+    "mimo": 1.63,
+    "fireredtts3": 1.21,
+    "ming_3_0_tts_tiny": 1.75,
+    "qwen_audio_tts_flash_text": 2.27,
+    "qwen_audio_tts_plus_text": 2
   },
   "special/extra_vocal/abnormal": {
     "bluebreeze": 2.86,
@@ -657,7 +785,11 @@
     "voxcpm2": 1.2,
     "mimopro": 2.52,
     "parlerttslarge": 1.77,
-    "mimo": 1.86
+    "mimo": 1.86,
+    "fireredtts3": 1.25,
+    "ming_3_0_tts_tiny": 2.16,
+    "qwen_audio_tts_flash_text": 1.62,
+    "qwen_audio_tts_plus_text": 1.34
   },
   "special/extra_vocal/abnormal/dysphonia": {
     "bluebreeze": 3.79,
@@ -677,7 +809,11 @@
     "voxcpm2": 1.33,
     "mimopro": 3.75,
     "parlerttslarge": 2.29,
-    "mimo": 2.54
+    "mimo": 2.54,
+    "fireredtts3": 1.25,
+    "qwen_audio_tts_flash_text": 1.96,
+    "qwen_audio_tts_plus_text": 1.42,
+    "ming_3_0_tts_tiny": 2.92
   },
   "easy/timbre/tag/atomic/gender": {
     "bluebreeze": 4.8,
@@ -697,7 +833,11 @@
     "voxcpm2": 4.6,
     "mimopro": 4.1,
     "parlerttslarge": 3.0,
-    "mimo": 3.7
+    "mimo": 3.7,
+    "fireredtts3": 4.2,
+    "ming_3_0_tts_tiny": 4.5,
+    "qwen_audio_tts_flash_text": 5,
+    "qwen_audio_tts_plus_text": 3.8
   },
   "special/extra_vocal/implicit_nv": {
     "bluebreeze": 2.19,
@@ -717,7 +857,11 @@
     "voxcpm2": 1.12,
     "mimopro": 1.72,
     "parlerttslarge": 1.12,
-    "mimo": 1.91
+    "mimo": 1.91,
+    "fireredtts3": 1.09,
+    "qwen_audio_tts_flash_text": 1.91,
+    "qwen_audio_tts_plus_text": 1.53,
+    "ming_3_0_tts_tiny": 1.31
   },
   "easy/style/direct/atomic/personality": {
     "bluebreeze": 3.1,
@@ -737,7 +881,11 @@
     "voxcpm2": 2.4,
     "mimopro": 3.85,
     "parlerttslarge": 1.9,
-    "mimo": 2.2
+    "mimo": 2.2,
+    "fireredtts3": 2.5,
+    "ming_3_0_tts_tiny": 3.2,
+    "qwen_audio_tts_flash_text": 3.25,
+    "qwen_audio_tts_plus_text": 2.4
   },
   "easy/style/tag/atomic/tone": {
     "bluebreeze": 2.5,
@@ -757,7 +905,11 @@
     "voxcpm2": 1.91,
     "mimopro": 3.5,
     "parlerttslarge": 1.82,
-    "mimo": 2.53
+    "mimo": 2.53,
+    "fireredtts3": 2.76,
+    "ming_3_0_tts_tiny": 2.03,
+    "qwen_audio_tts_flash_text": 2.15,
+    "qwen_audio_tts_plus_text": 2.44
   },
   "easy/timbre/direct/atomic/pitch": {
     "bluebreeze": 3.33,
@@ -777,7 +929,11 @@
     "voxcpm2": 1.93,
     "mimopro": 3.07,
     "parlerttslarge": 2.47,
-    "mimo": 2.33
+    "mimo": 2.33,
+    "fireredtts3": 3.33,
+    "ming_3_0_tts_tiny": 3.13,
+    "qwen_audio_tts_flash_text": 2.93,
+    "qwen_audio_tts_plus_text": 2.47
   },
   "hard/composite/complex_comp/layered": {
     "bluebreeze": 3.06,
@@ -797,7 +953,11 @@
     "voxcpm2": 2.09,
     "mimopro": 3.41,
     "parlerttslarge": 2.25,
-    "mimo": 2.34
+    "mimo": 2.34,
+    "fireredtts3": 1.94,
+    "ming_3_0_tts_tiny": 3.59,
+    "qwen_audio_tts_flash_text": 2.75,
+    "qwen_audio_tts_plus_text": 1.88
   },
   "easy/timbre/tag/atomic/age": {
     "bluebreeze": 4.08,
@@ -817,7 +977,11 @@
     "voxcpm2": 3.17,
     "mimopro": 3.42,
     "parlerttslarge": 2.0,
-    "mimo": 2.75
+    "mimo": 2.75,
+    "fireredtts3": 3.42,
+    "ming_3_0_tts_tiny": 1.92,
+    "qwen_audio_tts_flash_text": 2.58,
+    "qwen_audio_tts_plus_text": 1.75
   },
   "hard/composite/complex_comp/static": {
     "bluebreeze": 3.83,
@@ -837,7 +1001,11 @@
     "voxcpm2": 2.35,
     "mimopro": 3.92,
     "parlerttslarge": 2.04,
-    "mimo": 2.94
+    "mimo": 2.94,
+    "fireredtts3": 2.25,
+    "ming_3_0_tts_tiny": 2.5,
+    "qwen_audio_tts_flash_text": 2.4,
+    "qwen_audio_tts_plus_text": 2.06
   },
   "hard/composite/complex_comp/dynamic": {
     "bluebreeze": 3.26,
@@ -857,7 +1025,11 @@
     "voxcpm2": 2.64,
     "mimopro": 2.53,
     "parlerttslarge": 1.67,
-    "mimo": 2.5
+    "mimo": 2.5,
+    "fireredtts3": 1.94,
+    "ming_3_0_tts_tiny": 2.47,
+    "qwen_audio_tts_flash_text": 3.78,
+    "qwen_audio_tts_plus_text": 3.14
   },
   "easy/style/tag/atomic/emotion": {
     "bluebreeze": 3.17,
@@ -877,7 +1049,11 @@
     "voxcpm2": 3.33,
     "mimopro": 3.67,
     "parlerttslarge": 2.04,
-    "mimo": 2.79
+    "mimo": 2.79,
+    "fireredtts3": 3,
+    "ming_3_0_tts_tiny": 2.46,
+    "qwen_audio_tts_flash_text": 2.5,
+    "qwen_audio_tts_plus_text": 2.71
   },
   "hard/composite/persona/scenario": {
     "bluebreeze": 3.37,
@@ -897,7 +1073,11 @@
     "voxcpm2": 3.13,
     "mimopro": 3.6,
     "parlerttslarge": 1.4,
-    "mimo": 3.03
+    "mimo": 3.03,
+    "fireredtts3": 2.3,
+    "ming_3_0_tts_tiny": 3.13,
+    "qwen_audio_tts_flash_text": 3.23,
+    "qwen_audio_tts_plus_text": 2.1
   },
   "easy/style/tag/atomic/volume": {
     "bluebreeze": 4.27,
@@ -917,7 +1097,11 @@
     "voxcpm2": 3.4,
     "mimopro": 4.6,
     "parlerttslarge": 2.13,
-    "mimo": 3.33
+    "mimo": 3.33,
+    "fireredtts3": 3,
+    "ming_3_0_tts_tiny": 2.87,
+    "qwen_audio_tts_flash_text": 3.4,
+    "qwen_audio_tts_plus_text": 2.87
   },
   "easy/timbre/direct/atomic/texture": {
     "bluebreeze": 3.17,
@@ -937,7 +1121,11 @@
     "voxcpm2": 2.29,
     "mimopro": 3.46,
     "parlerttslarge": 2.21,
-    "mimo": 2.17
+    "mimo": 2.17,
+    "fireredtts3": 2.25,
+    "ming_3_0_tts_tiny": 2.62,
+    "qwen_audio_tts_flash_text": 2.67,
+    "qwen_audio_tts_plus_text": 2
   },
   "special/extra_vocal/abnormal/disfluency": {
     "bluebreeze": 1.61,
@@ -957,7 +1145,11 @@
     "voxcpm2": 1.05,
     "mimopro": 1.05,
     "parlerttslarge": 1.15,
-    "mimo": 1.05
+    "mimo": 1.05,
+    "fireredtts3": 1.25,
+    "ming_3_0_tts_tiny": 1.25,
+    "qwen_audio_tts_flash_text": 1.17,
+    "qwen_audio_tts_plus_text": 1.25
   },
   "easy/style/tag/atomic/personality": {
     "bluebreeze": 3.5,
@@ -977,7 +1169,11 @@
     "voxcpm2": 2.05,
     "mimopro": 3.45,
     "parlerttslarge": 1.95,
-    "mimo": 2.3
+    "mimo": 2.3,
+    "fireredtts3": 2.5,
+    "ming_3_0_tts_tiny": 2.15,
+    "qwen_audio_tts_flash_text": 2.05,
+    "qwen_audio_tts_plus_text": 1.7
   },
   "hard/composite/persona/social_role": {
     "bluebreeze": 3.17,
@@ -997,7 +1193,11 @@
     "voxcpm2": 2.4,
     "mimopro": 3.9,
     "parlerttslarge": 1.1,
-    "mimo": 2.77
+    "mimo": 2.77,
+    "fireredtts3": 2.5,
+    "ming_3_0_tts_tiny": 2.6,
+    "qwen_audio_tts_flash_text": 3.13,
+    "qwen_audio_tts_plus_text": 2.73
   },
   "special/extra_vocal/explicit_nv": {
     "bluebreeze": 3.16,
@@ -1017,7 +1217,11 @@
     "voxcpm2": 1.31,
     "mimopro": 2.91,
     "parlerttslarge": 1.0,
-    "mimo": 1.03
+    "mimo": 1.03,
+    "fireredtts3": 1.26,
+    "qwen_audio_tts_flash_text": 3.5,
+    "qwen_audio_tts_plus_text": 3.38,
+    "ming_3_0_tts_tiny": 1.62
   },
   "easy/timbre/tag/atomic/pitch": {
     "bluebreeze": 3.47,
@@ -1037,7 +1241,11 @@
     "voxcpm2": 2.4,
     "mimopro": 3.47,
     "parlerttslarge": 2.0,
-    "mimo": 2.87
+    "mimo": 2.87,
+    "fireredtts3": 3.4,
+    "ming_3_0_tts_tiny": 2.13,
+    "qwen_audio_tts_flash_text": 2.87,
+    "qwen_audio_tts_plus_text": 2.4
   },
   "easy/timbre/direct/atomic/age": {
     "bluebreeze": 3.58,
@@ -1057,7 +1265,11 @@
     "voxcpm2": 2.17,
     "mimopro": 4.33,
     "parlerttslarge": 2.0,
-    "mimo": 3.25
+    "mimo": 3.25,
+    "fireredtts3": 3.17,
+    "ming_3_0_tts_tiny": 2.25,
+    "qwen_audio_tts_flash_text": 2.83,
+    "qwen_audio_tts_plus_text": 2
   },
   "easy/style/direct/atomic/volume": {
     "bluebreeze": 3.73,
@@ -1077,6 +1289,10 @@
     "voxcpm2": 3.47,
     "mimopro": 4.2,
     "parlerttslarge": 1.47,
-    "mimo": 2.73
+    "mimo": 2.73,
+    "fireredtts3": 3.07,
+    "ming_3_0_tts_tiny": 3.13,
+    "qwen_audio_tts_flash_text": 3.27,
+    "qwen_audio_tts_plus_text": 2.73
   }
 }

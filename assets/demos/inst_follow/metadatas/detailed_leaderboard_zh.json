@@ -14,7 +14,11 @@
     "mimo": 2.94,
     "moss1b7": 3.17,
     "omnivoice": 2.17,
-    "mingmoe": 3.21
+    "mingmoe": 3.21,
+    "fireredtts3": 3.17,
+    "ming_3_0_tts_tiny": 2.32,
+    "qwen_audio_tts_flash_text": 3.33,
+    "qwen_audio_tts_plus_text": 3.45
   },
   "easy/timbre": {
     "qwen3tts": 3.73,
@@ -31,7 +35,11 @@
     "mimo": 2.8,
     "moss1b7": 2.92,
     "omnivoice": 2.41,
-    "mingmoe": 3.04
+    "mingmoe": 3.04,
+    "fireredtts3": 3.51,
+    "ming_3_0_tts_tiny": 2.48,
+    "qwen_audio_tts_flash_text": 3.15,
+    "qwen_audio_tts_plus_text": 3.21
   },
   "easy/timbre/direct": {
     "qwen3tts": 3.61,
@@ -48,7 +56,11 @@
     "mimo": 2.72,
     "moss1b7": 3.03,
     "omnivoice": 2.39,
-    "mingmoe": 3.05
+    "mingmoe": 3.05,
+    "fireredtts3": 3.23,
+    "ming_3_0_tts_tiny": 2.44,
+    "qwen_audio_tts_flash_text": 3.08,
+    "qwen_audio_tts_plus_text": 3.34
   },
   "easy/timbre/direct/atomic": {
     "qwen3tts": 3.61,
@@ -65,7 +77,11 @@
     "mimo": 2.72,
     "moss1b7": 3.03,
     "omnivoice": 2.39,
-    "mingmoe": 3.05
+    "mingmoe": 3.05,
+    "fireredtts3": 3.23,
+    "ming_3_0_tts_tiny": 2.44,
+    "qwen_audio_tts_flash_text": 3.08,
+    "qwen_audio_tts_plus_text": 3.34
   },
   "easy/timbre/direct/atomic/gender": {
     "qwen3tts": 4.4,
@@ -82,7 +98,11 @@
     "mimo": 3.6,
     "moss1b7": 4.2,
     "omnivoice": 4.3,
-    "mingmoe": 4.4
+    "mingmoe": 4.4,
+    "fireredtts3": 3.6,
+    "ming_3_0_tts_tiny": 3.8,
+    "qwen_audio_tts_flash_text": 4.8,
+    "qwen_audio_tts_plus_text": 5
   },
   "easy/style": {
     "qwen3tts": 3.72,
@@ -99,7 +119,11 @@
     "mimo": 2.93,
     "moss1b7": 3.24,
     "omnivoice": 1.94,
-    "mingmoe": 3.11
+    "mingmoe": 3.11,
+    "fireredtts3": 3.02,
+    "ming_3_0_tts_tiny": 2.17,
+    "qwen_audio_tts_flash_text": 3.25,
+    "qwen_audio_tts_plus_text": 3.52
   },
   "easy/style/direct": {
     "qwen3tts": 3.63,
@@ -116,7 +140,11 @@
     "mimo": 2.81,
     "moss1b7": 3.11,
     "omnivoice": 1.87,
-    "mingmoe": 2.9
+    "mingmoe": 2.9,
+    "fireredtts3": 3.06,
+    "ming_3_0_tts_tiny": 2.35,
+    "qwen_audio_tts_flash_text": 3.46,
+    "qwen_audio_tts_plus_text": 3.41
   },
   "easy/style/direct/atomic": {
     "qwen3tts": 3.63,
@@ -133,7 +161,11 @@
     "mimo": 2.81,
     "moss1b7": 3.11,
     "omnivoice": 1.87,
-    "mingmoe": 2.9
+    "mingmoe": 2.9,
+    "fireredtts3": 3.06,
+    "ming_3_0_tts_tiny": 2.35,
+    "qwen_audio_tts_flash_text": 3.46,
+    "qwen_audio_tts_plus_text": 3.41
   },
   "easy/style/direct/atomic/tone": {
     "qwen3tts": 4.09,
@@ -150,7 +182,11 @@
     "mimo": 3.06,
     "moss1b7": 3.64,
     "omnivoice": 1.62,
-    "mingmoe": 2.71
+    "mingmoe": 2.71,
+    "fireredtts3": 3.5,
+    "ming_3_0_tts_tiny": 2.32,
+    "qwen_audio_tts_flash_text": 3.38,
+    "qwen_audio_tts_plus_text": 3.71
   },
   "easy/style/tag": {
     "qwen3tts": 3.81,
@@ -167,7 +203,11 @@
     "mimo": 3.05,
     "moss1b7": 3.37,
     "omnivoice": 2.0,
-    "mingmoe": 3.31
+    "mingmoe": 3.31,
+    "fireredtts3": 2.98,
+    "ming_3_0_tts_tiny": 2,
+    "qwen_audio_tts_flash_text": 3.05,
+    "qwen_audio_tts_plus_text": 3.64
   },
   "easy/style/tag/atomic": {
     "qwen3tts": 3.81,
@@ -184,7 +224,11 @@
     "mimo": 3.05,
     "moss1b7": 3.37,
     "omnivoice": 2.0,
-    "mingmoe": 3.31
+    "mingmoe": 3.31,
+    "fireredtts3": 2.98,
+    "ming_3_0_tts_tiny": 2,
+    "qwen_audio_tts_flash_text": 3.05,
+    "qwen_audio_tts_plus_text": 3.64
   },
   "easy/style/tag/atomic/speed": {
     "qwen3tts": 3.53,
@@ -201,7 +245,11 @@
     "mimo": 3.07,
     "moss1b7": 2.8,
     "omnivoice": 2.13,
-    "mingmoe": 3.73
+    "mingmoe": 3.73,
+    "fireredtts3": 3,
+    "ming_3_0_tts_tiny": 2.53,
+    "qwen_audio_tts_flash_text": 3.4,
+    "qwen_audio_tts_plus_text": 3.53
   },
   "easy/style/direct/atomic/emotion": {
     "qwen3tts": 3.75,
@@ -218,7 +266,11 @@
     "mimo": 3.5,
     "moss1b7": 3.91,
     "omnivoice": 1.96,
-    "mingmoe": 3.83
+    "mingmoe": 3.83,
+    "fireredtts3": 3.04,
+    "ming_3_0_tts_tiny": 3,
+    "qwen_audio_tts_flash_text": 4,
+    "qwen_audio_tts_plus_text": 4.04
   },
   "easy/style/direct/atomic/speed": {
     "qwen3tts": 3.62,
@@ -235,7 +287,11 @@
     "mimo": 3.0,
     "moss1b7": 2.73,
     "omnivoice": 1.47,
-    "mingmoe": 2.8
+    "mingmoe": 2.8,
+    "fireredtts3": 3.2,
+    "ming_3_0_tts_tiny": 2.27,
+    "qwen_audio_tts_flash_text": 3.8,
+    "qwen_audio_tts_plus_text": 3.67
   },
   "easy/composite": {
     "qwen3tts": 4.29,
@@ -252,7 +308,11 @@
     "mimo": 3.19,
     "moss1b7": 3.34,
     "omnivoice": 2.61,
-    "mingmoe": 3.88
+    "mingmoe": 3.88,
+    "fireredtts3": 3.18,
+    "ming_3_0_tts_tiny": 2.6,
+    "qwen_audio_tts_flash_text": 3.9,
+    "qwen_audio_tts_plus_text": 3.6
   },
   "easy/composite/simple_comp": {
     "qwen3tts": 4.29,
@@ -269,7 +329,11 @@
     "mimo": 3.19,
     "moss1b7": 3.34,
     "omnivoice": 2.61,
-    "mingmoe": 3.88
+    "mingmoe": 3.88,
+    "fireredtts3": 3.18,
+    "ming_3_0_tts_tiny": 2.6,
+    "qwen_audio_tts_flash_text": 3.9,
+    "qwen_audio_tts_plus_text": 3.6
   },
   "easy/composite/simple_comp/static": {
     "qwen3tts": 4.29,
@@ -286,7 +350,11 @@
     "mimo": 3.19,
     "moss1b7": 3.34,
     "omnivoice": 2.61,
-    "mingmoe": 3.88
+    "mingmoe": 3.88,
+    "fireredtts3": 3.18,
+    "ming_3_0_tts_tiny": 2.6,
+    "qwen_audio_tts_flash_text": 3.9,
+    "qwen_audio_tts_plus_text": 3.6
   },
   "easy/timbre/tag": {
     "qwen3tts": 3.85,
@@ -303,7 +371,11 @@
     "mimo": 2.87,
     "moss1b7": 2.82,
     "omnivoice": 2.43,
-    "mingmoe": 3.03
+    "mingmoe": 3.03,
+    "fireredtts3": 3.79,
+    "ming_3_0_tts_tiny": 2.51,
+    "qwen_audio_tts_flash_text": 3.21,
+    "qwen_audio_tts_plus_text": 3.08
   },
   "easy/timbre/tag/atomic": {
     "qwen3tts": 3.85,
@@ -320,7 +392,11 @@
     "mimo": 2.87,
     "moss1b7": 2.82,
     "omnivoice": 2.43,
-    "mingmoe": 3.03
+    "mingmoe": 3.03,
+    "fireredtts3": 3.79,
+    "ming_3_0_tts_tiny": 2.51,
+    "qwen_audio_tts_flash_text": 3.21,
+    "qwen_audio_tts_plus_text": 3.08
   },
   "easy/timbre/tag/atomic/texture": {
     "qwen3tts": 3.42,
@@ -337,7 +413,11 @@
     "mimo": 2.62,
     "moss1b7": 2.52,
     "omnivoice": 1.62,
-    "mingmoe": 2.38
+    "mingmoe": 2.38,
+    "fireredtts3": 3.12,
+    "ming_3_0_tts_tiny": 2.17,
+    "qwen_audio_tts_flash_text": 2.88,
+    "qwen_audio_tts_plus_text": 2.5
   },
   "hard": {
     "qwen3tts": 3.34,
@@ -354,7 +434,11 @@
     "mimo": 2.54,
     "moss1b7": 3.15,
     "omnivoice": 2.07,
-    "mingmoe": 2.82
+    "mingmoe": 2.82,
+    "fireredtts3": 3.15,
+    "ming_3_0_tts_tiny": 2.13,
+    "qwen_audio_tts_flash_text": 2.61,
+    "qwen_audio_tts_plus_text": 2.69
   },
   "hard/composite": {
     "qwen3tts": 3.34,
@@ -371,7 +455,11 @@
     "mimo": 2.54,
     "moss1b7": 3.15,
     "omnivoice": 2.07,
-    "mingmoe": 2.82
+    "mingmoe": 2.82,
+    "fireredtts3": 3.15,
+    "ming_3_0_tts_tiny": 2.13,
+    "qwen_audio_tts_flash_text": 2.61,
+    "qwen_audio_tts_plus_text": 2.69
   },
   "hard/composite/persona": {
     "qwen3tts": 3.34,
@@ -388,7 +476,11 @@
     "mimo": 2.62,
     "moss1b7": 2.96,
     "omnivoice": 2.15,
-    "mingmoe": 2.8
+    "mingmoe": 2.8,
+    "fireredtts3": 3.28,
+    "ming_3_0_tts_tiny": 1.99,
+    "qwen_audio_tts_flash_text": 2.42,
+    "qwen_audio_tts_plus_text": 2.41
   },
   "hard/composite/persona/non_ip_archetype": {
     "qwen3tts": 3.43,
@@ -405,7 +497,11 @@
     "mimo": 2.5,
     "moss1b7": 3.18,
     "omnivoice": 1.83,
-    "mingmoe": 2.7
+    "mingmoe": 2.7,
+    "fireredtts3": 3.1,
+    "ming_3_0_tts_tiny": 1.77,
+    "qwen_audio_tts_flash_text": 2.3,
+    "qwen_audio_tts_plus_text": 2.07
   },
   "hard/composite/persona/stylized_persona": {
     "qwen3tts": 3.9,
@@ -422,7 +518,11 @@
     "mimo": 2.77,
     "moss1b7": 3.4,
     "omnivoice": 2.14,
-    "mingmoe": 3.53
+    "mingmoe": 3.53,
+    "fireredtts3": 4.1,
+    "ming_3_0_tts_tiny": 2.3,
+    "qwen_audio_tts_flash_text": 2.8,
+    "qwen_audio_tts_plus_text": 2.97
   },
   "easy/style/tag/atomic/accent": {
     "qwen3tts": 2.62,
@@ -439,7 +539,11 @@
     "mimo": 2.54,
     "moss1b7": 2.5,
     "omnivoice": 2.08,
-    "mingmoe": 1.46
+    "mingmoe": 1.46,
+    "fireredtts3": 2,
+    "ming_3_0_tts_tiny": 1.54,
+    "qwen_audio_tts_flash_text": 1.75,
+    "qwen_audio_tts_plus_text": 2.38
   },
   "hard/composite/complex_comp": {
     "qwen3tts": 3.34,
@@ -456,7 +560,11 @@
     "mimo": 2.46,
     "moss1b7": 3.32,
     "omnivoice": 1.99,
-    "mingmoe": 2.85
+    "mingmoe": 2.85,
+    "fireredtts3": 3.02,
+    "ming_3_0_tts_tiny": 2.25,
+    "qwen_audio_tts_flash_text": 2.77,
+    "qwen_audio_tts_plus_text": 2.94
   },
   "hard/composite/complex_comp/conflict": {
     "qwen3tts": 3.56,
@@ -473,7 +581,11 @@
     "mimo": 2.59,
     "moss1b7": 3.41,
     "omnivoice": 1.97,
-    "mingmoe": 2.44
+    "mingmoe": 2.44,
+    "fireredtts3": 2.56,
+    "ming_3_0_tts_tiny": 2.31,
+    "qwen_audio_tts_flash_text": 2.28,
+    "qwen_audio_tts_plus_text": 2.72
   },
   "easy/style/direct/atomic/accent": {
     "qwen3tts": 2.5,
@@ -490,7 +602,11 @@
     "mimo": 1.71,
     "moss1b7": 1.92,
     "omnivoice": 1.58,
-    "mingmoe": 1.62
+    "mingmoe": 1.62,
+    "fireredtts3": 1.62,
+    "ming_3_0_tts_tiny": 1.75,
+    "qwen_audio_tts_flash_text": 2.42,
+    "qwen_audio_tts_plus_text": 1.83
   },
   "hard/composite/persona/ip_portrait": {
     "qwen3tts": 2.81,
@@ -507,7 +623,11 @@
     "mimo": 2.44,
     "moss1b7": 2.53,
     "omnivoice": 2.34,
-    "mingmoe": 2.66
+    "mingmoe": 2.66,
+    "fireredtts3": 2.72,
+    "ming_3_0_tts_tiny": 1.91,
+    "qwen_audio_tts_flash_text": 2.09,
+    "qwen_audio_tts_plus_text": 1.56
   },
   "special": {
     "qwen3tts": 2.78,
@@ -524,7 +644,11 @@
     "mimo": 2.13,
     "moss1b7": 2.45,
     "omnivoice": 1.17,
-    "mingmoe": 1.69
+    "mingmoe": 1.69,
+    "fireredtts3": 1.91,
+    "ming_3_0_tts_tiny": 1.67,
+    "qwen_audio_tts_flash_text": 2.43,
+    "qwen_audio_tts_plus_text": 2.61
   },
   "special/extra_vocal": {
     "qwen3tts": 2.78,
@@ -541,7 +665,11 @@
     "mimo": 2.13,
     "moss1b7": 2.45,
     "omnivoice": 1.17,
-    "mingmoe": 1.69
+    "mingmoe": 1.69,
+    "fireredtts3": 1.91,
+    "ming_3_0_tts_tiny": 1.67,
+    "qwen_audio_tts_flash_text": 2.43,
+    "qwen_audio_tts_plus_text": 2.61
   },
   "special/extra_vocal/abnormal": {
     "qwen3tts": 2.95,
@@ -558,7 +686,11 @@
     "mimo": 2.5,
     "moss1b7": 2.31,
     "omnivoice": 1.0,
-    "mingmoe": 1.73
+    "mingmoe": 1.73,
+    "fireredtts3": 1.84,
+    "ming_3_0_tts_tiny": 1.43,
+    "qwen_audio_tts_flash_text": 1.95,
+    "qwen_audio_tts_plus_text": 1.82
   },
   "special/extra_vocal/abnormal/dysphonia": {
     "qwen3tts": 4.25,
@@ -575,7 +707,11 @@
     "mimo": 3.21,
     "moss1b7": 3.67,
     "omnivoice": 1.0,
-    "mingmoe": 2.33
+    "mingmoe": 2.33,
+    "fireredtts3": 2.5,
+    "ming_3_0_tts_tiny": 1.58,
+    "qwen_audio_tts_flash_text": 2.67,
+    "qwen_audio_tts_plus_text": 2.12
   },
   "easy/timbre/tag/atomic/gender": {
     "qwen3tts": 4.1,
@@ -592,7 +728,11 @@
     "mimo": 2.9,
     "moss1b7": 4.0,
     "omnivoice": 3.4,
-    "mingmoe": 4.1
+    "mingmoe": 4.1,
+    "fireredtts3": 4.3,
+    "ming_3_0_tts_tiny": 3.6,
+    "qwen_audio_tts_flash_text": 4.6,
+    "qwen_audio_tts_plus_text": 4.7
   },
   "special/extra_vocal/implicit_nv": {
     "qwen3tts": 2.97,
@@ -609,7 +749,11 @@
     "mimo": 2.34,
     "moss1b7": 2.7,
     "omnivoice": 1.44,
-    "mingmoe": 2.22
+    "mingmoe": 2.22,
+    "fireredtts3": 2.69,
+    "ming_3_0_tts_tiny": 2.03,
+    "qwen_audio_tts_flash_text": 2.06,
+    "qwen_audio_tts_plus_text": 2.41
   },
   "easy/style/direct/atomic/personality": {
     "qwen3tts": 3.65,
@@ -626,7 +770,11 @@
     "mimo": 2.35,
     "moss1b7": 2.53,
     "omnivoice": 2.2,
-    "mingmoe": 3.8
+    "mingmoe": 3.8,
+    "fireredtts3": 3.8,
+    "ming_3_0_tts_tiny": 2.25,
+    "qwen_audio_tts_flash_text": 3.63,
+    "qwen_audio_tts_plus_text": 3.85
   },
   "easy/style/tag/atomic/tone": {
     "qwen3tts": 4.5,
@@ -643,7 +791,11 @@
     "mimo": 3.44,
     "moss1b7": 3.79,
     "omnivoice": 1.88,
-    "mingmoe": 3.35
+    "mingmoe": 3.35,
+    "fireredtts3": 3.41,
+    "ming_3_0_tts_tiny": 1.85,
+    "qwen_audio_tts_flash_text": 2.97,
+    "qwen_audio_tts_plus_text": 4.24
   },
   "easy/timbre/direct/atomic/pitch": {
     "qwen3tts": 3.07,
@@ -660,7 +812,11 @@
     "mimo": 2.27,
     "moss1b7": 2.62,
     "omnivoice": 2.27,
-    "mingmoe": 2.79
+    "mingmoe": 2.79,
+    "fireredtts3": 3.67,
+    "ming_3_0_tts_tiny": 2.4,
+    "qwen_audio_tts_flash_text": 2.47,
+    "qwen_audio_tts_plus_text": 3.2
   },
   "hard/composite/complex_comp/layered": {
     "qwen3tts": 2.97,
@@ -677,7 +833,11 @@
     "mimo": 1.74,
     "moss1b7": 3.16,
     "omnivoice": 2.06,
-    "mingmoe": 2.84
+    "mingmoe": 2.84,
+    "fireredtts3": 3.41,
+    "ming_3_0_tts_tiny": 2.47,
+    "qwen_audio_tts_flash_text": 2.53,
+    "qwen_audio_tts_plus_text": 2.25
   },
   "easy/timbre/tag/atomic/age": {
     "qwen3tts": 4.17,
@@ -694,7 +854,11 @@
     "mimo": 3.17,
     "moss1b7": 2.83,
     "omnivoice": 3.33,
-    "mingmoe": 2.75
+    "mingmoe": 2.75,
+    "fireredtts3": 4.25,
+    "ming_3_0_tts_tiny": 2.42,
+    "qwen_audio_tts_flash_text": 2.83,
+    "qwen_audio_tts_plus_text": 2.58
   },
   "hard/composite/complex_comp/static": {
     "qwen3tts": 3.85,
@@ -711,7 +875,11 @@
     "mimo": 2.76,
     "moss1b7": 3.49,
     "omnivoice": 1.89,
-    "mingmoe": 3.12
+    "mingmoe": 3.12,
+    "fireredtts3": 3.29,
+    "ming_3_0_tts_tiny": 2.36,
+    "qwen_audio_tts_flash_text": 3.19,
+    "qwen_audio_tts_plus_text": 2.99
   },
   "hard/composite/complex_comp/dynamic": {
     "qwen3tts": 2.47,
@@ -728,7 +896,11 @@
     "mimo": 2.36,
     "moss1b7": 3.06,
     "omnivoice": 2.14,
-    "mingmoe": 2.67
+    "mingmoe": 2.67,
+    "fireredtts3": 2.56,
+    "ming_3_0_tts_tiny": 1.78,
+    "qwen_audio_tts_flash_text": 2.58,
+    "qwen_audio_tts_plus_text": 3.67
   },
   "easy/style/tag/atomic/emotion": {
     "qwen3tts": 3.48,
@@ -745,7 +917,11 @@
     "mimo": 3.33,
     "moss1b7": 3.71,
     "omnivoice": 1.79,
-    "mingmoe": 4.71
+    "mingmoe": 4.71,
+    "fireredtts3": 3.29,
+    "ming_3_0_tts_tiny": 2.17,
+    "qwen_audio_tts_flash_text": 3.92,
+    "qwen_audio_tts_plus_text": 3.42
   },
   "hard/composite/persona/scenario": {
     "qwen3tts": 3.43,
@@ -762,7 +938,11 @@
     "mimo": 3.03,
     "moss1b7": 2.87,
     "omnivoice": 2.3,
-    "mingmoe": 2.93
+    "mingmoe": 2.93,
+    "fireredtts3": 3.4,
+    "ming_3_0_tts_tiny": 2.1,
+    "qwen_audio_tts_flash_text": 2.23,
+    "qwen_audio_tts_plus_text": 2.73
   },
   "easy/style/tag/atomic/volume": {
     "qwen3tts": 4.73,
@@ -779,7 +959,11 @@
     "mimo": 3.07,
     "moss1b7": 4.36,
     "omnivoice": 1.73,
-    "mingmoe": 3.57
+    "mingmoe": 3.57,
+    "fireredtts3": 2.4,
+    "ming_3_0_tts_tiny": 1.87,
+    "qwen_audio_tts_flash_text": 3.87,
+    "qwen_audio_tts_plus_text": 4.47
   },
   "easy/timbre/direct/atomic/texture": {
     "qwen3tts": 3.25,
@@ -796,7 +980,11 @@
     "mimo": 2.21,
     "moss1b7": 2.57,
     "omnivoice": 1.88,
-    "mingmoe": 2.75
+    "mingmoe": 2.75,
+    "fireredtts3": 2.96,
+    "ming_3_0_tts_tiny": 2.17,
+    "qwen_audio_tts_flash_text": 2.61,
+    "qwen_audio_tts_plus_text": 3
   },
   "special/extra_vocal/abnormal/disfluency": {
     "qwen3tts": 1.4,
@@ -813,7 +1001,11 @@
     "mimo": 1.65,
     "moss1b7": 1.5,
     "omnivoice": 1.0,
-    "mingmoe": 1.0
+    "mingmoe": 1.0,
+    "fireredtts3": 1,
+    "ming_3_0_tts_tiny": 1.25,
+    "qwen_audio_tts_flash_text": 1.1,
+    "qwen_audio_tts_plus_text": 1.45
   },
   "easy/style/tag/atomic/personality": {
     "qwen3tts": 3.95,
@@ -830,7 +1022,11 @@
     "mimo": 2.65,
     "moss1b7": 3.05,
     "omnivoice": 2.45,
-    "mingmoe": 3.3
+    "mingmoe": 3.3,
+    "fireredtts3": 3.45,
+    "ming_3_0_tts_tiny": 2.3,
+    "qwen_audio_tts_flash_text": 2.8,
+    "qwen_audio_tts_plus_text": 3.85
   },
   "hard/composite/persona/social_role": {
     "qwen3tts": 3.13,
@@ -847,7 +1043,11 @@
     "mimo": 2.4,
     "moss1b7": 2.87,
     "omnivoice": 2.13,
-    "mingmoe": 2.17
+    "mingmoe": 2.17,
+    "fireredtts3": 3.13,
+    "ming_3_0_tts_tiny": 1.87,
+    "qwen_audio_tts_flash_text": 2.7,
+    "qwen_audio_tts_plus_text": 2.77
   },
   "special/extra_vocal/explicit_nv": {
     "qwen3tts": 2.34,
@@ -864,7 +1064,11 @@
     "mimo": 1.41,
     "moss1b7": 2.34,
     "omnivoice": 1.12,
-    "mingmoe": 1.12
+    "mingmoe": 1.12,
+    "fireredtts3": 1.22,
+    "ming_3_0_tts_tiny": 1.62,
+    "qwen_audio_tts_flash_text": 3.44,
+    "qwen_audio_tts_plus_text": 3.91
   },
   "easy/timbre/tag/atomic/pitch": {
     "qwen3tts": 4.13,
@@ -881,7 +1085,11 @@
     "mimo": 3.0,
     "moss1b7": 2.47,
     "omnivoice": 2.33,
-    "mingmoe": 3.6
+    "mingmoe": 3.6,
+    "fireredtts3": 4.13,
+    "ming_3_0_tts_tiny": 2.4,
+    "qwen_audio_tts_flash_text": 3.13,
+    "qwen_audio_tts_plus_text": 3.33
   },
   "easy/timbre/direct/atomic/age": {
     "qwen3tts": 4.33,
@@ -898,7 +1106,11 @@
     "mimo": 3.58,
     "moss1b7": 3.42,
     "omnivoice": 2.0,
-    "mingmoe": 2.83
+    "mingmoe": 2.83,
+    "fireredtts3": 2.92,
+    "ming_3_0_tts_tiny": 1.92,
+    "qwen_audio_tts_flash_text": 3.33,
+    "qwen_audio_tts_plus_text": 2.83
   },
   "easy/style/direct/atomic/volume": {
     "qwen3tts": 4.2,
@@ -915,6 +1127,10 @@
     "mimo": 3.33,
     "moss1b7": 3.73,
     "omnivoice": 2.73,
-    "mingmoe": 2.8
+    "mingmoe": 2.8,
+    "fireredtts3": 3.27,
+    "ming_3_0_tts_tiny": 2.53,
+    "qwen_audio_tts_flash_text": 3.87,
+    "qwen_audio_tts_plus_text": 3.4
   }
 }
