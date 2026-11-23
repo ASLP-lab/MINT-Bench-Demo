@@ -393,6 +393,19 @@ body {
 /* =========================
    7. Leaderboard 表格样式
    ========================= */
+.leaderboard-update {
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e3a5f;
+}
+
+.leaderboard-update p {
+    margin: 0.2rem 0 0;
+}
+
 .table-legend {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -474,6 +487,18 @@ body {
 .leaderboard-table thead .sticky-col {
     z-index: 12;
     background-color: #f8fafc;
+}
+
+.model-new-badge {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 0.65rem;
+    font-weight: 700;
+    vertical-align: middle;
 }
 
 /* 表头背景分类 */

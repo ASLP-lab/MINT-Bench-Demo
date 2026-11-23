@@ -158,8 +158,13 @@ def main():
                    + '\n'.join(cell(buckets[key], threshold) for key in BUCKETS) + '\n</tr>')
             pattern = rf'(<table\b[^>]*id="table-{lang}".*?<tbody>)(.*?)(</tbody>)'
             def update(match):
-                body = re.sub(r'<tr class="model-row">\s*<td[^>]*>' + re.escape(name) + r'</td>.*?</tr>', '', match[2], flags=re.S)
-                return match[1] + body + row + '\n' + match[3]
+                existing_row = (r'<tr class="model-row">\s*<td[^>]*>' + re.escape(name)
+                                + r'( <span class="model-new-badge">NEW</span>)?</td>.*?</tr>')
+                previous = re.search(existing_row, match[2], flags=re.S)
+                badge = (previous[1] or '') if previous else ''
+                body = re.sub(existing_row, '', match[2], flags=re.S)
+                updated_row = row.replace(name + '</td>', name + badge + '</td>', 1)
+                return match[1] + body + updated_row + '\n' + match[3]
             html, count = re.subn(pattern, update, html, flags=re.S)
             assert count == 1
             matched = sum(w is not None for _, _, w in buckets['overall'])
