@@ -19,7 +19,6 @@
     "parlerttslarge": 2.12,
     "mimo": 2.89,
     "fireredtts3": 2.9,
-    "ming_3_0_tts_tiny": 2.71,
     "qwen_audio_tts_flash_text": 3.19,
     "qwen_audio_tts_plus_text": 2.52
   },
@@ -43,7 +42,6 @@
     "parlerttslarge": 2.14,
     "mimo": 2.68,
     "fireredtts3": 3.07,
-    "ming_3_0_tts_tiny": 2.65,
     "qwen_audio_tts_flash_text": 3.05,
     "qwen_audio_tts_plus_text": 2.36
   },
@@ -67,7 +65,6 @@
     "parlerttslarge": 2.22,
     "mimo": 2.52,
     "fireredtts3": 2.97,
-    "ming_3_0_tts_tiny": 2.77,
     "qwen_audio_tts_flash_text": 3.1,
     "qwen_audio_tts_plus_text": 2.43
   },
@@ -91,7 +88,6 @@
     "parlerttslarge": 2.22,
     "mimo": 2.52,
     "fireredtts3": 2.97,
-    "ming_3_0_tts_tiny": 2.77,
     "qwen_audio_tts_flash_text": 3.1,
     "qwen_audio_tts_plus_text": 2.43
   },
@@ -115,7 +111,6 @@
     "parlerttslarge": 2.11,
     "mimo": 2.8,
     "fireredtts3": 3.9,
-    "ming_3_0_tts_tiny": 3.2,
     "qwen_audio_tts_flash_text": 4.7,
     "qwen_audio_tts_plus_text": 3.9
   },
@@ -139,7 +134,6 @@
     "parlerttslarge": 2.07,
     "mimo": 2.95,
     "fireredtts3": 2.73,
-    "ming_3_0_tts_tiny": 2.59,
     "qwen_audio_tts_flash_text": 3.11,
     "qwen_audio_tts_plus_text": 2.53
   },
@@ -163,7 +157,6 @@
     "parlerttslarge": 2.12,
     "mimo": 2.98,
     "fireredtts3": 2.75,
-    "ming_3_0_tts_tiny": 2.83,
     "qwen_audio_tts_flash_text": 3.57,
     "qwen_audio_tts_plus_text": 2.72
   },
@@ -187,7 +180,6 @@
     "parlerttslarge": 2.12,
     "mimo": 2.98,
     "fireredtts3": 2.75,
-    "ming_3_0_tts_tiny": 2.83,
     "qwen_audio_tts_flash_text": 3.57,
     "qwen_audio_tts_plus_text": 2.72
   },
@@ -211,7 +203,6 @@
     "parlerttslarge": 1.97,
     "mimo": 3.35,
     "fireredtts3": 2.82,
-    "ming_3_0_tts_tiny": 3.03,
     "qwen_audio_tts_flash_text": 3.71,
     "qwen_audio_tts_plus_text": 2.94
   },
@@ -235,7 +226,6 @@
     "parlerttslarge": 2.02,
     "mimo": 2.92,
     "fireredtts3": 2.71,
-    "ming_3_0_tts_tiny": 2.36,
     "qwen_audio_tts_flash_text": 2.65,
     "qwen_audio_tts_plus_text": 2.35
   },
@@ -259,7 +249,6 @@
     "parlerttslarge": 2.02,
     "mimo": 2.92,
     "fireredtts3": 2.71,
-    "ming_3_0_tts_tiny": 2.36,
     "qwen_audio_tts_flash_text": 2.65,
     "qwen_audio_tts_plus_text": 2.35
   },
@@ -283,7 +272,6 @@
     "parlerttslarge": 3.07,
     "mimo": 3.23,
     "fireredtts3": 3,
-    "ming_3_0_tts_tiny": 2.27,
     "qwen_audio_tts_flash_text": 3.6,
     "qwen_audio_tts_plus_text": 3.07
   },
@@ -307,7 +295,6 @@
     "parlerttslarge": 2.71,
     "mimo": 2.96,
     "fireredtts3": 3.04,
-    "ming_3_0_tts_tiny": 2.71,
     "qwen_audio_tts_flash_text": 4,
     "qwen_audio_tts_plus_text": 3.12
   },
@@ -331,7 +318,6 @@
     "parlerttslarge": 2.8,
     "mimo": 2.6,
     "fireredtts3": 2.8,
-    "ming_3_0_tts_tiny": 2.87,
     "qwen_audio_tts_flash_text": 4.47,
     "qwen_audio_tts_plus_text": 2.93
   },
@@ -355,7 +341,6 @@
     "parlerttslarge": 2.29,
     "mimo": 3.04,
     "fireredtts3": 3.24,
-    "ming_3_0_tts_tiny": 3.25,
     "qwen_audio_tts_flash_text": 3.75,
     "qwen_audio_tts_plus_text": 2.75
   },
@@ -379,7 +364,6 @@
     "parlerttslarge": 2.29,
     "mimo": 3.04,
     "fireredtts3": 3.24,
-    "ming_3_0_tts_tiny": 3.25,
     "qwen_audio_tts_flash_text": 3.75,
     "qwen_audio_tts_plus_text": 2.75
   },
@@ -403,7 +387,6 @@
     "parlerttslarge": 2.29,
     "mimo": 3.04,
     "fireredtts3": 3.24,
-    "ming_3_0_tts_tiny": 3.25,
     "qwen_audio_tts_flash_text": 3.75,
     "qwen_audio_tts_plus_text": 2.75
   },
@@ -427,7 +410,6 @@
     "parlerttslarge": 2.07,
     "mimo": 2.84,
     "fireredtts3": 3.18,
-    "ming_3_0_tts_tiny": 2.52,
     "qwen_audio_tts_flash_text": 3,
     "qwen_audio_tts_plus_text": 2.3
   },
@@ -451,7 +433,6 @@
     "parlerttslarge": 2.07,
     "mimo": 2.84,
     "fireredtts3": 3.18,
-    "ming_3_0_tts_tiny": 2.52,
     "qwen_audio_tts_flash_text": 3,
     "qwen_audio_tts_plus_text": 2.3
   },
@@ -475,7 +456,6 @@
     "parlerttslarge": 1.75,
     "mimo": 2.5,
     "fireredtts3": 2.5,
-    "ming_3_0_tts_tiny": 2.25,
     "qwen_audio_tts_flash_text": 2.46,
     "qwen_audio_tts_plus_text": 1.88
   },
@@ -499,7 +479,6 @@
     "parlerttslarge": 1.77,
     "mimo": 2.8,
     "fireredtts3": 2.37,
-    "ming_3_0_tts_tiny": 2.67,
     "qwen_audio_tts_flash_text": 2.8,
     "qwen_audio_tts_plus_text": 2.1
   },
@@ -523,7 +502,6 @@
     "parlerttslarge": 1.77,
     "mimo": 2.8,
     "fireredtts3": 2.37,
-    "ming_3_0_tts_tiny": 2.67,
     "qwen_audio_tts_flash_text": 2.8,
     "qwen_audio_tts_plus_text": 2.1
   },
@@ -547,7 +525,6 @@
     "parlerttslarge": 1.49,
     "mimo": 2.86,
     "fireredtts3": 2.64,
-    "ming_3_0_tts_tiny": 2.64,
     "qwen_audio_tts_flash_text": 2.78,
     "qwen_audio_tts_plus_text": 1.95
   },
@@ -571,7 +548,6 @@
     "parlerttslarge": 1.77,
     "mimo": 2.87,
     "fireredtts3": 1.97,
-    "ming_3_0_tts_tiny": 2.37,
     "qwen_audio_tts_flash_text": 2.43,
     "qwen_audio_tts_plus_text": 1.53
   },
@@ -595,7 +571,6 @@
     "parlerttslarge": 1.77,
     "mimo": 2.93,
     "fireredtts3": 3.83,
-    "ming_3_0_tts_tiny": 2.83,
     "qwen_audio_tts_flash_text": 2.63,
     "qwen_audio_tts_plus_text": 1.93
   },
@@ -619,7 +594,6 @@
     "parlerttslarge": 1.58,
     "mimo": 3.67,
     "fireredtts3": 2.17,
-    "ming_3_0_tts_tiny": 2.62,
     "qwen_audio_tts_flash_text": 2.96,
     "qwen_audio_tts_plus_text": 1.62
   },
@@ -643,7 +617,6 @@
     "parlerttslarge": 2.02,
     "mimo": 2.75,
     "fireredtts3": 2.13,
-    "ming_3_0_tts_tiny": 2.7,
     "qwen_audio_tts_flash_text": 2.81,
     "qwen_audio_tts_plus_text": 2.22
   },
@@ -667,7 +640,6 @@
     "parlerttslarge": 2.12,
     "mimo": 3.0,
     "fireredtts3": 2.28,
-    "ming_3_0_tts_tiny": 2.53,
     "qwen_audio_tts_flash_text": 2.72,
     "qwen_audio_tts_plus_text": 1.91
   },
@@ -691,7 +663,6 @@
     "parlerttslarge": 1.92,
     "mimo": 3.5,
     "fireredtts3": 2.33,
-    "ming_3_0_tts_tiny": 2.17,
     "qwen_audio_tts_flash_text": 2.83,
     "qwen_audio_tts_plus_text": 2.12
   },
@@ -715,7 +686,6 @@
     "parlerttslarge": 1.41,
     "mimo": 2.72,
     "fireredtts3": 2.66,
-    "ming_3_0_tts_tiny": 2.28,
     "qwen_audio_tts_flash_text": 2.5,
     "qwen_audio_tts_plus_text": 1.5
   },
@@ -739,7 +709,6 @@
     "parlerttslarge": 1.35,
     "mimo": 1.63,
     "fireredtts3": 1.21,
-    "ming_3_0_tts_tiny": 1.75,
     "qwen_audio_tts_flash_text": 2.27,
     "qwen_audio_tts_plus_text": 2
   },
@@ -763,7 +732,6 @@
     "parlerttslarge": 1.35,
     "mimo": 1.63,
     "fireredtts3": 1.21,
-    "ming_3_0_tts_tiny": 1.75,
     "qwen_audio_tts_flash_text": 2.27,
     "qwen_audio_tts_plus_text": 2
   },
@@ -787,7 +755,6 @@
     "parlerttslarge": 1.77,
     "mimo": 1.86,
     "fireredtts3": 1.25,
-    "ming_3_0_tts_tiny": 2.16,
     "qwen_audio_tts_flash_text": 1.62,
     "qwen_audio_tts_plus_text": 1.34
   },
@@ -812,8 +779,7 @@
     "mimo": 2.54,
     "fireredtts3": 1.25,
     "qwen_audio_tts_flash_text": 1.96,
-    "qwen_audio_tts_plus_text": 1.42,
-    "ming_3_0_tts_tiny": 2.92
+    "qwen_audio_tts_plus_text": 1.42
   },
   "easy/timbre/tag/atomic/gender": {
     "bluebreeze": 4.8,
@@ -835,7 +801,6 @@
     "parlerttslarge": 3.0,
     "mimo": 3.7,
     "fireredtts3": 4.2,
-    "ming_3_0_tts_tiny": 4.5,
     "qwen_audio_tts_flash_text": 5,
     "qwen_audio_tts_plus_text": 3.8
   },
@@ -860,8 +825,7 @@
     "mimo": 1.91,
     "fireredtts3": 1.09,
     "qwen_audio_tts_flash_text": 1.91,
-    "qwen_audio_tts_plus_text": 1.53,
-    "ming_3_0_tts_tiny": 1.31
+    "qwen_audio_tts_plus_text": 1.53
   },
   "easy/style/direct/atomic/personality": {
     "bluebreeze": 3.1,
@@ -883,7 +847,6 @@
     "parlerttslarge": 1.9,
     "mimo": 2.2,
     "fireredtts3": 2.5,
-    "ming_3_0_tts_tiny": 3.2,
     "qwen_audio_tts_flash_text": 3.25,
     "qwen_audio_tts_plus_text": 2.4
   },
@@ -907,7 +870,6 @@
     "parlerttslarge": 1.82,
     "mimo": 2.53,
     "fireredtts3": 2.76,
-    "ming_3_0_tts_tiny": 2.03,
     "qwen_audio_tts_flash_text": 2.15,
     "qwen_audio_tts_plus_text": 2.44
   },
@@ -931,7 +893,6 @@
     "parlerttslarge": 2.47,
     "mimo": 2.33,
     "fireredtts3": 3.33,
-    "ming_3_0_tts_tiny": 3.13,
     "qwen_audio_tts_flash_text": 2.93,
     "qwen_audio_tts_plus_text": 2.47
   },
@@ -955,7 +916,6 @@
     "parlerttslarge": 2.25,
     "mimo": 2.34,
     "fireredtts3": 1.94,
-    "ming_3_0_tts_tiny": 3.59,
     "qwen_audio_tts_flash_text": 2.75,
     "qwen_audio_tts_plus_text": 1.88
   },
@@ -979,7 +939,6 @@
     "parlerttslarge": 2.0,
     "mimo": 2.75,
     "fireredtts3": 3.42,
-    "ming_3_0_tts_tiny": 1.92,
     "qwen_audio_tts_flash_text": 2.58,
     "qwen_audio_tts_plus_text": 1.75
   },
@@ -1003,7 +962,6 @@
     "parlerttslarge": 2.04,
     "mimo": 2.94,
     "fireredtts3": 2.25,
-    "ming_3_0_tts_tiny": 2.5,
     "qwen_audio_tts_flash_text": 2.4,
     "qwen_audio_tts_plus_text": 2.06
   },
@@ -1027,7 +985,6 @@
     "parlerttslarge": 1.67,
     "mimo": 2.5,
     "fireredtts3": 1.94,
-    "ming_3_0_tts_tiny": 2.47,
     "qwen_audio_tts_flash_text": 3.78,
     "qwen_audio_tts_plus_text": 3.14
   },
@@ -1051,7 +1008,6 @@
     "parlerttslarge": 2.04,
     "mimo": 2.79,
     "fireredtts3": 3,
-    "ming_3_0_tts_tiny": 2.46,
     "qwen_audio_tts_flash_text": 2.5,
     "qwen_audio_tts_plus_text": 2.71
   },
@@ -1075,7 +1031,6 @@
     "parlerttslarge": 1.4,
     "mimo": 3.03,
     "fireredtts3": 2.3,
-    "ming_3_0_tts_tiny": 3.13,
     "qwen_audio_tts_flash_text": 3.23,
     "qwen_audio_tts_plus_text": 2.1
   },
@@ -1099,7 +1054,6 @@
     "parlerttslarge": 2.13,
     "mimo": 3.33,
     "fireredtts3": 3,
-    "ming_3_0_tts_tiny": 2.87,
     "qwen_audio_tts_flash_text": 3.4,
     "qwen_audio_tts_plus_text": 2.87
   },
@@ -1123,7 +1077,6 @@
     "parlerttslarge": 2.21,
     "mimo": 2.17,
     "fireredtts3": 2.25,
-    "ming_3_0_tts_tiny": 2.62,
     "qwen_audio_tts_flash_text": 2.67,
     "qwen_audio_tts_plus_text": 2
   },
@@ -1147,7 +1100,6 @@
     "parlerttslarge": 1.15,
     "mimo": 1.05,
     "fireredtts3": 1.25,
-    "ming_3_0_tts_tiny": 1.25,
     "qwen_audio_tts_flash_text": 1.17,
     "qwen_audio_tts_plus_text": 1.25
   },
@@ -1171,7 +1123,6 @@
     "parlerttslarge": 1.95,
     "mimo": 2.3,
     "fireredtts3": 2.5,
-    "ming_3_0_tts_tiny": 2.15,
     "qwen_audio_tts_flash_text": 2.05,
     "qwen_audio_tts_plus_text": 1.7
   },
@@ -1195,7 +1146,6 @@
     "parlerttslarge": 1.1,
     "mimo": 2.77,
     "fireredtts3": 2.5,
-    "ming_3_0_tts_tiny": 2.6,
     "qwen_audio_tts_flash_text": 3.13,
     "qwen_audio_tts_plus_text": 2.73
   },
@@ -1220,8 +1170,7 @@
     "mimo": 1.03,
     "fireredtts3": 1.26,
     "qwen_audio_tts_flash_text": 3.5,
-    "qwen_audio_tts_plus_text": 3.38,
-    "ming_3_0_tts_tiny": 1.62
+    "qwen_audio_tts_plus_text": 3.38
   },
   "easy/timbre/tag/atomic/pitch": {
     "bluebreeze": 3.47,
@@ -1243,7 +1192,6 @@
     "parlerttslarge": 2.0,
     "mimo": 2.87,
     "fireredtts3": 3.4,
-    "ming_3_0_tts_tiny": 2.13,
     "qwen_audio_tts_flash_text": 2.87,
     "qwen_audio_tts_plus_text": 2.4
   },
@@ -1267,7 +1215,6 @@
     "parlerttslarge": 2.0,
     "mimo": 3.25,
     "fireredtts3": 3.17,
-    "ming_3_0_tts_tiny": 2.25,
     "qwen_audio_tts_flash_text": 2.83,
     "qwen_audio_tts_plus_text": 2
   },
@@ -1291,7 +1238,6 @@
     "parlerttslarge": 1.47,
     "mimo": 2.73,
     "fireredtts3": 3.07,
-    "ming_3_0_tts_tiny": 3.13,
     "qwen_audio_tts_flash_text": 3.27,
     "qwen_audio_tts_plus_text": 2.73
   }

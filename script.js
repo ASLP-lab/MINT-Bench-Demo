@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "qwen_audio_tts_flash_text": "Qwen-Audio-TTS-Flash",
         "qwen_audio_tts_plus_text": "Qwen-Audio-TTS-Plus",
         "fireredtts3": "FireRedTTS3",
-        "ming_3_0_tts_tiny": "Ming-3.0-TTS-Tiny",
         "geminiflash": "Gemini 2.5-Flash",
         "geminipro": "Gemini 2.5-Pro",
         "elevenlabs": "ElevenLabs-ttv-v3",

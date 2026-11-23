@@ -19,7 +19,6 @@ MODELS = {
     'qwen_audio_tts_flash_text': 'Qwen-Audio-TTS-Flash',
     'qwen_audio_tts_plus_text': 'Qwen-Audio-TTS-Plus',
     'fireredtts3': 'FireRedTTS3',
-    'ming_3_0_tts_tiny': 'Ming-3.0-TTS-Tiny',
 }
 TIMBRE_ATTRS = {'age', 'gender', 'pitch', 'texture'}
 STYLE_ATTRS = {'speed', 'volume', 'emotion', 'accent', 'personality', 'tone'}
