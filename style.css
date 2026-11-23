@@ -393,17 +393,42 @@ body {
 /* =========================
    7. Leaderboard 表格样式
    ========================= */
-.leaderboard-update {
-    margin-bottom: 1.5rem;
-    padding: 0.85rem 1rem;
-    border: 1px solid #bfdbfe;
-    border-radius: 8px;
-    background: #eff6ff;
-    color: #1e3a5f;
+#news {
+    scroll-margin-top: 7rem;
 }
 
-.leaderboard-update p {
-    margin: 0.2rem 0 0;
+.news-list {
+    margin: 0;
+    list-style: none;
+}
+
+.news-list li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+}
+
+.news-list li + li {
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.news-list time,
+.news-todo {
+    min-width: 7rem;
+    color: #475569;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.news-list li > span {
+    flex: 1 1 18rem;
+}
+
+.news-list a {
+    color: #1d4ed8;
+    text-underline-offset: 0.15em;
 }
 
 .table-legend {

@@ -13,6 +13,7 @@
                 <img src="./assets/figs/logo.png" alt="MINT-Bench Logo" class="nav-logo-img">
             </a>
             <div class="nav-links">
+                <a href="#news">News</a>
                 <a href="#overview">Overview</a>
                 <a href="#leaderboard">Leaderboard</a>
                 <a href="#demos">Demos</a>
@@ -83,7 +84,8 @@
         <aside class="toc-sidebar">
             <div class="toc-title">On this page</div>
             <ul class="toc-list">
-                <li><a href="#overview" class="toc-link active">Overview</a></li>
+                <li><a href="#news" class="toc-link active">News</a></li>
+                <li><a href="#overview" class="toc-link">Overview</a></li>
                 <li>
                     <a href="#leaderboard" class="toc-link">Leaderboard</a>
                     <ul class="toc-sublist">
@@ -102,6 +104,25 @@
         </aside>
 
         <main class="main-content">
+            <section id="news" class="section">
+                <div class="container">
+                    <h2 class="section-title">News</h2>
+                    <ul class="card news-list">
+                        <li>
+                            <time datetime="2026-11-23">Nov 23, 2026</time>
+                            <span>MINT-Bench received an <a href="https://2026.acmmm.org/site/awards.html">Outstanding Paper Award at ACM Multimedia 2026</a>.</span>
+                        </li>
+                        <li>
+                            <time datetime="2026-11-10">Nov 10, 2026</time>
+                            <span>Added English and Chinese results for <strong>Qwen-Audio-TTS-Flash</strong>, <strong>Qwen-Audio-TTS-Plus</strong>, and <strong>FireRedTTS3</strong> to the <a href="#leaderboard">leaderboard</a>.</span>
+                        </li>
+                        <li>
+                            <strong class="news-todo">TODO</strong>
+                            <span>Evaluate upcoming TTS models and general-purpose audio generation models such as <strong>Seed Audio</strong>.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             
             <section id="overview" class="section">
                 <div class="container">
@@ -141,10 +162,6 @@
             <section id="leaderboard" class="section">
                 <div class="container-wide">
                     <h2 class="section-title">Leaderboard</h2>
-                    <aside class="leaderboard-update" aria-label="Recent leaderboard update">
-                        <strong>Recent update</strong>
-                        <p>English and Chinese results are now available for Qwen-Audio-TTS-Flash, Qwen-Audio-TTS-Plus, and FireRedTTS3.</p>
-                    </aside>
                     
                     <h3 id="overall-leaderboard" class="section-title">Overall</h3>
                     <div class="card">
